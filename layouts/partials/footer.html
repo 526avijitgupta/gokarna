@@ -1,0 +1,10 @@
+<div class="footer wrapper">
+	<nav class="nav">
+		<div>{{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . | safeHTML }} | {{ end }} <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+{{ template "_internal/google_analytics_async.html" . }}
+{{- with .Site.Params.Social -}}
+<script>feather.replace()</script>
+{{- end -}}
