@@ -1,0 +1,11 @@
+baseURL = "http://www.example.com"
+title = "Gokarna"
+theme = "gokarna"
+languageCode = "en"
+defaultContentLanguage = "en"
+
+paginate = 20
+
+pygmentsStyle = "bw"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
