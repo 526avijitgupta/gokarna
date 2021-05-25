@@ -33,24 +33,6 @@ html {
   height: 70px;
 }
 
-/* #header-sroll h1 {
-    font-size: 30px;
-    font-family: Arial;
-    text-align: center;
-    line-height: 50px;
-     -ms-transition:    all 0.2s ease-out;
-    -moz-transition:    all 0.2s ease-out;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition:      all 0.2s ease-out;
-    transition:         all 0.2s ease-out;
-}
-#header-sroll.small h1{
-    height: 70px;
-    line-height: 35px;
-    font-size: 25px;
-}
- */
-
 .header a {
   text-decoration: none;
   color: inherit;
@@ -72,7 +54,8 @@ html {
 
 .header-nav .avatar {
   float: left;
-  display: inline-block;
+  /* display: inline-block; */
+  margin-left: 15px;
   height: 100%;
   border: 0.5px solid white;
   border-radius: 18px;
@@ -95,4 +78,27 @@ html {
 .nav-title a {
   height: 50px;
   font-size: 20px;
+}
+
+.header-nav .nav-links {
+  line-height: 50px;
+  float: right;
+  margin-right: 15px;
+}
+
+.nav-links .nav-link {
+  display: inline-block;
+}
+
+.nav-links .nav-link a {
+  display: block;
+  padding: 0 15px;
+}
+
+.nav-links .nav-link.icon a {
+  padding: 0 8px;
+}
+
+.fab {
+  font-family: FontAwesome !important;
 }
