@@ -9,3 +9,36 @@ paginate = 20
 pygmentsStyle = "bw"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "linkedin"
+    pre = "<span class='fab fa-linkedin'></span>"
+    url = "/a/"
+    weight = 5
+
+  [[menu.main]]
+    identifier = "github"
+    pre = "<span class='fab fa-github'></span>"
+    url = "/b/"
+    weight = 6
