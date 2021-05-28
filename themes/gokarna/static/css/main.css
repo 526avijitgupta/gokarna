@@ -2,10 +2,6 @@ html {
   font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
 }
 
-.container {
-  height: 800px;
-}
-
 .header-light {
   background-color: #bbb;
   color: black;
@@ -101,4 +97,33 @@ html {
 
 .fab {
   font-family: FontAwesome !important;
+}
+
+#content {
+  width: 810px;
+  margin: 180px auto 0;
+}
+
+.post .post-date {
+  color: gray;
+}
+
+.post .post-tags {
+  padding: 0;
+  list-style-type: none;
+}
+
+.post-tags .post-tag {
+  display: inline-block;
+  background-color: #008c86;
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid #008c86;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.post .post-content {
+  margin-top: 50px;
 }
