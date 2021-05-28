@@ -7,22 +7,23 @@
     <div id="content">
 
         <div class="post" class="container">
+
             <div class="post-header-section">
-                <h1>Sample Title</h1>
+                <h1>{{ .Title }}</h1>
                 <p class="post-date">
-                    Date
+                    {{ dateFormat "January 2, 2006" .Date }}
                 </p>
+
                 <ul class="post-tags">
-                    <li>#abc</li>
-                    <li>#def</li>
+                {{ range .Params.tags }}
+                    <li class="post-tag"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                {{ end }}
                 </ul>
             </div>
+
             <div class="post-content">
                 <p>
-                    slkjdflks
-                    lksdjflkdsj
-                    lksdjflksjf slkdjfkljf lkjlkjlkj kljl kjljl jljl jl jlj lj lj jlslkdjflkss
-                    sdkjflk jlkj lkj lkjl jl jl jklk jlkj lk jlkj lkjkljlkj lkjl kjhiwehqqn 
+                    {{ .Content }}
                 </p>
             </div>
         </div>
