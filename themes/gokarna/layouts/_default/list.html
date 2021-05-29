@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+    {{- partial "header.html" . -}}
+    <main id="content">
+
+        <div class="container list-posts">
+
+            <h2 class="list-title">All Posts</h2>
+
+            <h2 class="posts-year">2021</h2>
+            <h4 class="posts-month">March</h4>
+            <article class="post-title">
+                <a href="example.com" class="post-link">Theme Documentation - Basics</a>
+                <span class="post-date">March 15, 2021</span>
+            </article>
+            <article class="post-title">
+                <a href="example.com" class="post-link">Theme Documentation - Built-in Shortcodes</a>
+                <span class="post-date">March 15, 2021</span>
+            </article>
+
+            <h2 class="posts-year">2019</h2>
+            <h4 class="posts-month">May</h4>
+            <article class="post-title">
+                <a href="example.com" class="post-link">Basic Markdown Syntax</a>
+                <span class="post-date">May 15, 2019</span>
+            </article>
+            <h4 class="posts-month">January</h4>
+            <article class="post-title">
+                <a href="example.com" class="post-link">Emoji Support</a>
+                <span class="post-date">January 19, 2019</span>
+            </article>
+
+
+        </div>
+
+    </main>
+    {{- partial "footer.html" . -}}
+</body>
+
+</html>

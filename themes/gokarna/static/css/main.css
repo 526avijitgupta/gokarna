@@ -127,3 +127,19 @@ html {
 .post .post-content {
   margin-top: 50px;
 }
+
+.list-posts .list-posts-title {
+  text-align: center;
+}
+
+.list-posts .posts-year {
+  margin-top: 40px;
+}
+
+.list-posts .post-title {
+  margin: 10px 0;
+}
+
+.post-title .post-date {
+  float: right;
+}
