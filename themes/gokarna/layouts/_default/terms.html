@@ -10,14 +10,14 @@
 
             <h2 class="list-title">Tags</h2>
             <ul class="post-tags">
+                {{ range $key, $value := .Data.Terms.ByCount }}
                 <li class="post-tag">
                     <a href="example.com">
-                        <div class="tag-name">
-                            ABC</div>
-                        <div class="tag-posts-count">
-                            2</div>
+                        <div class="tag-name">{{ $value.Name }}</div>
+                        <div class="tag-posts-count">{{ $value.Count }}</div>
                     </a>
                 </li>
+                {{ end }}
                 <li class="post-tag">
                     <a href="example.com">
                         <div class="tag-name">
