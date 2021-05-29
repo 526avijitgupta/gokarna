@@ -6,27 +6,13 @@
     {{- partial "header.html" . -}}
     <main id="content">
 
-        <div class="post container">
+        {{ if eq .Type "post" }}
+        {{- partial "post.html" . -}}
+        {{ end }}
 
-            <div class="post-header-section">
-                <h1>{{ .Title }}</h1>
-                <p class="post-date">
-                    {{ dateFormat "January 2, 2006" .Date }}
-                </p>
-
-                <ul class="post-tags">
-                {{ range .Params.tags }}
-                    <li class="post-tag"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-                {{ end }}
-                </ul>
-            </div>
-
-            <div class="post-content">
-                <p>
-                    {{ .Content }}
-                </p>
-            </div>
-        </div>
+        {{ if eq .Type "singles" }}
+        {{- partial "single.html" . -}}
+        {{ end }}
 
     </main>
     {{- partial "footer.html" . -}}
