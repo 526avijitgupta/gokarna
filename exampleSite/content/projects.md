@@ -1,6 +1,5 @@
 ---
 title: "Projects"
-tags: ["abc", "def"]
 type: singles
 ---
 
