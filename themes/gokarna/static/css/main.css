@@ -128,15 +128,15 @@ html {
   margin-top: 50px;
 }
 
-.all-posts .all-posts-title {
+.list-posts .list-posts-title {
   text-align: right;
 }
 
-.all-posts .posts-year {
+.list-posts .posts-year {
   margin-top: 40px;
 }
 
-.all-posts .post-title {
+.list-posts .post-title {
   margin: 10px 0;
 }
 
