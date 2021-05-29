@@ -1,37 +1,37 @@
-    <header class="header header-dark" id="header-sroll">
-        <nav class="header-nav">
+<header class="header header-dark" id="header-sroll">
+    <nav class="header-nav">
 
-            <div class="avatar">
-                <a href="{{ .Site.BaseURL }}">
-                    <img src=".Site.Params.Avatar" alt="Avatar" />
+        <div class="avatar">
+            <a href="{{ .Site.BaseURL }}">
+                <img src=".Site.Params.Avatar" alt="Avatar" />
+            </a>
+        </div>
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://example.com">Title title</a>
+        </div>
+
+        <div class="nav-links">
+            {{ range .Site.Menus.main }}
+            <div class="nav-link">
+                <a href="{{ .URL }}">
+                    {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                 </a>
             </div>
+            {{ end }}
 
-            <div class="nav-title">
-                <a class="nav-brand" href="https://example.com">Title title</a>
+            <!-- TODO: Handle 
+            <div class="nav-link icon">
+                <a href="http://example.com">
+                    <span class="fab fa-github"></span>
+                </a>
             </div>
-
-            <div class="nav-links">
-                {{ range .Site.Menus.main }}
-                <div class="nav-link">
-                    <a href="{{ .URL }}">
-                        {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
-                    </a>
-                </div>
-                {{ end }}
-
-                <!-- TODO: Handle 
-                <div class="nav-link icon">
-                    <a href="http://example.com">
-                        <span class="fab fa-github"></span>
-                    </a>
-                </div>
-                <div class="nav-link icon">
-                    <a href="http://example.com">
-                        <span class="fab fa-linkedin"></span>
-                    </a>
-                </div>
-                -->
+            <div class="nav-link icon">
+                <a href="http://example.com">
+                    <span class="fab fa-linkedin"></span>
+                </a>
             </div>
-        </nav>
-    </header>
+            -->
+        </div>
+    </nav>
+</header>

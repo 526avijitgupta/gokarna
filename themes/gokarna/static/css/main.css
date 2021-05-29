@@ -50,12 +50,12 @@ html {
 
 .header-nav .avatar {
   float: left;
-  /* display: inline-block; */
   margin-left: 15px;
   height: 100%;
   border: 0.5px solid white;
   border-radius: 18px;
 }
+
 .header-nav .avatar img {
   display: block;
   width: 50px;
@@ -108,20 +108,25 @@ html {
   color: gray;
 }
 
-.post .post-tags {
+.post-tags {
   padding: 0;
   list-style-type: none;
 }
 
 .post-tags .post-tag {
   display: inline-block;
-  background-color: #008c86;
+  background-color: #00b5ad;
   padding: 4px 12px;
   border-radius: 4px;
-  border: 1px solid #008c86;
+  border: 1px solid #00b5ad;
   color: white;
   font-size: 14px;
   font-weight: 700;
+}
+
+.post-tag a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .post .post-content {
@@ -142,4 +147,28 @@ html {
 
 .post-title .post-date {
   float: right;
+}
+
+.tags-list .post-tags {
+  margin-top: 50px;
+}
+
+.tags-list .post-tags .post-tag {
+  padding: 0;
+  margin: 0 5px;
+}
+
+.tags-list .post-tags .post-tag:hover {
+  background-color: #009c95;
+  border: 1px solid #00b5ad;
+}
+
+.tags-list .post-tags .post-tag a div {
+  display: inline-block;
+  padding: 5px 8px;
+}
+
+.tags-list .post-tags .post-tag a .tag-posts-count {
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
 }
