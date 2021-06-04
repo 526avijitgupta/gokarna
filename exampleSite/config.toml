@@ -33,12 +33,12 @@ pygmentsCodeFencesGuessSyntax = true
 
   [[menu.main]]
     identifier = "linkedin"
-    pre = "<span class='fab fa-linkedin'></span>"
+    pre = "<span class='fa fa-linkedin'></span>"
     url = "/a/"
     weight = 5
 
   [[menu.main]]
     identifier = "github"
-    pre = "<span class='fab fa-github'></span>"
+    pre = "<span class='fa fa-github'></span>"
     url = "/b/"
     weight = 6
