@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-<html>
-{{- partial "head.html" . -}}
+{{ define "main" }}
+<div class="container tags-list">
 
-<body>
-    {{- partial "header.html" . -}}
-    <main id="content">
+    <h2 class="list-title">Tags</h2>
+    <ul class="post-tags">
+        {{ range $key, $value := .Data.Terms.ByCount }}
+        <li class="post-tag">
+            <a href="/tags/{{ $value.Name | urlize }}/">
+                <div class="tag-name">{{ $value.Name }}</div>
+                <div class="tag-posts-count">{{ $value.Count }}</div>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
 
-        <div class="container tags-list">
-
-            <h2 class="list-title">Tags</h2>
-            <ul class="post-tags">
-                {{ range $key, $value := .Data.Terms.ByCount }}
-                <li class="post-tag">
-                    <a href="/tags/{{ $value.Name | urlize }}/">
-                        <div class="tag-name">{{ $value.Name }}</div>
-                        <div class="tag-posts-count">{{ $value.Count }}</div>
-                    </a>
-                </li>
-                {{ end }}
-            </ul>
-
-        </div>
-
-    </main>
-    {{- partial "footer.html" . -}}
-</body>
-
-</html>
+</div>
+{{ end }}

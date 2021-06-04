@@ -1,35 +1,23 @@
 html {
-  font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
-}
-html.gokarna-dark {
-  background: #252525;
-  color: white;
-}
-html.gokarna-light {
   background: white;
   color: black;
+  font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
 }
 
 /* HEADER */
 .header {
+  background-color: #bbb;
+  color: black;
   height: 70px;
   left: 0;
   position: fixed;
   top: 0;
-  -ms-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -ms-transition: height 0.5s ease-out;
+  -moz-transition: height 0.5s ease-out;
+  -webkit-transition: height 0.5s ease-out;
+  -o-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
   width: 100%;
-}
-.header.gokarna-dark {
-  background-color: #1b1c1d;
-  color: white;
-}
-.header.gokarna-light {
-  background-color: #bbb;
-  color: black;
 }
 .header.small {
   height: 50px;
@@ -41,11 +29,11 @@ html.gokarna-light {
 .header .header-nav {
   height: 50px;
   margin-top: 10px;
-  -ms-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -ms-transition: margin 0.5s ease-out;
+  -moz-transition: margin 0.5s ease-out;
+  -webkit-transition: margin 0.5s ease-out;
+  -o-transition: margin 0.5s ease-out;
+  transition: margin 0.5s ease-out;
 }
 .header .header-nav.small {
   margin-top: 0;
