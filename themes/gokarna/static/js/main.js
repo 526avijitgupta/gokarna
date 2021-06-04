@@ -13,7 +13,8 @@ function ready() {
     darkThemeCss = document.getElementById("dark-theme");
 
     // TODO: Fetch programatically by user's system preference
-    const savedTheme = localStorage.getItem(THEME_PREF_STORAGE_KEY) || 'light';
+    const savedTheme = localStorage.getItem(THEME_PREF_STORAGE_KEY) || 
+        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark': 'light';
     setTheme(savedTheme);
     document.getElementById('dark-theme-toggle').addEventListener('click', () => {
         if (toggleIcon.className === THEME_TO_ICON_CLASS.dark) {
