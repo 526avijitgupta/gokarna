@@ -1,10 +1,11 @@
-$(window).scroll(function () {
-    var sc = $(window).scrollTop()
-    if (sc > 100) {
-        $(".header").addClass("small");
-        $(".header-nav").addClass("small");
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        document.querySelectorAll('.header, .header-nav').forEach(function(item) {
+            item.classList.add('small')
+        })
     } else {
-        $(".header").removeClass("small");
-        $(".header-nav").removeClass("small");
+        document.querySelectorAll('.header, .header-nav').forEach(function(item) {
+            item.classList.remove('small')
+        })
     }
 });
