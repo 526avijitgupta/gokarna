@@ -1,38 +1,26 @@
-<!DOCTYPE html>
-<html>
-{{- partial "head.html" . -}}
+{{ define "main" }}        
+<!-- TODO: @yash Paginate this if items more than n -->
+<div class="container list-posts">
 
-<body>
-    {{- partial "header.html" . -}}
-    <main id="content">
+    <h2 class="list-title">{{ .Name }}</h2>
 
-        <!-- TODO: @yash Paginate this if items more than n -->
-        <div class="container list-posts">
+    {{ $posts := where .Data.Pages "Params.type" "post" }}
+    {{ range $posts.GroupByDate "2006" }}
 
-            <h2 class="list-title">{{ .Name }}</h2>
+    <h2 class="posts-year">{{ .Key }}</h2>
 
-            {{ $posts := where .Data.Pages "Params.type" "post" }}
-            {{ range $posts.GroupByDate "2006" }}
+    <!-- TODO: @yash The month param should be optional -->
+    {{ range .Pages.GroupByDate "January" }}
+    <h4 class="posts-month">{{ .Key }}</h4>
+    {{- range .Pages  -}}
+    <article class="post-title">
+        <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
+        <span class="post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
+    </article>
 
-            <h2 class="posts-year">{{ .Key }}</h2>
+    {{ end }}
+    {{ end }}
+    {{ end }}
 
-            <!-- TODO: @yash The month param should be optional -->
-            {{ range .Pages.GroupByDate "January" }}
-            <h4 class="posts-month">{{ .Key }}</h4>
-            {{- range .Pages  -}}
-            <article class="post-title">
-                <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
-                <span class="post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
-            </article>
-
-            {{ end }}
-            {{ end }}
-            {{ end }}
-
-        </div>
-
-    </main>
-    {{- partial "footer.html" . -}}
-</body>
-
-</html>
+</div>
+{{ end }}
