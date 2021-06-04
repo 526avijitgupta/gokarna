@@ -1,17 +1,16 @@
 html {
   font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
 }
-
-.header-light {
-  background-color: #bbb;
+html.gokarna-dark {
+  background: #252525;
+  color: white;
+}
+html.gokarna-light {
+  background: white;
   color: black;
 }
 
-.header-dark {
-  background-color: #1b1c1d;
-  color: white;
-}
-
+/* HEADER */
 .header {
   position: fixed;
   height: 70px;
@@ -24,16 +23,21 @@ html {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-
+.header.gokarna-dark {
+  background-color: #1b1c1d;
+  color: white;
+}
+.header.gokarna-light {
+  background-color: #bbb;
+  color: black;
+}
 .header.small {
   height: 50px;
 }
-
 .header a {
   text-decoration: none;
   color: inherit;
 }
-
 .header .header-nav {
   height: 50px;
   margin-top: 10px;
@@ -43,11 +47,9 @@ html {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-
 .header .header-nav.small {
   margin-top: 0;
 }
-
 .header-nav .avatar {
   float: left;
   margin-left: 15px;
@@ -55,7 +57,6 @@ html {
   border: 0.5px solid white;
   border-radius: 18px;
 }
-
 .header-nav .avatar img {
   display: block;
   width: 50px;
@@ -63,56 +64,42 @@ html {
   overflow: hidden;
   border-radius: 100%;
 }
-
 .header-nav .nav-title {
   display: inline-block;
   padding-left: 10px;
   height: 100%;
   line-height: 50px;
 }
-
 .nav-title a {
   height: 50px;
   font-size: 20px;
 }
-
 .header-nav .nav-links {
   line-height: 50px;
   float: right;
   margin-right: 15px;
 }
-
 .nav-links .nav-link {
   display: inline-block;
 }
-
 .nav-links .nav-link a {
   display: block;
   padding: 0 10px;
 }
-
 .nav-links .nav-link.icon a {
   padding: 0 8px;
 }
-
-.fab {
-  font-family: FontAwesome !important;
+.nav-links .nav-icons-divider {
+  border-color: inherit;
+  border-left: 1px solid;
+  margin-right: 4.5px;
 }
 
-#content {
-  width: 810px;
-  margin: 180px auto 0;
-}
-
-.post .post-date {
-  color: gray;
-}
-
+/* TAGS */
 .post-tags {
   padding: 0;
   list-style-type: none;
 }
-
 .post-tags .post-tag {
   display: inline-block;
   background-color: #00b5ad;
@@ -123,51 +110,51 @@ html {
   font-size: 14px;
   font-weight: 700;
 }
-
 .post-tag a {
   text-decoration: none;
   color: inherit;
 }
 
+/* SINGLE */
+#content {
+  width: 810px;
+  margin: 180px auto 0;
+}
+.post .post-date {
+  color: gray;
+}
 .post .post-content {
   margin-top: 50px;
 }
 
+/* LIST */
 .list-posts .list-title {
   text-align: center;
 }
-
 .list-posts .posts-year {
   margin-top: 40px;
 }
-
 .list-posts .post-title {
   margin: 10px 0;
 }
-
 .post-title .post-date {
   float: right;
 }
-
 .tags-list .post-tags {
   margin-top: 50px;
 }
-
 .tags-list .post-tags .post-tag {
   padding: 0;
   margin: 0 5px;
 }
-
 .tags-list .post-tags .post-tag:hover {
   background-color: #009c95;
   border: 1px solid #00b5ad;
 }
-
 .tags-list .post-tags .post-tag a div {
   display: inline-block;
   padding: 5px 8px;
 }
-
 .tags-list .post-tags .post-tag a .tag-posts-count {
   background: rgba(0, 0, 0, 0.1);
   opacity: 0.8;
