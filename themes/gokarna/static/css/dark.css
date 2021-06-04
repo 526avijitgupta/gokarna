@@ -2,20 +2,16 @@ html {
   background: #171717 !important;
   color: white !important;
 }
-/* html {
-  filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
-  -webkit-filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
-} */
 .header {
   background-color: #1b1c1d !important;
   color: white !important;
 }
-/* body {
-  background-color: #fff !important;
-} */
-/* img,
-video,
-body * [style*="background-image"] {
+
+/* TODO: Check if this is needed or not */
+/* 
+img,
+video {
   filter: hue-rotate(180deg) contrast(100%) invert(100%);
-  -webkit-filter: hue-rotate(180deg) contrast(100%) invert(100%); */
-/* } */
+  -webkit-filter: hue-rotate(180deg) contrast(100%) invert(100%);
+} 
+*/
