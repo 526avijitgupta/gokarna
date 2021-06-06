@@ -1,10 +1,13 @@
 html {
-  background: #171717 !important;
-  color: white !important;
+  background: #121212 !important;
+  color: #e2e2e2 !important;
 }
-.header {
-  background-color: #1b1c1d !important;
-  color: white !important;
+
+.header,
+code,
+pre {
+  background-color: #1f1f1f !important;
+  color: #e2e2e2 !important;
 }
 
 /* TODO: Check if this is needed or not */

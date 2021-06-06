@@ -20,5 +20,4 @@ Codeblocks look like this
 
 def print():
     print('Hello world!')
-
 ```
