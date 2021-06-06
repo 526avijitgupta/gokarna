@@ -12,8 +12,6 @@ function ready() {
     toggleIcon = document.querySelector('#dark-theme-toggle span');
     darkThemeCss = document.getElementById("dark-theme");
 
-    console.log(localStorage.getItem(THEME_PREF_STORAGE_KEY));
-    // TODO: Fetch programatically by user's system preference
     const savedTheme = localStorage.getItem(THEME_PREF_STORAGE_KEY) || 
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark': 'light');
     setTheme(savedTheme);

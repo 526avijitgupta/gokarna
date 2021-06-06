@@ -87,8 +87,7 @@ html {
   cursor: pointer;
 }
 
-/* COMMON */
-
+/** COMMON **/
 /* TAGS */
 .post-tags {
   list-style-type: none;
