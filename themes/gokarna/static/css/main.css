@@ -1,16 +1,19 @@
 html {
   background: white;
   color: black;
-  font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* HEADER */
 .header {
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
   color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.04rem;
   height: 70px;
   left: 0;
+  opacity: 0.95;
   position: fixed;
   top: 0;
   -ms-transition: height 0.5s ease-out;
@@ -94,13 +97,17 @@ html {
   padding: 0;
 }
 .post-tags .post-tag {
-  background-color: #00b5ad;
-  border: 1px solid #00b5ad;
+  background-color: #0058b5;
+  border: 1px solid #0058b5;
   border-radius: 4px;
   color: white;
   display: inline-block;
   font-size: 14px;
   padding: 4px 12px;
+}
+.post-tags .post-tag:hover {
+  background-color: #3d86d2;
+  border: 1px solid #3d86d2;
 }
 .post-tag a {
   color: inherit;
@@ -156,10 +163,6 @@ code {
 .tags-list .post-tags .post-tag {
   margin: 0 5px;
   padding: 0;
-}
-.tags-list .post-tags .post-tag:hover {
-  background-color: #009c95;
-  border: 1px solid #00b5ad;
 }
 .tags-list .post-tags .post-tag a div {
   display: inline-block;
