@@ -90,6 +90,16 @@ html {
   cursor: pointer;
 }
 
+/* FOOTER */
+.footer {
+    text-align: center;
+}
+
+.footer a {
+  font-family: "Ubuntu", sans-serif;
+  color: #000000;
+}
+
 /** COMMON **/
 /* TAGS */
 .post-tags {

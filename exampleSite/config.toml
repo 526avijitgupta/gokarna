@@ -10,6 +10,9 @@ pygmentsStyle = "bw"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 
+[params]
+  footer = "The Marauders"
+
 [menu]
   [[menu.main]]
     name = "Home"
