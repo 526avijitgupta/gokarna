@@ -90,7 +90,6 @@ html {
   cursor: pointer;
 }
 #dark-theme-toggle .feather {
-  fill: #b8c2cc;
   height: 24px;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -112,7 +111,7 @@ html {
 /* ICONS */
 .feather {
   height: 20px;
-  stroke-width: 1.5;
+  stroke-width: 1.75;
   width: 20px;
 }
 
