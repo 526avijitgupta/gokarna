@@ -86,13 +86,20 @@ html {
   border-left: 1px solid;
   margin-right: 4.5px;
 }
-.nav-links #dark-light-theme-toggle:hover {
+.nav-links #dark-theme-toggle:hover {
   cursor: pointer;
+}
+#dark-theme-toggle .feather {
+  fill: #b8c2cc;
+  height: 24px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 24px;
 }
 
 /* FOOTER */
 .footer {
-    text-align: center;
+  text-align: center;
 }
 
 .footer a {
@@ -101,6 +108,14 @@ html {
 }
 
 /** COMMON **/
+
+/* ICONS */
+.feather {
+  height: 20px;
+  stroke-width: 1.5;
+  width: 20px;
+}
+
 /* TAGS */
 .post-tags {
   list-style-type: none;
