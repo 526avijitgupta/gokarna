@@ -98,12 +98,22 @@ html {
 
 /* FOOTER */
 .footer {
+  border-top: 1px solid #eee;
+  color: inherit;
+  margin-top: 50px;
+  padding: 40px 0;
   text-align: center;
 }
 
-.footer a {
+.footer span {
+  display: block;
+  font-size: 0.85rem;
+  padding: 1px 0;
+}
+
+.footer span a {
+  color: inherit;
   font-family: "Ubuntu", sans-serif;
-  color: #000000;
 }
 
 /** COMMON **/
