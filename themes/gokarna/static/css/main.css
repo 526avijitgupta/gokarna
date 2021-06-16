@@ -9,7 +9,6 @@ html {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
   color: black;
-  font-family: "Ubuntu", sans-serif;
   font-size: 1.04rem;
   height: 70px;
   left: 0;
@@ -98,15 +97,28 @@ html {
 
 /* FOOTER */
 .footer {
+  border-top: 1px solid #eee;
+  color: inherit;
+  margin-top: 50px;
+  padding: 40px 0;
   text-align: center;
 }
 
-.footer a {
-  font-family: "Ubuntu", sans-serif;
-  color: #000000;
+.footer span {
+  display: block;
+  font-size: 0.9rem;
+  padding: 1px 0;
+}
+
+.footer span a {
+  color: inherit;
 }
 
 /** COMMON **/
+
+.header .footer {
+  font-family: "Ubuntu", sans-serif;
+}
 
 /* ICONS */
 .feather {

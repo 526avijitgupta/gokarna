@@ -10,8 +10,8 @@ pre {
   color: #e2e2e2 !important;
 }
 
-.footer a {
-    color: #e2e2e2 !important;
+.footer {
+  border-top-color: #333;
 }
 
 /* TODO: Check if this is needed or not */
