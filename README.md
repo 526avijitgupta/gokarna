@@ -34,6 +34,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 - Navbar
 - Footer
 - Inject html
+- Syntax highlighting (Choose one of emacs, trac, perldoc)
 
 ## LICENSE
 

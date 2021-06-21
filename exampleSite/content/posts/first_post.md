@@ -22,8 +22,29 @@ Yo yo yo
 5. list
 
 ```py
-Codeblocks look like this
+# Codeblocks look like this
 
 def print():
     print('Hello world!')
+```
+
+```golang
+package main
+
+import (
+    "fmt"
+)
+
+// This is a comment
+func main () {
+    fmt.Println("Hello, world!")
+}
+```
+
+```bash
+PATH=$HOME
+
+cat $HOME/file.txt | while read -n data; do
+    echo $data
+done
 ```

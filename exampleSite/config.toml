@@ -6,9 +6,8 @@ defaultContentLanguage = "en"
 
 paginate = 20
 
-pygmentsStyle = "bw"
-pygmentsCodeFences = true
-pygmentsCodeFencesGuessSyntax = true
+# Choose one of emacs, trac or perldoc
+pygmentsStyle = "emacs"
 
 [params]
   footer = "The Marauders"
