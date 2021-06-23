@@ -89,7 +89,7 @@ body {
 .nav-links .nav-icons-divider {
   border-color: inherit;
   border-left: 1px solid;
-  margin-right: 4.5px;
+  margin: 0 10px;
 }
 .nav-links #dark-theme-toggle:hover {
   cursor: pointer;
@@ -133,6 +133,7 @@ body {
 /* ICONS */
 .feather {
   height: 20px;
+  margin: -3px auto;
   stroke-width: 1.75;
   width: 20px;
 }
