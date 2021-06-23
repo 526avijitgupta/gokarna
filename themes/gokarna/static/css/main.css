@@ -44,6 +44,9 @@ body {
   -o-transition: margin 0.5s ease-out;
   transition: margin 0.5s ease-out;
 }
+.header .header-nav a:hover {
+  color: teal;
+}
 .header .header-nav.small {
   margin-top: 0;
 }
