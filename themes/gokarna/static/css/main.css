@@ -44,11 +44,14 @@ body {
   -o-transition: margin 0.5s ease-out;
   transition: margin 0.5s ease-out;
 }
-.header .header-nav a:hover {
-  color: teal;
-}
 .header .header-nav.small {
   margin-top: 0;
+}
+.header-nav a {
+  transition: color 0.15s ease-in-out;
+}
+.header-nav a:hover {
+  color: teal;
 }
 .header-nav .avatar {
   border: 0.5px solid white;
