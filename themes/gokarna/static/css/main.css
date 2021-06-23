@@ -2,6 +2,12 @@ html {
   background: white;
   color: black;
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin-bottom: 170px;
 }
 
 /* HEADER */
@@ -97,11 +103,15 @@ html {
 
 /* FOOTER */
 .footer {
+  bottom: 0;
   border-top: 1px solid #eee;
   color: inherit;
-  margin-top: 50px;
+  left: 0;
+  overflow: hidden;
   padding: 40px 0;
+  position: absolute;
   text-align: center;
+  width: 100%;
 }
 
 .footer span {
@@ -171,7 +181,7 @@ code {
 /* SINGLE */
 #content {
   width: 810px;
-  margin: 180px auto 0;
+  margin: 120px auto 0;
 }
 .post .post-date {
   color: gray;
