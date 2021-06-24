@@ -2,6 +2,12 @@ html {
   background: white;
   color: black;
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin-bottom: 170px;
 }
 
 /* HEADER */
@@ -40,6 +46,12 @@ html {
 }
 .header .header-nav.small {
   margin-top: 0;
+}
+.header-nav a {
+  transition: color 0.15s ease-in-out;
+}
+.header-nav a:hover {
+  color: teal;
 }
 .header-nav .avatar {
   border: 0.5px solid white;
@@ -83,7 +95,7 @@ html {
 .nav-links .nav-icons-divider {
   border-color: inherit;
   border-left: 1px solid;
-  margin-right: 4.5px;
+  margin: 0 10px;
 }
 .nav-links #dark-theme-toggle:hover {
   cursor: pointer;
@@ -97,11 +109,15 @@ html {
 
 /* FOOTER */
 .footer {
+  bottom: 0;
   border-top: 1px solid #eee;
   color: inherit;
-  margin-top: 50px;
+  left: 0;
+  overflow: hidden;
   padding: 40px 0;
+  position: absolute;
   text-align: center;
+  width: 100%;
 }
 
 .footer span {
@@ -123,6 +139,7 @@ html {
 /* ICONS */
 .feather {
   height: 20px;
+  margin: -3px auto;
   stroke-width: 1.75;
   width: 20px;
 }
@@ -171,7 +188,7 @@ code {
 /* SINGLE */
 #content {
   width: 810px;
-  margin: 180px auto 0;
+  margin: 120px auto 0;
 }
 .post .post-date {
   color: gray;
