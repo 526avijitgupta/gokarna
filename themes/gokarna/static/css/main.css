@@ -185,6 +185,41 @@ code {
   word-wrap: break-word;
 }
 
+/* HOME PAGE */
+.home-about {
+  text-align: center;
+}
+
+.home-about .avatar img {
+  border-radius: 50%;
+  height: auto;
+}
+
+.home-about .avatar img {
+  width: 11rem;
+}
+
+/* Avatar sizes - XS, S, M, L, XL */
+.home-about .avatar img.size-xs {
+  width: 7rem;
+}
+
+.home-about .avatar img.size-s {
+  width: 9rem;
+}
+
+.home-about .avatar img.size-m {
+  width: 11rem;
+}
+
+.home-about .avatar img.size-l {
+  width: 13rem;
+}
+
+.home-about .avatar img.size-xl {
+  width: 15rem;
+}
+
 /* SINGLE */
 #content {
   width: 810px;
