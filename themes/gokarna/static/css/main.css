@@ -2,13 +2,19 @@ html {
   background: white;
   color: black;
   font-family: "Quicksand", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
+  letter-spacing: 0.5px;
   min-height: 100%;
   position: relative;
 }
 
 body {
   margin-bottom: 170px;
+}
+
+main#content {
+  width: 810px;
+  margin: 120px auto 0;
 }
 
 /* HEADER */
@@ -155,6 +161,7 @@ body {
   background-color: #0058b5;
   border: 1px solid #0058b5;
   border-radius: 4px;
+  box-sizing: border-box;
   color: white;
   display: inline-block;
   font-size: 14px;
@@ -219,14 +226,12 @@ code {
 }
 
 /* SINGLE */
-#content {
-  width: 810px;
-  margin: 120px auto 0;
-}
 .post .post-date {
   color: gray;
 }
 .post .post-content {
+  font-size: 1.04rem;
+  line-height: 1.7;
   margin-top: 50px;
 }
 
