@@ -195,11 +195,7 @@ code {
   height: auto;
 }
 
-.home-about .avatar img {
-  width: 11rem;
-}
-
-/* Avatar sizes - XS, S, M, L, XL */
+/* Avatar sizes (default is M) - XS, S, M, L, XL */
 .home-about .avatar img.size-xs {
   width: 7rem;
 }
@@ -208,7 +204,7 @@ code {
   width: 9rem;
 }
 
-.home-about .avatar img.size-m {
+.home-about .avatar img {
   width: 11rem;
 }
 
