@@ -194,6 +194,11 @@ code {
   word-wrap: break-word;
 }
 
+blockquote {
+  border-left: 2px solid #e0e0e0;
+  padding-left: 1rem;
+}
+
 /* HOME PAGE */
 .home-about {
   text-align: center;

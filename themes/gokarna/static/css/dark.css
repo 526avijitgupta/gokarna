@@ -11,7 +11,11 @@ pre {
 }
 
 .footer {
-  border-top-color: #333;
+  border-top-color: #333 !important;
+}
+
+blockquote {
+  border-left-color: #333 !important;
 }
 
 /* TODO: Check if this is needed or not */
