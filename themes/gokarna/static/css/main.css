@@ -1,7 +1,8 @@
 html {
   background: white;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
   min-height: 100%;
   position: relative;
 }
@@ -132,7 +133,8 @@ body {
 
 /** COMMON **/
 
-.header .footer {
+.header,
+.footer {
   font-family: "Ubuntu", sans-serif;
 }
 
