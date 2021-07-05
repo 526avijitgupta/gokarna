@@ -210,22 +210,27 @@ blockquote {
 
 /* Avatar sizes (default is M) - XS, S, M, L, XL */
 .home-about .avatar img.size-xs {
+  height: 7rem;
   width: 7rem;
 }
 
 .home-about .avatar img.size-s {
+  height: 9rem;
   width: 9rem;
 }
 
 .home-about .avatar img {
+  height: 11rem;
   width: 11rem;
 }
 
 .home-about .avatar img.size-l {
+  height: 13rem;
   width: 13rem;
 }
 
 .home-about .avatar img.size-xl {
+  height: 15rem;
   width: 15rem;
 }
 
