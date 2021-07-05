@@ -69,15 +69,16 @@ main#content {
 .header-nav .avatar img {
   border-radius: 100%;
   display: block;
-  height: 50px;
+  height: 40px;
+  margin-top: 4px;
   overflow: hidden;
-  width: 50px;
+  width: 40px;
 }
 .header-nav .nav-title {
   display: inline-block;
   height: 100%;
   line-height: 50px;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 .nav-title a {
   font-size: 20px;
