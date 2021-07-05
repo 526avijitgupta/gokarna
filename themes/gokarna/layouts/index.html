@@ -1,9 +1,11 @@
 {{ define "main" }}
 <section class="home-about">
 	<div class="avatar">
-		<img alt="avatar" src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSglXjS92JzGJeFHp4iwpFnP9RbjXnBe7DR2hDg3PSe_n3UBw%26s&sp=1625351290T763370d97b7d0cb466789c2d5f5e23a6dd4674cb572fc6450eddfef3d4b60370">
+        {{ if isset .Site.Params "avatarurl" }}
+        <img alt="avatar" src='{{ .Site.Params.AvatarURL }}'>
+        {{ end }}
 	</div>
-	<h1>Chaman Chutiya</h1>
-	<h2>Software Developer</h2>
+    <h1>{{ .Site.Title }}</h1>
+    <h3>{{ .Site.Params.Description }}</h3>
 </section>
 {{ end }}

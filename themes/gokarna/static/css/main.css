@@ -61,7 +61,6 @@ main#content {
   color: teal;
 }
 .header-nav .avatar {
-  border: 0.5px solid white;
   border-radius: 18px;
   float: left;
   height: 100%;
