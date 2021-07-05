@@ -1,11 +1,13 @@
 <header class="header">
     <nav class="header-nav">
 
+        {{ if isset .Site.Params "avatarurl" }}
         <div class="avatar">
             <a href="{{ .Site.BaseURL }}">
-                <img src=".Site.Params.Avatar" alt="Avatar" />
+                <img src="{{ .Site.Params.AvatarURL }}" alt="avatar" />
             </a>
         </div>
+        {{ end }}
 
         <div class="nav-title">
             <a class="nav-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
