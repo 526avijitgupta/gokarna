@@ -3,11 +3,23 @@ html {
   color: #e2e2e2 !important;
 }
 
+a {
+  color: white;
+}
+
+.header {
+  box-shadow: rgba(102, 102, 102, 0.5) 0px 1px 2px 0px;
+}
+
 .header,
 code,
 pre {
   background-color: #1f1f1f !important;
   color: #e2e2e2 !important;
+}
+
+.nav-links .nav-icons-divider {
+  color: #484848; !important
 }
 
 .footer {

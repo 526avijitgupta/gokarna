@@ -25,18 +25,6 @@ function ready() {
     });
 }
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        document.querySelectorAll('.header, .header-nav').forEach(function(item) {
-            item.classList.add('small')
-        })
-    } else {
-        document.querySelectorAll('.header, .header-nav').forEach(function(item) {
-            item.classList.remove('small')
-        })
-    }
-});
-
 function setTheme(themeToSet) {
     localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
     darkThemeCss.disabled = themeToSet === 'light';

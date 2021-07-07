@@ -1,8 +1,9 @@
 html {
   background: white;
   color: black;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 300;
+/*  font-family: "Quattrocento Sans", sans-serif;*/
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.5px;
   min-height: 100%;
   position: relative;
@@ -12,18 +13,27 @@ body {
   margin-bottom: 170px;
 }
 
+a:hover {
+  color: #0058b5;
+}
+
 main#content {
   width: 810px;
   margin: 120px auto 0;
 }
 
+img {
+  width: 810px;
+  height: auto;
+}
+
 /* HEADER */
 .header {
   background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
+  box-shadow: rgba(170, 170, 170, 0.5) 0px 1px 2px 0px;
   color: black;
-  font-size: 1.04rem;
-  height: 70px;
+  font-size: 1.1rem;
+  height: 50px;
   left: 0;
   opacity: 0.95;
   position: fixed;
@@ -35,30 +45,26 @@ main#content {
   transition: height 0.5s ease-out;
   width: 100%;
 }
-.header.small {
-  height: 50px;
-}
+
 .header a {
   color: inherit;
   text-decoration: none;
 }
 .header .header-nav {
   height: 50px;
-  margin-top: 10px;
+  margin-top: 0;
   -ms-transition: margin 0.5s ease-out;
   -moz-transition: margin 0.5s ease-out;
   -webkit-transition: margin 0.5s ease-out;
   -o-transition: margin 0.5s ease-out;
   transition: margin 0.5s ease-out;
 }
-.header .header-nav.small {
-  margin-top: 0;
-}
+
 .header-nav a {
   transition: color 0.15s ease-in-out;
 }
 .header-nav a:hover {
-  color: teal;
+  color: #0058b5;
 }
 .header-nav .avatar {
   border-radius: 18px;
@@ -87,14 +93,14 @@ main#content {
 .header-nav .nav-links {
   float: right;
   line-height: 50px;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .nav-links .nav-link {
   display: inline-block;
 }
 .nav-links .nav-link a {
   display: block;
-  padding: 0 10px;
+  padding: 0 6px;
 }
 .nav-links .nav-link.icon a {
   padding: 0 8px;
@@ -103,6 +109,7 @@ main#content {
   border-color: inherit;
   border-left: 1px solid;
   margin: 0 10px;
+  color: #dfdfdf;
 }
 .nav-links #dark-theme-toggle:hover {
   cursor: pointer;
@@ -139,16 +146,15 @@ main#content {
 
 /** COMMON **/
 
-.header,
-.footer {
-  font-family: "Ubuntu", sans-serif;
+a {
+  color: black;
 }
 
 /* ICONS */
 .feather {
   height: 20px;
   margin: -3px auto;
-  stroke-width: 1.75;
+  stroke-width: 1.25;
   width: 20px;
 }
 
@@ -197,6 +203,7 @@ code {
 blockquote {
   border-left: 2px solid #e0e0e0;
   padding-left: 1rem;
+  color: grey;
 }
 
 /* HOME PAGE */
@@ -240,7 +247,7 @@ blockquote {
   color: gray;
 }
 .post .post-content {
-  font-size: 1.04rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   margin-top: 50px;
 }
@@ -254,6 +261,10 @@ blockquote {
 }
 .list-posts .post-title {
   margin: 10px 0;
+  font-size: 1.2rem;
+}
+.list-posts a {
+  text-decoration: none;
 }
 .post-title .post-date {
   float: right;
