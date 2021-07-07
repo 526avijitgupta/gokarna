@@ -14,6 +14,7 @@ A minimal opinionated theme for Hugo
 - Syntax highlighting
 - Math typesetting
 - SEO Ready
+- Support for adding custom HTML, which can be used to add snippets or script tags
 
 
 ## Inspiration
@@ -33,8 +34,9 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 
 - Navbar
 - Footer
-- Inject html
+- Inject html (Give example)
 - Syntax highlighting (Choose one of emacs, trac, perldoc)
+- Avatar sizes
 
 ## LICENSE
 
