@@ -1,7 +1,6 @@
 html {
   background: white;
   color: black;
-/*  font-family: "Quattrocento Sans", sans-serif;*/
   font-family: "Jost", sans-serif;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -19,7 +18,7 @@ a:hover {
 
 main#content {
   width: 810px;
-  margin: 120px auto 0;
+  margin: 90px auto 0;
 }
 
 img {
@@ -32,17 +31,12 @@ img {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(170, 170, 170, 0.5) 0px 1px 2px 0px;
   color: black;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   height: 50px;
   left: 0;
   opacity: 0.95;
   position: fixed;
   top: 0;
-  -ms-transition: height 0.5s ease-out;
-  -moz-transition: height 0.5s ease-out;
-  -webkit-transition: height 0.5s ease-out;
-  -o-transition: height 0.5s ease-out;
-  transition: height 0.5s ease-out;
   width: 100%;
 }
 
@@ -53,15 +47,6 @@ img {
 .header .header-nav {
   height: 50px;
   margin-top: 0;
-  -ms-transition: margin 0.5s ease-out;
-  -moz-transition: margin 0.5s ease-out;
-  -webkit-transition: margin 0.5s ease-out;
-  -o-transition: margin 0.5s ease-out;
-  transition: margin 0.5s ease-out;
-}
-
-.header-nav a {
-  transition: color 0.15s ease-in-out;
 }
 .header-nav a:hover {
   color: #0058b5;
@@ -75,10 +60,10 @@ img {
 .header-nav .avatar img {
   border-radius: 100%;
   display: block;
-  height: 40px;
-  margin-top: 4px;
+  height: 38px;
+  margin-top: 5px;
   overflow: hidden;
-  width: 40px;
+  width: 38px;
 }
 .header-nav .nav-title {
   display: inline-block;
@@ -97,6 +82,7 @@ img {
 }
 .nav-links .nav-link {
   display: inline-block;
+  padding: 0 4px;
 }
 .nav-links .nav-link a {
   display: block;
@@ -107,7 +93,7 @@ img {
 }
 .nav-links .nav-icons-divider {
   border-color: inherit;
-  border-left: 1px solid;
+  border-left: 1.5px solid;
   margin: 0 10px;
   color: #dfdfdf;
 }
@@ -247,7 +233,7 @@ blockquote {
   color: gray;
 }
 .post .post-content {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   margin-top: 50px;
 }
@@ -257,14 +243,16 @@ blockquote {
   text-align: center;
 }
 .list-posts .posts-year {
-  margin-top: 40px;
+  margin-top: 70px;
 }
 .list-posts .post-title {
-  margin: 10px 0;
-  font-size: 1.2rem;
+  margin: 10px 0 0 15px;
 }
 .list-posts a {
   text-decoration: none;
+}
+.post-title .post-link {
+  font-size: 1.2rem;
 }
 .post-title .post-date {
   float: right;
