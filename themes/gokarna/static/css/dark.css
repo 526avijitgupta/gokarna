@@ -17,6 +17,17 @@ a {
   color: #484848; !important
 }
 
+
+.post-tags .post-tag {
+  border: 1px solid white;
+  color: white;
+}
+
+.post-tags .post-tag:hover {
+  background-color: white;
+  color: black;
+}
+
 .footer {
   border-top-color: #333 !important;
 }
