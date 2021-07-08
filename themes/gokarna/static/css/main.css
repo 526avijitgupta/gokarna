@@ -12,8 +12,12 @@ body {
   margin-bottom: 170px;
 }
 
+a {
+  color: black;
+}
+
 a:hover {
-  color: #0058b5;
+  color: #0058b5 !important;
 }
 
 main#content {
@@ -48,9 +52,7 @@ img {
   height: 50px;
   margin-top: 0;
 }
-.header-nav a:hover {
-  color: #0058b5;
-}
+
 .header-nav .avatar {
   border-radius: 18px;
   float: left;
@@ -132,9 +134,6 @@ img {
 
 /** COMMON **/
 
-a {
-  color: black;
-}
 
 /* ICONS */
 .feather {
