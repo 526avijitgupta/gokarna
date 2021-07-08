@@ -139,7 +139,6 @@ img {
 
 /** COMMON **/
 
-
 /* ICONS */
 .feather {
   height: 20px;
@@ -255,11 +254,13 @@ blockquote {
 .list-posts a {
   text-decoration: none;
 }
+.post-title .post-link,
+.post-title .post-date {
+  display: inline-block;
+}
 .post-title .post-link {
   font-size: 1.2rem;
-}
-.post-title .post-date {
-  float: right;
+  width: 80%;
 }
 .tags-list .post-tags {
   margin-top: 50px;
