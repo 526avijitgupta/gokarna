@@ -1,3 +1,8 @@
+:root {
+  --color-blue: #0058b5;
+  --content-width: 810px;
+}
+
 html {
   background: white;
   color: black;
@@ -17,22 +22,22 @@ a {
 }
 
 a:hover {
-  color: #0058b5 !important;
+  color: var(--color-blue) !important;
 }
 
 main#content {
-  width: 810px;
+  width: var(--content-width);
   margin: 90px auto 0;
 }
 
 img {
-  width: 810px;
+  width: var(--content-width);
   height: auto;
 }
 
 /* HEADER */
 .header {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(240, 240, 240);
   box-shadow: rgba(170, 170, 170, 0.5) 0px 1px 2px 0px;
   color: black;
   font-size: 1.05rem;
@@ -149,8 +154,8 @@ img {
   padding: 0;
 }
 .post-tags .post-tag {
-  background-color: #0058b5;
-  border: 1px solid #0058b5;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
   border-radius: 4px;
   box-sizing: border-box;
   color: white;
