@@ -258,11 +258,13 @@ table td {
 }
 
 /* SINGLE */
+main#content .post {
+  font-size: 1.2rem;
+}
 .post .post-date {
   color: gray;
 }
 .post .post-content {
-  font-size: 1.2rem;
   line-height: 1.7;
   margin-top: 50px;
 }
