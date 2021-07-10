@@ -270,6 +270,7 @@ blockquote {
   padding: 0;
 }
 .tags-list .post-tags .post-tag a {
+  border-radius: inherit;
   padding: 0;
 }
 
@@ -281,6 +282,7 @@ blockquote {
 }
 .tags-list .post-tags .post-tag a .tag-posts-count {
   background: rgba(0, 0, 0, 0.1);
+  border-radius: inherit;
   opacity: 0.8;
   padding: 6px;
 }
