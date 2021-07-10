@@ -50,7 +50,6 @@ img {
 }
 
 .header a {
-  /* color: inherit; */
   text-decoration: none;
 }
 .header .header-nav {
@@ -159,7 +158,6 @@ img {
   color: black;
   display: inline-block;
   font-size: 14px;
-  padding: 6px 12px;
 }
 .post-tags .post-tag:hover {
   background-color: black;
@@ -167,6 +165,8 @@ img {
 }
 .post-tag a {
   color: inherit;
+  display: block;
+  padding: 6px 12px;
   text-decoration: none;
 }
 
@@ -269,11 +269,18 @@ blockquote {
   margin: 0 5px;
   padding: 0;
 }
+.tags-list .post-tags .post-tag a {
+  padding: 0;
+}
+
 .tags-list .post-tags .post-tag a div {
   display: inline-block;
+}
+.tags-list .post-tags .post-tag a .tag-name {
   padding: 5px 8px;
 }
 .tags-list .post-tags .post-tag a .tag-posts-count {
   background: rgba(0, 0, 0, 0.1);
   opacity: 0.8;
+  padding: 6px;
 }
