@@ -195,6 +195,26 @@ blockquote {
   color: grey;
 }
 
+table {
+  border-collapse: collapse;
+  font-size: 1.05rem;
+  margin: 30px 0;
+  text-align: left;
+}
+
+table thead {
+  background-color: rgb(240, 240, 240);
+}
+
+table td,
+table th {
+  padding: 1.4rem;
+}
+
+table td {
+  border-bottom: 1px solid #e0e0e0;
+}
+
 /* HOME PAGE */
 .home-about {
   text-align: center;

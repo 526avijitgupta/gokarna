@@ -44,6 +44,15 @@ blockquote {
   border-left-color: #333 !important;
 }
 
+table td,
+table th {
+  border-bottom-color: #333;
+}
+
+table thead {
+  background-color: #1f1f1f;
+}
+
 /* TODO: Check if this is needed or not */
 /* 
 img,
