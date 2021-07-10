@@ -14,7 +14,26 @@ a {
 }
 
 .nav-links .nav-icons-divider {
-  color: #484848; !important
+  color: #484848;
+}
+
+.post-tags .post-tag {
+  border: 1px solid white;
+  color: white;
+}
+
+.post-tags .post-tag:hover {
+  background-color: white;
+  color: black;
+}
+
+.tags-list .post-tags .post-tag a .tag-posts-count {
+  background-color: #1f1f1f;
+}
+
+.tags-list .post-tags .post-tag:hover a .tag-posts-count {
+  background-color: white;
+  color: black;
 }
 
 .footer {
