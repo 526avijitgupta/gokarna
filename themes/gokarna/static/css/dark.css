@@ -4,7 +4,6 @@
   --dark-text-color: white;
   --dark-header-bg-color: #1f1f1f;
   --dark-header-divider-color: #484848;
-  --dark-footer-border-color: #333;
 }
 
 html {
@@ -36,7 +35,7 @@ html {
 }
 
 .footer {
-  border-top-color: var(--dark-footer-border-color);
+  border-top-color: var(--dark-header-bg-color);
 }
 
 blockquote {

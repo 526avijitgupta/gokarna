@@ -6,7 +6,6 @@
   --light-text-color: black;
   --light-header-bg-color: #f0f0f0;
   --light-header-divider-color: #dfdfdf;
-  --light-footer-border-color: #eee;
 }
 
 html {
@@ -122,7 +121,7 @@ img {
 /* FOOTER */
 .footer {
   bottom: 0;
-  border-top: 1px solid var(--light-footer-border-color);
+  border-top: 1px solid var(--light-header-bg-color);
   color: inherit;
   left: 0;
   overflow: hidden;
