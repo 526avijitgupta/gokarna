@@ -19,7 +19,6 @@ body {
 
 a {
   color: black;
-  text-decoration: none;
 }
 
 a:hover {
@@ -49,10 +48,16 @@ img {
   top: 0;
   width: 100%;
 }
+
+.header a {
+  /* color: inherit; */
+  text-decoration: none;
+}
 .header .header-nav {
   height: 50px;
   margin-top: 0;
 }
+
 .header-nav .avatar {
   border-radius: 18px;
   float: left;
