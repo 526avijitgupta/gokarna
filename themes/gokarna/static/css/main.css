@@ -1,11 +1,17 @@
 :root {
   --accent-color: #ff4d4d;
   --content-width: 810px;
+  /* light theme colors */
+  --light-bg-color: white;
+  --light-text-color: black;
+  --light-header-bg-color: #f0f0f0;
+  --light-header-divider-color: #dfdfdf;
+  --light-footer-border-color: #eee;
 }
 
 html {
-  background: white;
-  color: black;
+  background: var(--light-bg-color);
+  color: var(--light-text-color);
   font-family: "Jost", sans-serif;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -18,7 +24,7 @@ body {
 }
 
 a {
-  color: black;
+  color: var(--light-text-color);
 }
 
 a:hover {
@@ -26,20 +32,19 @@ a:hover {
 }
 
 main#content {
-  width: var(--content-width);
   margin: 90px auto 0;
+  width: var(--content-width);
 }
 
 img {
-  width: var(--content-width);
   height: auto;
+  width: var(--content-width);
 }
 
 /* HEADER */
 .header {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--light-header-bg-color);
   box-shadow: rgba(170, 170, 170, 0.5) 0px 1px 2px 0px;
-  color: black;
   font-size: 1.05rem;
   height: 50px;
   left: 0;
@@ -100,8 +105,8 @@ img {
 .nav-links .nav-icons-divider {
   border-color: inherit;
   border-left: 1.5px solid;
+  color: var(--light-header-divider-color);
   margin: 0 10px;
-  color: #dfdfdf;
 }
 .nav-links #dark-theme-toggle:hover {
   cursor: pointer;
@@ -116,7 +121,7 @@ img {
 /* FOOTER */
 .footer {
   bottom: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--light-footer-border-color);
   color: inherit;
   left: 0;
   overflow: hidden;
@@ -152,16 +157,16 @@ img {
   padding: 0;
 }
 .post-tags .post-tag {
-  border: 1px solid black;
+  border: 1px solid var(--light-text-color);
   border-radius: 4px;
   box-sizing: border-box;
-  color: black;
+  color: var(--light-text-color);
   display: inline-block;
   font-size: 14px;
 }
 .post-tags .post-tag:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--light-text-color);
+  color: var(--light-bg-color);
 }
 .post-tag a {
   color: inherit;
@@ -190,9 +195,9 @@ code {
 }
 
 blockquote {
-  border-left: 2px solid #e0e0e0;
-  padding-left: 1rem;
+  border-left: 2px solid var(--light-header-divider-color);
   color: grey;
+  padding-left: 1rem;
 }
 
 table {
@@ -203,7 +208,7 @@ table {
 }
 
 table thead {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--light-header-bg-color);
 }
 
 table td,
@@ -212,7 +217,7 @@ table th {
 }
 
 table td {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--light-header-divider-color);
 }
 
 /* HOME PAGE */
@@ -293,7 +298,6 @@ table td {
   border-radius: inherit;
   padding: 0;
 }
-
 .tags-list .post-tags .post-tag a div {
   display: inline-block;
 }
