@@ -1,6 +1,6 @@
 html {
   background: #121212 !important;
-  color: #e2e2e2 !important;
+  color: white !important;
 }
 
 a {
@@ -9,13 +9,8 @@ a {
 
 .header {
   box-shadow: rgba(102, 102, 102, 0.5) 0px 1px 2px 0px;
-}
-
-.header,
-code,
-pre {
   background-color: #1f1f1f !important;
-  color: #e2e2e2 !important;
+  color: white !important;
 }
 
 .nav-links .nav-icons-divider {

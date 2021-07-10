@@ -1,5 +1,5 @@
 :root {
-  --color-blue: #0058b5;
+  --accent-color: #ff4d4d;
   --content-width: 810px;
 }
 
@@ -22,7 +22,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-blue) !important;
+  color: var(--accent-color) !important;
 }
 
 main#content {
@@ -153,8 +153,8 @@ img {
   padding: 0;
 }
 .post-tags .post-tag {
-  background-color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
   box-sizing: border-box;
   color: white;
@@ -174,8 +174,9 @@ img {
 /* CODE BLOCKS */
 code,
 pre {
-  background-color: #eee !important;
+  background-color: #1f1f1f !important;
   box-sizing: border-box;
+  color: white;
 }
 
 pre {
