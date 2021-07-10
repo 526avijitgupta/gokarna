@@ -10,7 +10,7 @@
 }
 
 html {
-  background: var(--light-bg-color);
+  background-color: var(--light-bg-color);
   color: var(--light-text-color);
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: var(--light-text-color);
+  color: inherit;
 }
 
 a:hover {
@@ -45,6 +45,7 @@ img {
 .header {
   background-color: var(--light-header-bg-color);
   box-shadow: rgba(170, 170, 170, 0.5) 0px 1px 2px 0px;
+  color: inherit;
   font-size: 1.05rem;
   height: 50px;
   left: 0;
@@ -157,10 +158,10 @@ img {
   padding: 0;
 }
 .post-tags .post-tag {
-  border: 1px solid var(--light-text-color);
+  border: 1px solid;
   border-radius: 4px;
   box-sizing: border-box;
-  color: var(--light-text-color);
+  color: inherit;
   display: inline-block;
   font-size: 14px;
 }

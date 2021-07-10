@@ -1,56 +1,55 @@
-html {
-  background: #121212 !important;
-  color: white !important;
+:root {
+  /* dark theme colors */
+  --dark-bg-color: #121212;
+  --dark-text-color: white;
+  --dark-header-bg-color: #1f1f1f;
+  --dark-header-divider-color: #484848;
+  --dark-footer-border-color: #333;
 }
 
-a {
-  color: white;
+html {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
 }
 
 .header {
   box-shadow: rgba(102, 102, 102, 0.5) 0px 1px 2px 0px;
-  background-color: #1f1f1f !important;
-  color: white !important;
+  background-color: var(--dark-header-bg-color);
 }
 
 .nav-links .nav-icons-divider {
-  color: #484848;
-}
-
-.post-tags .post-tag {
-  border: 1px solid white;
-  color: white;
+  color: var(--dark-header-divider-color);
 }
 
 .post-tags .post-tag:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--dark-text-color);
+  color: var(--dark-bg-color);
 }
 
 .tags-list .post-tags .post-tag a .tag-posts-count {
-  background-color: #1f1f1f;
+  background-color: var(--dark-header-bg-color);
 }
 
 .tags-list .post-tags .post-tag:hover a .tag-posts-count {
-  background-color: white;
-  color: black;
+  background-color: var(--dark-text-color);
+  color: var(--dark-bg-color);
 }
 
 .footer {
-  border-top-color: #333 !important;
+  border-top-color: var(--dark-footer-border-color);
 }
 
 blockquote {
-  border-left-color: #333 !important;
+  border-left-color: var(--dark-header-divider-color);
+}
+
+table thead {
+  background-color: var(--dark-header-bg-color);
 }
 
 table td,
 table th {
-  border-bottom-color: #333;
-}
-
-table thead {
-  background-color: #1f1f1f;
+  border-bottom-color: var(--dark-header-divider-color);
 }
 
 /* TODO: Check if this is needed or not */
