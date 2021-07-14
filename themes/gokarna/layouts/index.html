@@ -8,4 +8,15 @@
     <h1>{{ .Site.Title }}</h1>
     <h3>{{ .Site.Params.Description }}</h3>
 </section>
+<div class="recent-posts list-posts">
+    <h2>Recent Posts</h2>
+
+    <!-- TODO Make this 3 user configurable -->
+    {{ range (where .Site.Pages "Params.type" "post" | first 3 ) }}
+    <article class="post-title">
+        <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
+        <span class="post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
+    </article>
+    {{ end }}
+</div>
 {{ end }}

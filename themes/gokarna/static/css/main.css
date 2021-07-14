@@ -118,6 +118,10 @@ img {
   width: 24px;
 }
 
+.recent-posts {
+  padding-top: 20px;
+}
+
 /* FOOTER */
 .footer {
   bottom: 0;
