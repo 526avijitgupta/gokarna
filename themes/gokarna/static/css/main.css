@@ -118,10 +118,6 @@ img {
   width: 24px;
 }
 
-.recent-posts {
-  padding-top: 20px;
-}
-
 /* FOOTER */
 .footer {
   bottom: 0;
@@ -258,6 +254,10 @@ table td {
 .home-about .avatar img.size-xl {
   height: 15rem;
   width: 15rem;
+}
+
+.home-posts {
+  padding-top: 20px;
 }
 
 /* SINGLE */
