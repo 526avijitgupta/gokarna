@@ -3,6 +3,7 @@ title = "Gokarna"
 theme = "gokarna"
 languageCode = "en"
 defaultContentLanguage = "en"
+enableEmoji = true
 
 paginate = 20
 
@@ -14,6 +15,7 @@ pygmentsStyle = "emacs"
   description = "You miss 100% of the shots you don't take"
   avatarURL = "https://upload.wikimedia.org/wikipedia/commons/7/7a/1859-Martinique.web.jpg"
   customHTML = ""
+  showPostsOnHomePage = "recent"
 
 [menu]
   [[menu.main]]
