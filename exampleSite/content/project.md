@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 type: singles
-slug: projects
+slug: /projects
 ---
 
 
