@@ -8,11 +8,7 @@
     <h2 class="posts-year">{{ .Key }}</h2>
 
     {{- range .Pages  -}}
-    <article class="post-title">
-        <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
-        <span class="post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
-    </article>
-
+        {{- partial "list-posts.html" . -}}
     {{ end }}
     {{ end }}
 

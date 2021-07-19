@@ -10,25 +10,23 @@
 </section>
 
 {{ if isset .Site.Params "showpostsonhomepage" }}
-{{ $allPosts := where .Site.Pages "Params.type" "post" }}
-{{ $posts := $allPosts | first 4 }}
 
-{{ if eq .Site.Params.ShowPostsOnHomePage "popular" }}
-{{ $posts := (sort $allPosts "Params.weight") | first 4 }}
-{{ else if eq .Site.Params.ShowPostsOnHomePage "recent" }}
-{{ $posts := $allPosts | first 4 }}
-{{ end }}
+    <div class="home-posts list-posts">
+        <h2>{{ .Site.Params.ShowPostsOnHomePage | humanize }} Posts</h2>
 
-<div class="home-posts list-posts">
-    <h2>{{ .Site.Params.ShowPostsOnHomePage | humanize }} Posts</h2>
+    {{ $posts := where .Site.Pages "Params.type" "post" }}
 
-    {{ range $posts }}
-    <article class="post-title">
-        <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
-        <span class="post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
-    </article>
+    {{ if eq .Site.Params.ShowPostsOnHomePage "popular" }}
+        {{ range $posts.ByWeight | first 4 }}
+            {{- partial "list-posts.html" . -}}
+        {{ end }}
+    {{ else if eq .Site.Params.ShowPostsOnHomePage "recent" }}
+        {{ range $posts.ByDate.Reverse | first 4 }}
+            {{- partial "list-posts.html" . -}}
+        {{ end }}
     {{ end }}
-</div>
+    </div>
 
 {{ end }}
+
 {{ end }}
