@@ -15,7 +15,7 @@ pygmentsStyle = "emacs"
   description = "You miss 100% of the shots you don't take"
   avatarURL = "https://upload.wikimedia.org/wikipedia/commons/7/7a/1859-Martinique.web.jpg"
   customHTML = ""
-  showPostsOnHomePage = "recent"
+  showPostsOnHomePage = "popular"
 
 [menu]
   [[menu.main]]
