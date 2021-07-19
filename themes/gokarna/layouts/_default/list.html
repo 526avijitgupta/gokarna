@@ -1,20 +1,14 @@
 {{ define "main" }}        
-<!-- TODO: @yash Paginate this if items more than n -->
 <div class="container list-posts">
 
     <h2 class="list-title">{{ .Name }}</h2>
 
-    {{ $posts := where .Data.Pages "Params.type" "post" }}
-    {{ range $posts.GroupByDate "2006" }}
+    {{ range (where .Site.Pages "Params.type" "post" ).GroupByDate "2006" }}
 
     <h2 class="posts-year">{{ .Key }}</h2>
 
     {{- range .Pages  -}}
-    <article class="post-title">
-        <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
-        <span class="post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
-    </article>
-
+        {{- partial "list-posts.html" . -}}
     {{ end }}
     {{ end }}
 

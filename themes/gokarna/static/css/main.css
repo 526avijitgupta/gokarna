@@ -256,6 +256,10 @@ table td {
   width: 15rem;
 }
 
+.home-posts {
+  padding-top: 20px;
+}
+
 /* SINGLE */
 main#content .post {
   font-size: 1.2rem;
