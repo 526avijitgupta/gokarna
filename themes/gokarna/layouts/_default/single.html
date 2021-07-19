@@ -1,9 +1,9 @@
 {{ define "main" }}
     {{ if eq .Type "post" }}
-    {{- partial "post.html" . -}}
+        {{- partial "post.html" . -}}
     {{ end }}
 
     {{ if eq .Type "singles" }}
-    {{- partial "single.html" . -}}
+        {{- partial "single.html" . -}}
     {{ end }}
 {{ end }}
