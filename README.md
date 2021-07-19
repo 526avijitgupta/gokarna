@@ -2,7 +2,7 @@
 
 A minimal opinionated theme for Hugo
 
-![Gokarna theme](/docs/screenshot.png)
+![Gokarna theme](/.project/screenshot.png)
 
 ## Features
 
@@ -21,7 +21,7 @@ A minimal opinionated theme for Hugo
 
 The theme is inspired by and accordingly named after [Gokarna](https://en.wikipedia.org/wiki/Gokarna,_Karnataka), a small and peaceful beach town on the west coast on India.
 
-![Gokarna](/docs/gokarna.jpg)
+![Gokarna](/.project/gokarna.jpg)
 
 
 ## Installation
@@ -37,6 +37,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 - Inject html (Give example)
 - Syntax highlighting (Choose one of emacs, trac, perldoc)
 - Avatar sizes
+- Option to show posts on homepage (Choose one of [popular|recent])
 
 ## LICENSE
 
