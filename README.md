@@ -35,7 +35,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 - Navbar
 - Footer
 - Inject html (Give example)
-- Syntax highlighting (Choose one of emacs, trac, perldoc)
+- Syntax highlighting (Choose from https://xyproto.github.io/splash/docs/all.html)
 - Avatar sizes
 - Option to show posts on homepage (Choose one of [popular|recent])
 
