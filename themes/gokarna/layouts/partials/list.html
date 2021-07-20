@@ -1,0 +1,14 @@
+<div class="container list-posts">
+
+    <h1 class="list-title">{{ .Name }}</h2>
+
+    {{ range (where .Site.Pages "Params.type" "post" ).GroupByDate "2006" }}
+
+    <h2 class="posts-year">{{ .Key }}</h2>
+
+    {{- range .Pages  -}}
+        {{- partial "list-posts.html" . -}}
+    {{ end }}
+    {{ end }}
+
+</div>
