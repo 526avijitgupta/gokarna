@@ -27,10 +27,10 @@ function ready() {
 
     document.getElementById('hamburger-menu-toggle').addEventListener('click', () => {
         const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0]
-        if (hamburgerMenu.style.visibility === "" || hamburgerMenu.style.visibility === "hidden") {
-            hamburgerMenu.style.visibility = "visible";
+        if (hamburgerMenu.classList.contains('visibility-hidden')) {
+            hamburgerMenu.classList.remove('visibility-hidden');
         } else {
-            hamburgerMenu.style.visibility = "hidden";
+            hamburgerMenu.classList.add('visibility-hidden');
         }
     })
 }

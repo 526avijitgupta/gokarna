@@ -129,7 +129,7 @@ img {
 }
 .nav-hamburger-list {
   background: var(--light-header-bg-color);
-  visibility: hidden;
+  /* visibility: hidden; */
   position: absolute;
   /* top: 6rem; */
   right: 0;
@@ -175,6 +175,9 @@ img {
   flex-basis: 100%;
   height: 0;
   display: none;
+}
+.visibility-hidden {
+  visibility: hidden;
 }
 
 /* ICONS */
@@ -397,5 +400,11 @@ main#content .post {
 
   .list-posts {
     flex: 1;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .nav-hamburger-list {
+    visibility: hidden;
   }
 }
