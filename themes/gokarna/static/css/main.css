@@ -128,7 +128,7 @@ img {
   width: 24px;
 }
 .nav-hamburger-list {
-  background: white;
+  background: var(--light-header-bg-color);
   visibility: hidden;
   position: absolute;
   /* top: 6rem; */
