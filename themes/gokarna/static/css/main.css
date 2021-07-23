@@ -42,14 +42,12 @@ img {
 
 /* HEADER */
 .header {
-  /* background-color: var(--light-header-bg-color); */
   background-color: rgba(240, 240, 240, 0.95);
   box-shadow: rgba(170, 170, 170, 0.5) 0px 1px 2px 0px;
   color: inherit;
   font-size: 1.05rem;
   height: 50px;
   left: 0;
-  /* opacity: 0.95; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -129,18 +127,16 @@ img {
 }
 .nav-hamburger-list {
   background: var(--light-header-bg-color);
-  /* visibility: hidden; */
-  position: absolute;
-  /* top: 6rem; */
-  right: 0;
-  z-index: 5;
-  padding: 0;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  list-style-type: none;
-  border-top: solid 1.5px var(--light-header-divider-color);
   border-bottom: solid 1.5px var(--light-header-divider-color);
+  border-top: solid 1.5px var(--light-header-divider-color);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
 }
 .nav-hamburger-list a:hover {
   text-decoration: underline;
@@ -176,6 +172,7 @@ img {
   height: 0;
   display: none;
 }
+
 .visibility-hidden {
   visibility: hidden;
 }
@@ -358,9 +355,6 @@ main#content .post {
 @media only screen and (max-width: 820px) {
   body {
     font-size: 0.95rem;
-    /* font-weight: 300; */
-    /* TODO: Find a better fix */
-    /* overflow-x: hidden; */
   }
 
   .flex-break {
@@ -383,10 +377,8 @@ main#content .post {
   }
 
   main#content {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    padding: 0 1.5rem;
     box-sizing: border-box;
+    padding: 0 1.5rem;
     width: auto;
   }
 
@@ -405,6 +397,6 @@ main#content .post {
 
 @media only screen and (min-width: 820px) {
   .nav-hamburger-list {
-    visibility: hidden;
+    visibility: hidden !important;
   }
 }
