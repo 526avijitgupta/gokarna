@@ -23,6 +23,16 @@ function ready() {
             setTheme('dark');
         }
     });
+
+
+    document.getElementById('hamburger-menu-toggle').addEventListener('click', () => {
+        const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0]
+        if (hamburgerMenu.style.visibility === "" || hamburgerMenu.style.visibility === "hidden") {
+            hamburgerMenu.style.visibility = "visible";
+        } else {
+            hamburgerMenu.style.visibility = "hidden";
+        }
+    })
 }
 
 function setTheme(themeToSet) {
