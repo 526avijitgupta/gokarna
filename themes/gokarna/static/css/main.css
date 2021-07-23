@@ -219,8 +219,8 @@ pre {
 
 pre {
   font-size: 0.95rem;
-  padding: 20px;
   overflow: scroll;
+  padding: 20px;
 }
 
 code {

@@ -24,7 +24,6 @@ function ready() {
         }
     });
 
-
     document.getElementById('hamburger-menu-toggle').addEventListener('click', () => {
         const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0]
         if (hamburgerMenu.classList.contains('visibility-hidden')) {
