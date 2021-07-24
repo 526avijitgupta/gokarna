@@ -16,6 +16,10 @@ html {
   background-color: var(--dark-header-bg-color);
 }
 
+.nav-hamburger-list {
+  background: var(--dark-header-bg-color);
+}
+
 .nav-links .nav-icons-divider {
   color: var(--dark-header-divider-color);
 }
