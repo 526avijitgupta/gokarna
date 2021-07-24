@@ -240,6 +240,8 @@ table {
   font-size: 1.05rem;
   margin: 30px 0;
   text-align: left;
+  display: block;
+  overflow-x: auto;
 }
 
 table thead {

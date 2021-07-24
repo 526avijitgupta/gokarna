@@ -35,6 +35,7 @@
                 </a>
             </div>
 
+            <!-- For mobile -->
             <ul class="nav-hamburger-list visibility-hidden">
                 {{ range .Site.Menus.main }}
                 <li class="nav-item">
@@ -43,6 +44,11 @@
                     </a>
                 </li>
                 {{ end }}
+                <li class="nav-item">
+                    <a id="dark-theme-toggle">
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
             </ul>
 
         </div>
