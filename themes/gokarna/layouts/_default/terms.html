@@ -3,11 +3,11 @@
 
     <h2 class="list-title">Tags</h2>
     <ul class="post-tags">
-        {{ range $key, $value := .Data.Terms.ByCount }}
+        {{ range $.Site.Taxonomies.tags.ByCount }}
         <li class="post-tag">
-            <a href="/tags/{{ $value.Name | urlize }}/">
-                <div class="tag-name">{{ $value.Name }}</div>
-                <div class="tag-posts-count">{{ $value.Count }}</div>
+            <a href="/tags/{{ .Name | urlize }}/">
+                <div class="tag-name">{{ .Name }}</div>
+                <div class="tag-posts-count">{{ .Count }}</div>
             </a>
         </li>
         {{ end }}
