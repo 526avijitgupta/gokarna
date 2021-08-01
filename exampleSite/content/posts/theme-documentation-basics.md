@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 10
 title: "Theme Documentation - Basics"
 date: 2020-03-06T21:29:01+08:00
 description: "Discover what the Hugo - gokarna theme is all about and the core-concepts behind it."
@@ -68,7 +68,7 @@ theme = "gokarna"
 
   # You can use this to inject any HTML in the <head> tag.
   # Ideal usecase for this is to import custom js/css or add your analytics snippet
-  customHTML = ""
+  customHeadHTML = ""
 
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)
@@ -126,7 +126,7 @@ Feel free to edit the post file by adding some sample content and replacing the 
 For posts you need to add `type: "post"` in the markdown metadata. We currently support 2 types of content:
 
 1. Post (`type: "post"`): A normal blog-post with tags, date, & content.
-2. Singles (`type: "singles"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like, showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/link-TODO) page.
+2. Page (`type: "page"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like, showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/link-TODO) page.
 
 By default all posts and pages are created as a draft. If you want to render these pages, remove the property `draft: true` from the metadata, set the property `draft: false` or add `-D`/`--buildDrafts` parameter to `hugo` command.
 
@@ -139,17 +139,6 @@ hugo serve
 ```
 
 Go to `http://localhost:1313`.
-
-![Basic configuration preview](basic-configuration-preview.png "Basic configuration preview")
-
-When you run `hugo serve`, when the contents of the files change, the page automatically refreshes with the changes.
-
-Since the theme use `.Scratch` in Hugo to implement some features,
-it is highly recommended that you add `--disableFastRender` parameter to `hugo server` command for the live preview of the page you are editing.
-
-```bash
-hugo serve --disableFastRender
-```
 
 ### 2.6 Build the Website
 
@@ -239,182 +228,3 @@ It is recommended to put your own favicons:
 
 into `/static`. They’re easily created via [https://realfavicongenerator.net/](https://realfavicongenerator.net/).
 
-Customize `browserconfig.xml` and `site.webmanifest` to set theme-color and background-color.
-
-### 3.3 Style Customization
-
-Hugo **extended** version is necessary for the style customization.
-
-**gokarna** theme has been built to be as configurable as possible by defining custom `.scss` style files.
-
-The directory including the custom `.scss` style files is `assets/css` relative to **your project root directory**.
-
-In `assets/css/_override.scss`, you can override the variables in `themes/gokarna/assets/css/_variables.scss` to customize the style.
-
-Here is a example:
-
-```scss
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace;
-```
-
-In `assets/css/_custom.scss`, you can add some css style code to customize the style.
-
-## 4 Multilingual and i18n
-
-**gokarna** theme is fully compatible with Hugo multilingual mode, which provides in-browser language switching.
-
-![Language Switch](language-switch.gif "Language Switch")
-
-### 4.1 Compatibility {#language-compatibility}
-
-
-| Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                    | Lunr.js Support               |
-|:-------------------- |:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| English              | `en`      | `en`                  | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| Spanish              | `es`      | `es`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| French               | `fr`      | `fr`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Indonesian           | `id`      | `id`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Italian              | `it`      | `it`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Polish               | `pl`      | `pl`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Romanian             | `ro`      | `ro`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Russian              | `ru`      | `ru`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Serbian              | `sr`      | `sr`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Vietnamese           | `vi`      | `vi`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-
-### 4.2 Basic Configuration
-
-After learning [how Hugo handle multilingual websites](https://gohugo.io/content-management/multilingual), define your languages in your [site configuration](#site-configuration).
-
-For example with English, Chinese and French website:
-
-```toml
-# [en, zh-cn, fr, pl, ...] determines default content language
-defaultContentLanguage = "en"
-
-[languages]
-  [languages.en]
-    weight = 1
-    title = "My New Hugo Site"
-    languageCode = "en"
-    languageName = "English"
-    [[languages.en.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Posts"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.en.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Tags"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.en.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "Categories"
-      url = "/categories/"
-      title = ""
-      weight = 3
-
-  [languages.zh-cn]
-    weight = 2
-    title = "我的全新 Hugo 网站"
-    # language code, CN only here
-    languageCode = "zh-CN"
-    languageName = "简体中文"
-    # whether to include Chinese/Japanese/Korean
-    hasCJKLanguage = true
-    [[languages.zh-cn.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "文章"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.zh-cn.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "标签"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.zh-cn.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "分类"
-      url = "/categories/"
-      title = ""
-      weight = 3
-
-  [languages.fr]
-    weight = 3
-    title = "Mon nouveau site Hugo"
-    languageCode = "fr"
-    languageName = "Français"
-    [[languages.fr.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Postes"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.fr.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Balises"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.fr.menu.main]]
-      identifier = "categories"
-      name = "Catégories"
-      pre = ""
-      post = ""
-      url = "/categories/"
-      title = ""
-      weight = 3
-```
-
-Then, for each new page, append the language code to the file name.
-
-Single file `my-page.md` is split in three files:
-
-* in English: `my-page.en.md`
-* in Chinese: `my-page.zh-cn.md`
-* in French: `my-page.fr.md`
-
-### 4.3 Overwrite Translation Strings
-
-Translations strings are used for common default values used in the theme. Translations are available in [some languages](#language-compatibility), but you may use another language or want to override default values.
-
-To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/gokarna/i18n/en.toml`.
-
-By the way, as these translations could be used by other people, please take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/526avijitgupta/gokarna/pulls) to the theme!
-
-## 5 Search
-
-Based on [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/), searching is supported in **gokarna** theme.
-
-### 5.1 Output Configuration
-
-In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your [site configuration](#site-configuration).
-
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-```
