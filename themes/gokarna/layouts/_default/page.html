@@ -3,7 +3,7 @@
         {{- partial "post.html" . -}}
     {{ end }}
 
-    {{ if eq .Type "singles" }}
-        {{- partial "single.html" . -}}
+    {{ if eq .Type "page" }}
+        {{- partial "page.html" . -}}
     {{ end }}
 {{ end }}
