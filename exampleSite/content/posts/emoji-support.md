@@ -4,7 +4,7 @@ date: 2020-10-01T17:55:28+08:00
 description: "Guide to emoji usage in Hugo and DoIt."
 tags: ["emoji"]
 type: post
-weight: 1
+weight: 25
 ---
 
 Emoji can be enabled in a Hugo project in a number of ways.
