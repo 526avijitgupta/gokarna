@@ -34,6 +34,19 @@ function ready() {
     })
 }
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        document.querySelectorAll('.header').forEach(function(item) {
+            item.classList.add('header-shadow')
+        })
+    } else {
+        document.querySelectorAll('.header').forEach(function(item) {
+            item.classList.remove('header-shadow')
+        })
+    }
+});
+
+
 function setTheme(themeToSet) {
     localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
     darkThemeCss.disabled = themeToSet === 'light';

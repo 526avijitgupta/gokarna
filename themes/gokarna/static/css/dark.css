@@ -55,7 +55,12 @@ table th {
 }
 
 :not(pre) > code {
+  background-color: #272822 !important;
   color: var(--dark-text-color);
+}
+
+.header-shadow {
+  box-shadow: rgb(33, 38, 45) 0px -1px 0px 0px inset;
 }
 
 /* TODO: Check if this is needed or not */
