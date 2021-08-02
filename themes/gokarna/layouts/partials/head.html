@@ -15,8 +15,8 @@
     <script src="/js/main.js"></script>
 
     <!-- Option for user to inject custom html -->
-    {{ if .Site.Params.CustomHTML }}
-    {{ .Site.Params.CustomHTML | safeHTML }}
+    {{ if .Site.Params.CustomHeadHTML }}
+    {{ .Site.Params.CustomHeadHTML | safeHTML }}
     {{ end }}
 
     {{ $title := print .Site.Title " | " .Title }}

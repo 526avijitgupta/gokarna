@@ -1,6 +1,6 @@
 {{ define "main" }}
-    {{ if eq .Type "singles" }}
-        {{- partial "single.html" . -}}
+    {{ if eq .Type "page" }}
+        {{- partial "page.html" . -}}
     {{ else }}
         {{- partial "list.html" . -}}
     {{ end }}
