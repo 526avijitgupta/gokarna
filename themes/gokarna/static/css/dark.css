@@ -54,6 +54,10 @@ table th {
   border-bottom-color: var(--dark-header-divider-color);
 }
 
+:not(pre) > code {
+  color: var(--dark-text-color);
+}
+
 /* TODO: Check if this is needed or not */
 /* 
 img,

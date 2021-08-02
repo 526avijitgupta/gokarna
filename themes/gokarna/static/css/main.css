@@ -212,7 +212,7 @@ img {
 /* CODE BLOCKS */
 code,
 pre {
-  background-color: #1f1f1f !important;
+  background-color: #272822 !important;
   box-sizing: border-box;
   color: white;
 }
@@ -228,6 +228,12 @@ code {
   padding: 0 3px;
   word-wrap: break-word;
   font-size: 0.8em;
+}
+
+:not(pre) > code {
+  background-color: #e0e0e0 !important;
+  color: var(--light-text-color);
+  padding: 1px 4px;
 }
 
 pre code {
