@@ -227,6 +227,11 @@ code {
   box-decoration-break: clone;
   padding: 0 3px;
   word-wrap: break-word;
+  font-size: 0.8em;
+}
+
+pre code {
+  font-size: 1em;
 }
 
 blockquote {
