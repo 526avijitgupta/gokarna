@@ -4,7 +4,7 @@
   /* light theme colors */
   --light-bg-color: white;
   --light-text-color: black;
-  --light-header-bg-color: #f0f0f0;
+  --light-header-bg-color: white;
   --light-header-divider-color: #dfdfdf;
 }
 
@@ -42,8 +42,7 @@ img {
 
 /* HEADER */
 .header {
-  background-color: rgba(240, 240, 240, 0.95);
-  box-shadow: rgba(170, 170, 170, 0.5) 0px 1px 2px 0px;
+  background-color: var(--light-bg-color);
   color: inherit;
   font-size: 1.05rem;
   height: 50px;
@@ -51,6 +50,7 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 0.95;
 }
 
 .header a {
