@@ -144,14 +144,6 @@ a:hover .feather-sun {
   width: 100%;
   z-index: 5;
 }
-.nav-hamburger-list .nav-item {
-  position: relative;
-  z-index: 5;
-}
-.nav-item a {
-  position: relative;
-  z-index: 5;
-}
 .nav-hamburger-list a:hover {
   text-decoration: underline;
 }
