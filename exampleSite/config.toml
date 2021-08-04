@@ -14,6 +14,7 @@ pygmentsStyle = "monokai"
   footer = "The Marauders"
   description = "Sky above, sand below & peace within"
   avatarURL = "https://upload.wikimedia.org/wikipedia/commons/7/7a/1859-Martinique.web.jpg"
+  avatarSize = "size-l"
   customHeadHTML = ""
   showPostsOnHomePage = "popular"
 
