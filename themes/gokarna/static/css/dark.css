@@ -1,5 +1,4 @@
 :root {
-  /* dark theme colors */
   --dark-bg-color: #121212;
   --dark-text-color: white;
   --dark-header-bg-color: #121212;
@@ -23,12 +22,8 @@ html {
   color: var(--dark-header-divider-color);
 }
 
-.feather-moon {
-  fill: white;
-}
-
 a:hover .feather-moon {
-  fill: none;
+  fill: white;
   color: white;
 }
 
