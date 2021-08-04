@@ -117,7 +117,7 @@ img {
 
 a:hover .feather-sun {
   fill: none;
-  color: black !important;
+  color: black;
 }
 
 #dark-theme-toggle .feather {
