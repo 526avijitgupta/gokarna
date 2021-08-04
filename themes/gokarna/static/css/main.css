@@ -43,6 +43,7 @@ img {
 /* HEADER */
 .header {
   background-color: var(--light-bg-color);
+  /* background-color: inherit; */
   color: inherit;
   font-size: 1.2rem;
   height: 50px;
@@ -168,7 +169,6 @@ a:hover .feather-sun {
 }
 
 /** COMMON **/
-
 .flex-break {
   flex-basis: 100%;
   height: 0;
@@ -317,6 +317,9 @@ table td {
 /* SINGLE */
 main#content .post {
   font-size: 1.2rem;
+}
+.post [role="doc-subtitle"] {
+  font-size: 1.3rem;
 }
 .post .post-date {
   color: gray;
