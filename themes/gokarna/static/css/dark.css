@@ -29,7 +29,7 @@ html {
 
 a:hover .feather-moon {
   fill: none;
-  color: white !important;
+  color: white;
 }
 
 .post-tags .post-tag:hover {
