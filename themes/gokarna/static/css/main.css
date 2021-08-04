@@ -48,9 +48,8 @@ img {
   left: 0;
   position: fixed;
   top: 0;
-  width: 100%;
-  /* opacity: 0.95; */
   transition: box-shadow 0.3s ease-in-out;
+  width: 100%;
 }
 
 .header a {
@@ -106,7 +105,7 @@ img {
   color: var(--light-header-divider-color);
   margin: 0 10px;
 }
-.nav-links #dark-theme-toggle:hover {
+.nav-links .dark-theme-toggle:hover {
   cursor: pointer;
 }
 
@@ -115,11 +114,11 @@ a:hover .feather-sun {
   color: black;
 }
 
-#dark-theme-toggle .feather {
-  height: 24px;
+.dark-theme-toggle .feather {
+  height: 22px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  width: 24px;
+  width: 22px;
 }
 #hamburger-menu-toggle {
   display: none;
@@ -150,7 +149,7 @@ a:hover .feather-sun {
 /* FOOTER */
 .footer {
   bottom: 0;
-  border-top: 1px solid rgb(var(--light-bg-color));
+  border-top: 1px solid var(--light-header-divider-color);
   color: inherit;
   left: 0;
   overflow: hidden;
