@@ -91,10 +91,10 @@ We preferred privacy friendly tools like [Umami](https://umami.is/) & [Fathom An
 
 Giving users the freedom to add anything in the HTML via config.toml seemed like an elegant way to solve the problem.
 
-```toml
+```markdown
 [params]
   customHeadHTML = """
-    <script async defer data-website-id="webiste-id" src="https://analytics.example.com/script.js"></script>
+    <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
   """
 ```
 
