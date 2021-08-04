@@ -23,6 +23,15 @@ html {
   color: var(--dark-header-divider-color);
 }
 
+.feather-moon {
+  fill: white;
+}
+
+a:hover .feather-moon {
+  fill: none;
+  color: white !important;
+}
+
 .post-tags .post-tag:hover {
   background-color: var(--dark-text-color);
   color: var(--dark-bg-color);
