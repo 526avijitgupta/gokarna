@@ -3,6 +3,7 @@
 
   --light-bg-color: 255, 255, 255;
   --light-text-color: black;
+  --light-tags-bg-color: #dddddd;
   --light-header-divider-color: #dfdfdf;
 }
 
@@ -50,6 +51,7 @@ img {
   top: 0;
   transition: box-shadow 0.3s ease-in-out;
   width: 100%;
+  z-index: 5;
 }
 
 .header a {
@@ -142,6 +144,14 @@ a:hover .feather-sun {
   width: 100%;
   z-index: 5;
 }
+.nav-hamburger-list .nav-item {
+  position: relative;
+  z-index: 5;
+}
+.nav-item a {
+  position: relative;
+  z-index: 5;
+}
 .nav-hamburger-list a:hover {
   text-decoration: underline;
 }
@@ -203,7 +213,7 @@ a:hover .feather-sun {
 }
 .post-tags .post-tag:hover {
   background-color: var(--light-text-color);
-  color: var(--light-bg-color);
+  color: rgb(var(--light-bg-color));
 }
 .post-tag a {
   color: inherit;
@@ -351,7 +361,7 @@ main#content .post {
   margin-top: 50px;
 }
 .tags-list .post-tags .post-tag {
-  margin: 0 5px;
+  margin: 2px 5px;
   padding: 0;
 }
 .tags-list .post-tags .post-tag a {
@@ -365,12 +375,17 @@ main#content .post {
   padding: 5px 8px;
 }
 .tags-list .post-tags .post-tag a .tag-posts-count {
-  background: rgba(0, 0, 0, 0.1);
+  background-color: var(--light-tags-bg-color);
   border-radius: inherit;
+  color: inherit;
   opacity: 0.8;
   padding: 6px;
   position: relative;
-  z-index: -1;
+  z-index: 0;
+}
+.tags-list .post-tags .post-tag:hover a .tag-posts-count {
+  background-color: var(--light-text-color);
+  color: rgb(var(--light-bg-color));
 }
 
 @media only screen and (max-width: 820px) {
