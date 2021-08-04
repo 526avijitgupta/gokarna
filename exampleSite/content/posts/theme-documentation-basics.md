@@ -7,18 +7,13 @@ tags: ["installation", "configuration", "markdown"]
 type: post
 ---
 
-Discover what the Hugo - Gokarna theme is all about and the core-concepts behind it.
-TODO: Similar intro as in README, opinionated, authors
+Gokarna is an opinionated theme with a focus on minimalism and simplicity. TODO: Better line Our aim was to keep it clean and leave some room for user customizability.
 
-## 1 Requirements
-
-Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
-
-## 2 Installation
+## Installation
 
 The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/quick-start/).
 
-### 2.1 Create Your Project
+### a. Create Your Project
 
 Hugo provides a `new` command to create a new website:
 
@@ -27,7 +22,7 @@ hugo new site my_website
 cd my_website
 ```
 
-### 2.2 Install the Theme
+### b. Install the Theme
 
 The theme’s repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
 
@@ -46,7 +41,7 @@ git init
 git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 ```
 
-### 2.3 Basic Configuration {#basic-configuration}
+### c. Basic Configuration {#basic-configuration}
 
 The following is a basic configuration for the gokarna theme:
 
@@ -58,25 +53,6 @@ languageCode = "en"
 title = "My New Hugo Site"
 
 theme = "gokarna"
-
-[params]
-  # URL for the avatar on homepage
-  avatarURL = ""
-
-  # Description to display on homepage
-  description = "Sky above, sand below & peace within"
-
-  # You can use this to inject any HTML in the <head> tag.
-  # Ideal usecase for this is to import custom js/css or add your analytics snippet
-  customHeadHTML = ""
-
-  # If you want to display posts on the homepage, the options are
-  # "popular" (order posts by weight), "recent" (order posts by date)
-  # or "" (do not display, default option)
-  showPostsOnHomePage = ""
-
-  # Footer text
-  footer = "The Marauders"
 
 [menu]
   [[menu.main]]
@@ -113,7 +89,7 @@ theme = "gokarna"
 ```
 
 
-### 2.4 Create Your First Post
+### d. Create Your First Post
 
 Here is the way to create your first post:
 
@@ -126,11 +102,9 @@ Feel free to edit the post file by adding some sample content and replacing the 
 For posts you need to add `type: "post"` in the markdown metadata. We currently support 2 types of content:
 
 1. Post (`type: "post"`): A normal blog-post with tags, date, & content.
-2. Page (`type: "page"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like, showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/link-TODO) page.
+2. Page (`type: "page"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/posts/theme-documentation-advanced/#content-types) page.
 
-By default all posts and pages are created as a draft. If you want to render these pages, remove the property `draft: true` from the metadata, set the property `draft: false` or add `-D`/`--buildDrafts` parameter to `hugo` command.
-
-### 2.5 Launching the Website Locally
+### e. Launching the Website Locally
 
 Launch by using the following command:
 
@@ -140,7 +114,7 @@ hugo serve
 
 Go to `http://localhost:1313`.
 
-### 2.6 Build the Website
+### f. Build the Website
 
 When your site is ready to deploy, run the following command:
 
@@ -150,72 +124,109 @@ hugo
 
 A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
 
-The website can be automatically published and hosted with [Netlify](https://www.netlify.com/) (Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)).
-Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and more...
+The website can be automatically published and hosted with [Netlify](https://www.netlify.com/), [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and more...
 
-## 3 Configuration
-
-### 3.1 Site Configuration {#site-configuration}
+## Configuration
 
 In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **gokarna** lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default).
 
-Please open the code block below to view the complete sample configuration :(far fa-hand-point-down fa-fw)::
+```toml
+[params]
+  # URL for the avatar on homepage
+  avatarURL = ""
+
+  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
+  avatarSize = ""
+
+  # Description to display on homepage
+  description = "Sky above, sand below & peace within"
+
+  # Accent color is displayed when you hover over <a> tags
+  accentColor = "#FF4D4D"
+
+  # You can use this to inject any HTML in the <head> tag.
+  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  customHeadHTML = ""
+
+  # If you want to display posts on the homepage, the options are
+  # "popular" (order posts by weight), "recent" (order posts by date)
+  # or "" (do not display, default option)
+  showPostsOnHomePage = ""
+
+  # Footer text
+  footer = "The Marauders"
+```
+
+### Avatar URL
+
+This is the image url for the avatar on the homepage and the header.
 
 ```toml
 [params]
-  version = "1.0.X"
-  # site description
-  description = "This is My New Hugo Site"
-  # site keywords
-  keywords = ["Theme", "Hugo"]
-  # site default theme ("light", "dark", "auto")
-  defaultTheme = "auto"
-  # public git repo url only then enableGitInfo is true
-  gitRepo = ""
-  # ("sha256", "sha384", "sha512", "md5")
-  fingerprint = ""
-  dateFormat = "2006-01-02"
-  # website images for Open Graph and Twitter Cards
-  images = ["/logo.png"]
-  SourceMap = true
-
-  [params.pwa]
-    # whether to enable PWA support
-    enable = true
-    # service-worker version
-    version = "1.0.1"
-
-  [params.app]
-    # optional site title override for the app when added to an iOS home screen or Android launcher
-    title = "gokarna"
-    # whether to omit favicon resource links
-    noFavicon = false
-    # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = ""
-    # Android browser theme color
-    themeColor = "#ffffff"
-    # Safari mask icon color
-    iconColor = "#5bbad5"
-    # Windows v8-10 tile color
-    tileColor = "#da532c"
-
-  [params.search]
-    enable = true
-    # type of search engine ("lunr", "algolia")
-
-  # Header config
-  [params.header]
-    # desktop header mode ("fixed", "normal", "auto")
-    desktopMode = "fixed"
-    # mobile header mode ("fixed", "normal", "auto")
-    mobileMode = "auto"
-    [params.header.title]
-      # URL of the LOGO
-      logo = ""
-      rss = true
+  avatarURL = "/images/avatar.jpg"
 ```
 
-### 3.2 Favicons, Browserconfig, Manifest
+### Avatar Size
+
+You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`. (Default: `size-m`)
+
+```toml
+[params]
+  avatarSize = "size-l"
+```
+
+### Description
+
+Description to display on homepage below the title and avatar.
+```toml
+[params]
+  description = "Hello, world!"
+```
+
+### Accent Color
+
+Accent color is displayed when you hover over `<a>` tags. It takes a hex/rgb color code. Default is `#FF4D4D`
+
+```toml
+[params]
+  accentColor = "#08F"
+```
+
+### Posts on home page
+
+If you want to display posts on the homepage, the options are:
+
+- `popular`: Show popular posts on home page if the value is set to popular. It sorts the all the posts by it’s weight attribute in ascending order. Read more about it [here](/posts/theme-documentation-advanced/#weights).
+- `recent`: Show recent posts on home page if the value is set to recent
+- Do not show anything if the variable is unset or an empty string.
+
+```toml
+[params]
+  showPostsOnHomePage = "popular"
+```
+
+### Footer
+
+Text to display in the footer section
+
+```toml
+[params]
+  footer = "Text in footer"
+```
+
+### Custom Head HTML
+
+You can add custom HTML in head section
+
+```toml
+[params]
+  customHeadHTML = "<script>console.log('Any HTML')</script>"
+```
+
+Read more in the advanced section [here](/posts/theme-documentation-advanced/#custom-head-html)
+
+
+### Favicons, Browserconfig, Manifest
 
 It is recommended to put your own favicons:
 
@@ -226,5 +237,5 @@ It is recommended to put your own favicons:
 * android-chrome-192x192.png (192x192)
 * android-chrome-512x512.png (512x512)
 
-into `/static`. They’re easily created via [https://realfavicongenerator.net/](https://realfavicongenerator.net/).
+into `/static` directory. They’re easily created via [favicon.io](https://favicon.io) or [realfavicongenerator.net](https://realfavicongenerator.net/).
 
