@@ -2,6 +2,9 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
+        <script type="text/javascript">
+            setThemeByUserPref();
+        </script>
         {{- partial "header.html" . -}}
         <main id="content">
         {{- block "main" . }}{{- end }}
