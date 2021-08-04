@@ -14,15 +14,16 @@ function ready() {
 
     const savedTheme = localStorage.getItem(THEME_PREF_STORAGE_KEY) || 
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark': 'light');
-    setTheme(savedTheme);
-    document.getElementById('dark-theme-toggle').addEventListener('click', () => {
-        toggleIcon = document.querySelector("#dark-theme-toggle a svg.feather");
+    const darkThemeToggles = document.querySelectorAll('.dark-theme-toggle');
+    setTheme(savedTheme, darkThemeToggles);
+    darkThemeToggles.forEach(el => el.addEventListener('click', (event) => {
+        toggleIcon = event.currentTarget.querySelector("a svg.feather");
         if (toggleIcon.classList[1] === THEME_TO_ICON_CLASS.dark) {
-            setTheme('light');
+            setTheme('light', [event.currentTarget]);
         } else if (toggleIcon.classList[1] === THEME_TO_ICON_CLASS.light) {
-            setTheme('dark');
+            setTheme('dark', [event.currentTarget]);
         }
-    });
+    }));
 
     document.getElementById('hamburger-menu-toggle').addEventListener('click', () => {
         const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0]
@@ -47,9 +48,11 @@ window.addEventListener('scroll', () => {
 });
 
 
-function setTheme(themeToSet) {
+function setTheme(themeToSet, targets) {
     localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
     darkThemeCss.disabled = themeToSet === 'light';
-    document.querySelector('#dark-theme-toggle a').innerHTML = feather.icons[THEME_TO_ICON_CLASS[themeToSet].split('-')[1]].toSvg();
+    targets.forEach((target) => {
+            target.querySelector('a').innerHTML = feather.icons[THEME_TO_ICON_CLASS[themeToSet].split('-')[1]].toSvg();
+    });
 }
 
