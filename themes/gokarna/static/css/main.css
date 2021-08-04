@@ -1,7 +1,6 @@
 :root {
-  --accent-color: #ff4d4d;
   --content-width: 810px;
-  /* light theme colors */
+
   --light-bg-color: white;
   --light-text-color: black;
   --light-header-bg-color: white;
@@ -26,6 +25,7 @@ a {
   color: inherit;
 }
 
+/* This is set in partials/head.html and is populated via config */
 a:hover {
   color: var(--accent-color);
 }
@@ -169,10 +169,6 @@ a:hover .feather-sun {
   display: block;
   font-size: 0.9rem;
   padding: 1px 0;
-}
-
-.footer span a {
-  color: inherit;
 }
 
 /** COMMON **/
