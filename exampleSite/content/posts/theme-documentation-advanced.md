@@ -8,8 +8,7 @@ type: post
 
 ---
 
-Discover what the Hugo - Gokarna theme is all about and the core-concepts behind it.
-TODO: Similar intro as in README, opinionated, authors
+Gokarna is an opinionated theme with a focus on minimalism and simplicity. TODO: Better line Our aim was to keep it clean and leave some room for user customizability.
 
 ## Content Types
 
@@ -54,6 +53,20 @@ The `weight` attribute can be added in the markdown metadata for `post` types. W
 2. Show recent posts on home page if the value is set to `recent`
 3. Do not show anything if the variable is unset or an empty string.
 
+## Icons in header
+
+We have used [feather](https://feathericons.com) as our icons library. Here is an example of how to add custom icons in the header:
+
+```
+  [[menu.main]]
+    identifier = "github"
+    url = "https://github.com"
+    weight = 3
+
+    # We use feather-icons
+    pre = "<span data-feather='github'></span>"
+```
+
 ## Custom Head HTML
 
 The goal of this feature is to give the user more control over the theme. It's functioning is very straightforward - "You can inject any HTML you want in the `<head>` tag" . This may seem simple at first, but it opens up a lot of possibilities.
@@ -83,15 +96,6 @@ Giving users the freedom to add anything in the HTML via config.toml seemed like
   customHeadHTML = """
     <script async defer data-website-id="webiste-id" src="https://analytics.example.com/script.js"></script>
   """
-```
-
-### Avatar Size
-
-You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`. (Default: `size-m`)
-
-```toml
-[params]
-  avatarSize = "size-l"
 ```
 
 ## Syntax Highlighting
