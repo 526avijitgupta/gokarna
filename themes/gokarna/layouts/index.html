@@ -2,7 +2,7 @@
 <section class="home-about">
 	<div class="avatar">
         {{ if isset .Site.Params "avatarurl" }}
-        <img alt="avatar" src='{{ .Site.Params.AvatarURL }}'>
+        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Site.Params.AvatarURL }}'>
         {{ end }}
 	</div>
     <h1>{{ .Site.Title }}</h1>

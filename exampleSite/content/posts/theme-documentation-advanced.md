@@ -74,7 +74,7 @@ Add your own JavaScript or CSS by putting them in the `static/` folder and impor
 
 Integration with any analytics tool: This was a personal pet peeve. User privacy is our primary concern and this meant not using Google Analytics or any of the popular tools.
 
-We preferred privacy friendly tools like Umami(TODO link) & fathom(TODO link), but the downside was that no theme supported them out of the box which led to either changing the theme source code or contributing supporting code to the original theme (both of which are good ways to extend the theme, but not our ideal choice)
+We preferred privacy friendly tools like [Umami](https://umami.is/) & [Fathom Analytics](https://usefathom.com/), but the downside was that no theme supported them out of the box which led to either changing the theme source code or contributing supporting code to the original theme (both of which are good ways to extend the theme, but not our ideal choice)
 
 Giving users the freedom to add anything in the HTML via config.toml seemed like an elegant way to solve the problem.
 
@@ -83,6 +83,15 @@ Giving users the freedom to add anything in the HTML via config.toml seemed like
   customHeadHTML = """
     <script async defer data-website-id="webiste-id" src="https://analytics.example.com/script.js"></script>
   """
+```
+
+### Avatar Size
+
+You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`. (Default: `size-m`)
+
+```toml
+[params]
+  avatarSize = "size-l"
 ```
 
 ## Syntax Highlighting
@@ -95,9 +104,4 @@ After choosing your theme, just update the `pygmentsStyle`  attribute in config.
 pygmentsStyle = "monokai"
 ```
 
-You can read more about syntax highlighting on the [official hugo docs](TODO).
-
-
-
-
-
+You can read more about syntax highlighting on the [official hugo docs](https://gohugo.io/content-management/syntax-highlighting/).
