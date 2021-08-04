@@ -225,7 +225,7 @@ pre {
 
 pre {
   font-size: 0.95rem;
-  overflow: scroll;
+  overflow: auto;
   padding: 20px;
 }
 
