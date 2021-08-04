@@ -1,14 +1,13 @@
 :root {
   --content-width: 810px;
 
-  --light-bg-color: white;
+  --light-bg-color: 255, 255, 255;
   --light-text-color: black;
-  --light-header-bg-color: white;
   --light-header-divider-color: #dfdfdf;
 }
 
 html {
-  background-color: var(--light-bg-color);
+  background-color: rgb(var(--light-bg-color));
   color: var(--light-text-color);
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -42,8 +41,7 @@ img {
 
 /* HEADER */
 .header {
-  background-color: var(--light-bg-color);
-  /* background-color: inherit; */
+  background-color: rgba(var(--light-bg-color), 0.95);
   color: inherit;
   font-size: 1.2rem;
   height: 50px;
@@ -51,7 +49,7 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.95;
+  /* opacity: 0.95; */
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -133,7 +131,7 @@ a:hover .feather-sun {
   width: 24px;
 }
 .nav-hamburger-list {
-  background: var(--light-header-bg-color);
+  background: rgb(var(--light-bg-color));
   border-bottom: solid 1.5px var(--light-header-divider-color);
   border-top: solid 1.5px var(--light-header-divider-color);
   list-style-type: none;
@@ -152,7 +150,7 @@ a:hover .feather-sun {
 /* FOOTER */
 .footer {
   bottom: 0;
-  border-top: 1px solid var(--light-header-bg-color);
+  border-top: 1px solid rgb(var(--light-bg-color));
   color: inherit;
   left: 0;
   overflow: hidden;
@@ -262,7 +260,7 @@ table {
 }
 
 table thead {
-  background-color: var(--light-header-bg-color);
+  background-color: var(--light-bg-color);
 }
 
 table td,
