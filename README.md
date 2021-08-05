@@ -25,7 +25,11 @@ The theme is inspired by and accordingly named after [Gokarna](https://en.wikipe
 
 ## Screenshots
 
-![Light mode](/.project/screenshot-light-home.png "Light mode") ![Dark mode](/.project/screenshot-dark-home.png "Dark mode")
+### Homepage
+
+Light Mode                                                      | Dark Mode
+:-------------------------:|:-------------------------:
+![Light mode](/.project/screenshot-light-home.png "Light mode") | ![Dark mode](/.project/screenshot-dark-home.png "Dark mode")
 
 ## Installation
 
