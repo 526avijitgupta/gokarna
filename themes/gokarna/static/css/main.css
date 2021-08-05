@@ -1,14 +1,13 @@
 :root {
   --content-width: 810px;
 
-  --light-bg-color: 255, 255, 255;
+  --light-primary-color: 255, 255, 255;
+  --light-secondary-color: #dddddd;
   --light-text-color: black;
-  --light-tags-bg-color: #dddddd;
-  --light-header-divider-color: #dfdfdf;
 }
 
 html {
-  background-color: rgb(var(--light-bg-color));
+  background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -42,7 +41,7 @@ img {
 
 /* HEADER */
 .header {
-  background-color: rgba(var(--light-bg-color), 0.95);
+  background-color: rgba(var(--light-primary-color), 0.95);
   color: inherit;
   font-size: 1.2rem;
   height: 50px;
@@ -104,7 +103,7 @@ img {
 .nav-links .nav-icons-divider {
   border-color: inherit;
   border-left: 1.5px solid;
-  color: var(--light-header-divider-color);
+  color: var(--light-secondary-color);
   margin: 0 10px;
 }
 .nav-links .dark-theme-toggle:hover {
@@ -132,9 +131,9 @@ a:hover .feather-sun {
   width: 24px;
 }
 .nav-hamburger-list {
-  background: rgb(var(--light-bg-color));
-  border-bottom: solid 1.5px var(--light-header-divider-color);
-  border-top: solid 1.5px var(--light-header-divider-color);
+  background: rgb(var(--light-primary-color));
+  border-bottom: solid 1.5px var(--light-secondary-color);
+  border-top: solid 1.5px var(--light-secondary-color);
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -151,7 +150,6 @@ a:hover .feather-sun {
 /* FOOTER */
 .footer {
   bottom: 0;
-  border-top: 0.5px solid var(--light-header-divider-color);
   color: inherit;
   left: 0;
   overflow: hidden;
@@ -205,7 +203,7 @@ a:hover .feather-sun {
 }
 .post-tags .post-tag:hover {
   background-color: var(--light-text-color);
-  color: rgb(var(--light-bg-color));
+  color: rgb(var(--light-primary-color));
 }
 .post-tag a {
   color: inherit;
@@ -246,7 +244,7 @@ pre code {
 }
 
 blockquote {
-  border-left: 2px solid var(--light-header-divider-color);
+  border-left: 2px solid var(--light-secondary-color);
   color: grey;
   padding-left: 1rem;
 }
@@ -261,7 +259,7 @@ table {
 }
 
 table thead {
-  background-color: var(--light-bg-color);
+  background-color: var(--light-secondary-color);
 }
 
 table td,
@@ -270,7 +268,7 @@ table th {
 }
 
 table td {
-  border-bottom: 1px solid var(--light-header-divider-color);
+  border-bottom: 1px solid var(--light-secondary-color);
 }
 
 /* HOME PAGE */
@@ -318,7 +316,8 @@ main#content .post {
   font-size: 1.2rem;
 }
 .post [role="doc-subtitle"] {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-style: italic;
 }
 .post .post-date {
   color: gray;
@@ -367,7 +366,7 @@ main#content .post {
   padding: 5px 8px;
 }
 .tags-list .post-tags .post-tag a .tag-posts-count {
-  background-color: var(--light-tags-bg-color);
+  background-color: var(--light-secondary-color);
   border-radius: inherit;
   color: inherit;
   opacity: 0.8;
@@ -377,7 +376,7 @@ main#content .post {
 }
 .tags-list .post-tags .post-tag:hover a .tag-posts-count {
   background-color: var(--light-text-color);
-  color: rgb(var(--light-bg-color));
+  color: rgb(var(--light-primary-color));
 }
 
 @media only screen and (max-width: 820px) {
