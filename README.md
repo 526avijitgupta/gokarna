@@ -1,8 +1,8 @@
 # Gokarna
 
-A minimal opinionated theme for Hugo
+Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
-![Gokarna theme](/.project/screenshot.png)
+Demo: TODO Link
 
 ## Features
 
@@ -23,6 +23,9 @@ The theme is inspired by and accordingly named after [Gokarna](https://en.wikipe
 
 ![Gokarna](/.project/gokarna.jpg)
 
+## Screenshots
+
+![Light mode](/.project/screenshot-light-home.png "Light mode") ![Dark mode](/.project/screenshot-dark-home.png "Dark mode")
 
 ## Installation
 

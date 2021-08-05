@@ -2,12 +2,12 @@
 weight: 10
 title: "Theme Documentation - Basics"
 date: 2020-03-06T21:29:01+08:00
-description: "Discover what the Hugo - gokarna theme is all about and the core-concepts behind it."
+description: "A guide to getting started with Gokarna"
 tags: ["installation", "configuration", "markdown"]
 type: post
 ---
 
-Gokarna is an opinionated theme with a focus on minimalism and simplicity. TODO: Better line Our aim was to keep it clean and leave some room for user customizability.
+Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 ## Installation
 
