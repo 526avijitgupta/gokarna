@@ -15,9 +15,6 @@ Demo: TODO Link
 - SEO Ready
 - Option to add custom javascript and css
 
-
-![Gokarna](/.project/gokarna.jpg)
-
 ## Screenshots
 
 ### Homepage
@@ -62,6 +59,8 @@ For a complete guide on customization, please go through our [basic](TODO: Link)
 ## Inspiration
 
 The theme is inspired by and accordingly named after [Gokarna](https://en.wikipedia.org/wiki/Gokarna,_Karnataka), a small and peaceful beach town on the west coast on India.
+
+![Gokarna](/.project/gokarna.jpg)
 
 ## LICENSE
 
