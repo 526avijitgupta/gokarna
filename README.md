@@ -2,6 +2,11 @@
 
 Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
+### Authors:
+
+1. [Yash Mehrotra](https://yashmehrotra.com)
+2. [Avijit Gupta](https://twitter.com/526avijit)
+
 Demo: TODO Link
 
 ## Features
@@ -39,6 +44,8 @@ Light Mode                                                      | Dark Mode
 
 ## Installation
 
+Follow details installation steps in the [documentation here](TODO: Link)
+
 ```sh
 git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 ```
@@ -47,7 +54,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 
 For a complete guide on customization, please go through our [basic](TODO: Link) and [advanced](TODO: Link) theme documentation. A gist of things you can customize:
 
-- Navbar
+- Navigation menu
 - Avatar image and size
 - Accent color
 - Theme mode (Auto, Light & Dark)
