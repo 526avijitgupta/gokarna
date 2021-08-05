@@ -7,7 +7,7 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 1. [Yash Mehrotra](https://yashmehrotra.com)
 2. [Avijit Gupta](https://twitter.com/526avijit)
 
-Demo: TODO Link
+#### Demo: TODO Link
 
 ## Features
 
