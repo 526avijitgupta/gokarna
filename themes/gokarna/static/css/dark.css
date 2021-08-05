@@ -1,25 +1,25 @@
 :root {
-  --dark-bg-color: 18, 18, 18;
+  --dark-primary-color: 18, 18, 18;
   --dark-text-color: white;
-  --dark-tags-bg-color: #444444;
-  --dark-header-divider-color: #484848;
+  --dark-secondary-color: #444444;
+  --dark-secondary-color: #444444;
 }
 
 html {
-  background-color: rgb(var(--dark-bg-color));
+  background-color: rgb(var(--dark-primary-color));
   color: var(--dark-text-color);
 }
 
 .header {
-  background-color: rgba(var(--dark-bg-color), 0.95);
+  background-color: rgba(var(--dark-primary-color), 0.95);
 }
 
 .nav-hamburger-list {
-  background: rgba(var(--dark-bg-color), 1);
+  background: rgba(var(--dark-primary-color), 1);
 }
 
 .nav-links .nav-icons-divider {
-  color: var(--dark-header-divider-color);
+  color: var(--dark-secondary-color);
 }
 
 a:hover .feather-moon {
@@ -29,16 +29,16 @@ a:hover .feather-moon {
 
 .post-tags .post-tag:hover {
   background-color: var(--dark-text-color);
-  color: rgb(var(--dark-bg-color));
+  color: rgb(var(--dark-primary-color));
 }
 
 .tags-list .post-tags .post-tag a .tag-posts-count {
-  background-color: var(--dark-tags-bg-color);
+  background-color: var(--dark-secondary-color);
 }
 
 .tags-list .post-tags .post-tag:hover a .tag-posts-count {
   background-color: var(--dark-text-color);
-  color: rgb(var(--dark-bg-color));
+  color: rgb(var(--dark-primary-color));
 }
 
 .footer {
@@ -46,16 +46,16 @@ a:hover .feather-moon {
 }
 
 blockquote {
-  border-left-color: var(--dark-header-divider-color);
+  border-left-color: var(--dark-secondary-color);
 }
 
 table thead {
-  background-color: var(--dark-header-bg-color);
+  background-color: var(--dark-secondary-color);
 }
 
 table td,
 table th {
-  border-bottom-color: var(--dark-header-divider-color);
+  border-bottom-color: var(--dark-secondary-color);
 }
 
 :not(pre) > code {

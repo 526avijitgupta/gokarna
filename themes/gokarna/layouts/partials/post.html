@@ -2,7 +2,7 @@
 
     <div class="post-header-section">
         <h1>{{ .Title }}</h1>
-        <small role="doc-subtitle">This is a subheading</small>
+        <small role="doc-subtitle">{{ .Description }}</small>
         <p class="post-date">
             {{ dateFormat "January 2, 2006" .Date }}
         </p>
