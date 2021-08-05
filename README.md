@@ -31,6 +31,20 @@ Light Mode                                                      | Dark Mode
 :-------------------------:|:-------------------------:
 ![Light mode](/.project/screenshot-light-home.png "Light mode") | ![Dark mode](/.project/screenshot-dark-home.png "Dark mode")
 
+### Post page
+
+Light Mode                                                      | Dark Mode
+:-------------------------:|:-------------------------:
+![Light mode](/.project/screenshot-light-post.png "Light mode") | ![Dark mode](/.project/screenshot-dark-post.png "Dark mode")
+
+### List page
+
+Light Mode                                                      | Dark Mode
+:-------------------------:|:-------------------------:
+![Light mode](/.project/screenshot-light-list.png "Light mode") | ![Dark mode](/.project/screenshot-dark-list.png "Dark mode")
+
+
+
 ## Installation
 
 ```sh
