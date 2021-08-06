@@ -7,7 +7,7 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 1. [Yash Mehrotra](https://yashmehrotra.com)
 2. [Avijit Gupta](https://twitter.com/526avijit)
 
-#### Demo: TODO Link
+#### Demo: [https://gokarna-hugo.netlify.app](https://gokarna-hugo.netlify.app)
 
 ## Features
 
@@ -44,7 +44,7 @@ Light Mode                                                      | Dark Mode
 
 ## Installation
 
-Follow details installation steps in the [documentation here](TODO: Link)
+Follow details installation steps in the [documentation here](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#installation)
 
 ```sh
 git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
@@ -52,7 +52,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 
 ## Customization
 
-For a complete guide on customization, please go through our [basic](TODO: Link) and [advanced](TODO: Link) theme documentation. A gist of things you can customize:
+For a complete guide on customization, please go through our [basic](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/) and [advanced](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/) theme documentation. A gist of things you can customize:
 
 - Navigation menu
 - Avatar image and size
