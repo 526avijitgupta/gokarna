@@ -6,6 +6,9 @@
   --light-text-color: black;
 }
 
+ @font-face { font-family: Jost; src: url('/fonts/Jost-Regular.ttf'); }
+ @font-face { font-family: Jost; font-weight: 700; src: url('/fonts/Jost-Bold.ttf');}
+
 html {
   background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
