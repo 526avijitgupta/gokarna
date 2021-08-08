@@ -1,7 +1,7 @@
 :root {
-  --dark-primary-color: 18, 18, 18;
+  --dark-primary-color: 32, 32, 32;
   --dark-text-color: white;
-  --dark-secondary-color: #444444;
+  --dark-secondary-color: #999;
 }
 
 html {
@@ -45,6 +45,7 @@ a:hover .feather-moon {
 }
 
 blockquote {
+  color: darkgrey;
   border-left-color: var(--dark-secondary-color);
 }
 
