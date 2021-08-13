@@ -390,6 +390,11 @@ main#content .post {
   color: rgb(var(--light-primary-color));
 }
 
+.text-404 {
+  margin-top: 100px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 820px) {
   body {
     font-size: 0.95rem;
