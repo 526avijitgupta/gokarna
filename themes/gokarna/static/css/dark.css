@@ -59,7 +59,7 @@ table th {
 }
 
 :not(pre) > code {
-  background-color: #272822 !important;
+  background-color: var(--dark-secondary-color) !important;
   color: var(--dark-text-color);
 }
 

@@ -245,7 +245,7 @@ code {
 }
 
 :not(pre) > code {
-  background-color: #e0e0e0 !important;
+  background-color: var(--light-secondary-color) !important;
   color: var(--light-text-color);
   padding: 1px 4px;
 }
@@ -388,6 +388,11 @@ main#content .post {
 .tags-list .post-tags .post-tag:hover a .tag-posts-count {
   background-color: var(--light-text-color);
   color: rgb(var(--light-primary-color));
+}
+
+.text-404 {
+  margin-top: 125px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 820px) {
