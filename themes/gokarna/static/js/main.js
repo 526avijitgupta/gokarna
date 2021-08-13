@@ -23,7 +23,16 @@ function ready() {
 }
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
+    if (window.innerWidth <= 820) {
+        // For smaller screen, show shadow earlier
+        toggleHeaderShadow(50);
+    } else {
+        toggleHeaderShadow(100);
+    }
+});
+
+function toggleHeaderShadow(scrollY) {
+    if (window.scrollY > scrollY) {
         document.querySelectorAll('.header').forEach(function(item) {
             item.classList.add('header-shadow')
         })
@@ -32,7 +41,7 @@ window.addEventListener('scroll', () => {
             item.classList.remove('header-shadow')
         })
     }
-});
+}
 
 function setThemeByUserPref() {
     darkThemeCss = document.getElementById("dark-theme");
