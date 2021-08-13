@@ -9,18 +9,8 @@
     </style>
 
     <!-- SEO titles & descriptions -->
-    
-    {{ if .Title }}
-        <title>{{ .Title }}</title>
-    {{ else }}
-        <title>{{ .Site.Title }}</title>
-    {{ end }}
-
-    {{ if .Description }}
-        <meta name="description" content="{{ .Description }}">
-    {{ else }}
-        <meta name="description" content="{{ .Site.Params.Description }}">
-    {{ end }}    
+    <title>{{ .Title | default .Site.Title }}</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.Description }}">
 
     <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
     <link rel="canonical" href="{{ .Permalink }}" />
