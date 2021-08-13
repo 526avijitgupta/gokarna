@@ -8,19 +8,22 @@
         }
     </style>
 
-    {{/* SEO titles & descriptions */}}
+    <!-- SEO titles & descriptions -->
     {{ if .IsHome }} {{/* For homepage */}}
     <title>
         {{ .Site.Title }}
     </title>
     <meta name="description" content="{{ .Site.Params.Description }}">
 
-    {{ else }} {{/* For non-homepage pages */}}
+    {{ else }} <!-- For non-homepage pages -->
     <title>
         {{ .Title }}
     </title>
     <meta name="description" content="{{ .Description }}">
     {{ end }}
+
+    <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
+    <link rel="canonical" href="{{ .Permalink }}" />
 
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
