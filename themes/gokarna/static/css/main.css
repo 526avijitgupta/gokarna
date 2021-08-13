@@ -290,6 +290,7 @@ table td {
 .home-about .avatar img {
   border-radius: 50%;
   height: auto;
+  object-fit: cover;
 }
 
 /* Avatar sizes (default is M) - XS, S, M, L, XL */

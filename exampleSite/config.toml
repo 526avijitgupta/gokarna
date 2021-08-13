@@ -13,7 +13,7 @@ pygmentsStyle = "monokai"
 [params]
   footer = "The Marauders"
   description = "Sky above, sand below and peace within"
-  avatarURL = "/images/beach.webp"
+  avatarURL = "/images/avatar.webp"
   avatarSize = "size-m"
   customHeadHTML = ""
   showPostsOnHomePage = "popular"
