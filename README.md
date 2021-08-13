@@ -76,6 +76,10 @@ Google Lighthouse check score: 100%
 
 ![Lighthouse Score](/images/lighthouse.png)
 
+## Support the developer
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/avijitgupta)
+
 ## LICENSE
 
 This code is licensed under [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
