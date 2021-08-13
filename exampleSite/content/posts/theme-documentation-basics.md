@@ -54,6 +54,9 @@ title = "My New Hugo Site"
 
 theme = "gokarna"
 
+# Automatically generate robots.txt
+enableRobotsTXT = true
+
 [menu]
   [[menu.main]]
     # Unique identifer for a menu item
@@ -84,7 +87,7 @@ theme = "gokarna"
     url = "https://github.com"
     weight = 3
     
-    # We use feather-icons
+    # We use feather-icons: https://feathericons.com/
     pre = "<span data-feather='github'></span>"
 ```
 
@@ -147,6 +150,9 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # You can use this to inject any HTML in the <head> tag.
   # Ideal usecase for this is to import custom js/css or add your analytics snippet
   customHeadHTML = ""
+
+  # Keywords relevant for SEO
+  metaKeywords = ["blog", "gokarna", "hugo"]
 
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)
@@ -225,6 +231,13 @@ You can add custom HTML in head section
 
 Read more in the advanced section [here](/posts/theme-documentation-advanced/#custom-head-html)
 
+### robots.txt
+
+Automatically generate robots.txt
+
+```toml
+enableRobotsTXT = true
+```
 
 ### Favicons, Browserconfig, Manifest
 

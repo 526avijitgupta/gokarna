@@ -205,7 +205,7 @@ a:hover .feather-sun {
   padding: 0;
 }
 .post-tags .post-tag {
-  border: 1px solid;
+  border: 1.5px solid;
   border-radius: 4px;
   box-sizing: border-box;
   color: inherit;

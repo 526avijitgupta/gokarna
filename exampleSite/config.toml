@@ -4,6 +4,7 @@ theme = "gokarna"
 languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
+enableRobotsTXT = true
 
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"

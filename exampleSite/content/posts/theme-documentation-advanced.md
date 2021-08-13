@@ -5,7 +5,6 @@ date: 2020-05-06T21:29:01+08:00
 description: "Discover how to maximise Gokarna's potential"
 tags: ["installation", "configuration", "markdown"]
 type: post
-
 ---
 
 Gokarna is an opinionated theme with a focus on minimalism and simplicity.
@@ -23,6 +22,7 @@ This is the default blog post type which will be shown in your "Posts" section a
 title: "Hello, world!"
 date: 2021-01-01
 description: "A blog post"
+image: "path/to/image.png"
 type: "post"
 tags: ["blog"]
 ---
@@ -38,6 +38,7 @@ We introduced this type to distinguish between blog posts and normal markdown pa
 ```markdown
 ---
 title: "Hello, world!"
+image: "path/to/image.png"
 type: "page"
 ---
 
@@ -109,3 +110,40 @@ pygmentsStyle = "monokai"
 ```
 
 You can read more about syntax highlighting on the [official hugo docs](https://gohugo.io/content-management/syntax-highlighting/).
+
+## Site Metadata
+
+Gokarna enables you to improve the SEO performance of your website with minimal effort.
+
+### Image preview
+
+We make sure your pages are social media ready.
+
+![Social Media Preview](/images/theme-documentation-advanced/preview.png "Social Media Preview")
+
+```markdown
+---
+title: "Hello, world!"
+image: "path/to/image.png"
+---
+```
+
+> Note: If no image is specified in the markdown metadata, the site avatar is automatically used instead.
+
+### SEO keywords
+
+The keywords relevant for SEO are composed of the page `tags` as defined below:
+
+```markdown
+---
+title: "Hello, world!"
+tags: ["hello", "world"]
+---
+```
+
+and the `metaKeywords` specified in the config.toml:
+
+```markdown
+[params]
+  metaKeywords = ["blog", "gokarna", "hugo"]
+```
