@@ -9,6 +9,10 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 ### Demo: [https://gokarna-hugo.netlify.app](https://gokarna-hugo.netlify.app)
 
+## Support the developer
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/avijitgupta)
+
 ## Features
 
 - Minimalistic & fast
@@ -75,10 +79,6 @@ The theme is inspired by and accordingly named after [Gokarna](https://en.wikipe
 Google Lighthouse check score: 100%
 
 ![Lighthouse Score](/images/lighthouse.png)
-
-## Support the developer
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/avijitgupta)
 
 ## LICENSE
 
