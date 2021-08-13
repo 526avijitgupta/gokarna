@@ -8,9 +8,26 @@
         }
     </style>
 
+    {{ $title := .Title | default .Site.Title }}
+    {{ $description := .Description | default .Site.Params.Description }}
+    {{ $image := .Params.image | default .Site.Params.AvatarURL }}
+
     <!-- SEO titles & descriptions -->
-    <title>{{ .Title | default .Site.Title }}</title>
-    <meta name="description" content="{{ .Description | default .Site.Params.Description }}">
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $description }}">
+
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:image" content="{{ $image }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    <meta property="twitter:domain" content="{{ .Permalink }}">
+    <meta property="twitter:url" content="{{ .Permalink }}">
+    <meta name="twitter:image" content="{{ $image }}">
 
     <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
     <link rel="canonical" href="{{ .Permalink }}" />
