@@ -258,6 +258,7 @@ blockquote {
   border-left: 2px solid var(--light-secondary-color);
   color: grey;
   padding-left: 1rem;
+  margin-left: 0;
 }
 
 table {
