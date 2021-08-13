@@ -7,18 +7,19 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 1. [Yash Mehrotra](https://yashmehrotra.com)
 2. [Avijit Gupta](https://twitter.com/526avijit)
 
-#### Demo: [https://gokarna-hugo.netlify.app](https://gokarna-hugo.netlify.app)
+### Demo: [https://gokarna-hugo.netlify.app](https://gokarna-hugo.netlify.app)
 
 ## Features
 
 - Minimalistic & fast
 - Customizable header
 - Responsive
-- Support for light and dark themes
-- Native fonts
+- Available in light and dark themes
+- Native fonts and support for [feather icons](https://feathericons.com/)
 - Syntax highlighting
 - SEO Ready
 - Option to add custom javascript and css
+- RSS Feed
 
 ## Screenshots
 
