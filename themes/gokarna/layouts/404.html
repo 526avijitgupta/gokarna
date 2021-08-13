@@ -1,0 +1,19 @@
+{{ define "main"}}
+
+<div class="text-404">
+  <h1 class="error-emoji"></h1>
+  <h2>
+      404 ... This page does not exist, go <a href="{{ "/" | relURL }}">home</a>
+  </h2>
+</div>
+<script>
+  const errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
+  const emojiArray = [
+    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
+    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
+  ];
+  const errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
+</script>
+
+{{ end }}
