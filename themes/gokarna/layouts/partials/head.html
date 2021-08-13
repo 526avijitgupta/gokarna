@@ -11,10 +11,14 @@
     {{ $title := .Title | default .Site.Title }}
     {{ $description := .Description | default .Site.Params.Description }}
     {{ $image := .Params.image | default .Site.Params.AvatarURL }}
+    {{ $siteKeywords := .Site.Params.MetaKeywords | default (slice) }}
+    {{ $postKeywords := .Params.tags | default (slice) }}
+    {{ $keywords := union $siteKeywords $postKeywords }}
 
     <!-- SEO titles & descriptions -->
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
+    <meta name="keywords" content='{{ delimit $keywords ", "}}'>
 
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:type" content="website">

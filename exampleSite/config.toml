@@ -17,6 +17,7 @@ pygmentsStyle = "monokai"
   avatarSize = "size-m"
   customHeadHTML = ""
   showPostsOnHomePage = "popular"
+  metaKeywords = ["blog", "gokarna", "hugo"]
 
 [menu]
   [[menu.main]]
