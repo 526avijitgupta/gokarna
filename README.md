@@ -70,6 +70,12 @@ The theme is inspired by and accordingly named after [Gokarna](https://en.wikipe
 
 ![Gokarna](/images/gokarna.jpg)
 
+## Performance
+
+Google Lighthouse check score: 100%
+
+![Lighthouse Score](/images/lighthouse.png)
+
 ## LICENSE
 
 This code is licensed under [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
