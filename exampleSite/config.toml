@@ -5,8 +5,6 @@ languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 
-paginate = 20
-
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
 
@@ -51,3 +49,9 @@ pygmentsStyle = "monokai"
     pre = "<span data-feather='github'></span>"
     url = "https://github.com/526avijitgupta/gokarna"
     weight = 6
+
+  [[menu.main]]
+    identifier = "rss"
+    pre = "<span data-feather='rss'></span>"
+    url = "/index.xml"
+    weight = 7
