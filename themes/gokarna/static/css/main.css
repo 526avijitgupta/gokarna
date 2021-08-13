@@ -245,7 +245,7 @@ code {
 }
 
 :not(pre) > code {
-  background-color: #e0e0e0 !important;
+  background-color: var(--light-secondary-color) !important;
   color: var(--light-text-color);
   padding: 1px 4px;
 }
