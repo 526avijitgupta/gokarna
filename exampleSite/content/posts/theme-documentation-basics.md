@@ -84,7 +84,7 @@ theme = "gokarna"
     url = "https://github.com"
     weight = 3
     
-    # We use feather-icons
+    # We use feather-icons: https://feathericons.com/
     pre = "<span data-feather='github'></span>"
 ```
 
