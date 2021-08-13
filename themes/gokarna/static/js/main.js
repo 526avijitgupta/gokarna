@@ -23,8 +23,8 @@ function ready() {
 }
 
 window.addEventListener('scroll', () => {
-    console.log(window.innerWidth);
     if (window.innerWidth <= 820) {
+        // For smaller screen, show shadow earlier
         toggleHeaderShadow(50);
     } else {
         toggleHeaderShadow(100);
