@@ -8,6 +8,20 @@
         }
     </style>
 
+    {{/* SEO titles & descriptions */}}
+    {{ if .IsHome }} {{/* For homepage */}}
+    <title>
+        {{ .Site.Title }}
+    </title>
+    <meta name="description" content="{{ .Site.Params.Description }}">
+
+    {{ else }} {{/* For non-homepage pages */}}
+    <title>
+        {{ .Title }}
+    </title>
+    <meta name="description" content="{{ .Description }}">
+    {{ end }}
+
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
