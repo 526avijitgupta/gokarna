@@ -31,19 +31,19 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 Light Mode                                                      | Dark Mode
 :-------------------------:|:-------------------------:
-![Light mode](/images/screenshot-light-home.png "Light mode") | ![Dark mode](/images/screenshot-dark-home.png "Dark mode")
+![Light mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-light-home.png "Light mode") | ![Dark mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-dark-home.png "Dark mode")
 
 ### Post page
 
 Light Mode                                                      | Dark Mode
 :-------------------------:|:-------------------------:
-![Light mode](/images/screenshot-light-post.png "Light mode") | ![Dark mode](/images/screenshot-dark-post.png "Dark mode")
+![Light mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-light-post.png "Light mode") | ![Dark mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-dark-post.png "Dark mode")
 
 ### List page
 
 Light Mode                                                      | Dark Mode
 :-------------------------:|:-------------------------:
-![Light mode](/images/screenshot-light-list.png "Light mode") | ![Dark mode](/images/screenshot-dark-list.png "Dark mode")
+![Light mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-light-list.png "Light mode") | ![Dark mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-dark-list.png "Dark mode")
 
 
 
@@ -72,13 +72,13 @@ For a complete guide on customization, please go through our [basic](https://gok
 
 The theme is inspired by and accordingly named after [Gokarna](https://en.wikipedia.org/wiki/Gokarna,_Karnataka), a small and peaceful beach town on the west coast on India.
 
-![Gokarna](/images/gokarna.jpg)
+![Gokarna](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/gokarna.jpg)
 
 ## Performance
 
 Google Lighthouse check score: 100%
 
-![Lighthouse Score](/images/lighthouse.png)
+![Lighthouse Score](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/lighthouse.png)
 
 ## LICENSE
 
