@@ -1,4 +1,18 @@
 {{ define "main"}}
-    <h1 style="text-align: center"><a href="{{ "/" | relURL }}">404 ... You should go to the mainland</a></h1>
-    <img src="/404.gif">
+
+<h1 class="error-emoji" style="text-align: center"></h1>
+<h1 style="text-align: center">
+    404 ... This page does not exist, go <a href="{{ "/" | relURL }}">back</a>
+</h1>
+
+<script>
+  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
+  var emojiArray = [
+    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
+    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
+  ];
+  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
+</script>
+
 {{ end }}
