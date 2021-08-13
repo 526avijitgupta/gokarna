@@ -5,7 +5,6 @@ languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
-paginate = 20
 
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
