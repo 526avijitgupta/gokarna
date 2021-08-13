@@ -42,7 +42,7 @@ pygmentsStyle = "monokai"
   [[menu.main]]
     identifier = "coffee"
     pre = "<span data-feather='coffee'></span>"
-    url = "/TODO/"
+    url = "https://www.buymeacoffee.com/avijitgupta"
     weight = 5
 
   [[menu.main]]
