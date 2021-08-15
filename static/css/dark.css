@@ -49,6 +49,10 @@ blockquote {
   border-left-color: var(--dark-secondary-color);
 }
 
+hr {
+  color: var(--dark-secondary-color);
+}
+
 table thead {
   background-color: var(--dark-secondary-color);
 }
