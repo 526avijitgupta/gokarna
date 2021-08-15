@@ -261,6 +261,11 @@ blockquote {
   margin-left: 0;
 }
 
+hr {
+  color: var(--light-secondary-color);
+  margin: 50px auto;
+}
+
 table {
   border-collapse: collapse;
   font-size: 1.05rem;
