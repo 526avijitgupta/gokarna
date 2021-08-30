@@ -261,7 +261,7 @@ code {
 }
 
 pre code {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 blockquote {
@@ -340,7 +340,7 @@ table td {
 
 /* SINGLE */
 .post [role="doc-subtitle"] {
-  font-size: 1.2rem;
+  font-size: 1.1em;
   font-style: italic;
 }
 .post .post-date {
