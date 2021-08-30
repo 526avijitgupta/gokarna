@@ -7,24 +7,34 @@
 }
 
 @font-face {
-  font-family: Jost;
-  src: url("/fonts/Jost-Regular.ttf");
+  font-family: Inter;
+  font-weight: 300;
+  src: url("/fonts/Inter-Light.ttf");
 }
 
 @font-face {
-  font-family: Jost;
+  font-family: Inter;
+  font-weight: 400;
+  src: url("/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: Inter;
   font-weight: 700;
-  src: url("/fonts/Jost-Bold.ttf");
+  src: url("/fonts/Inter-Bold.ttf");
 }
 
 html {
   background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.5px;
+  font-family: "Inter", sans-serif;
+  font-size: 16.5px;
   min-height: 100%;
   position: relative;
+}
+
+b, strong {
+  font-weight: bold;
 }
 
 body {
@@ -54,7 +64,6 @@ img {
 .header {
   background-color: rgba(var(--light-primary-color), 0.95);
   color: inherit;
-  font-size: 1.2rem;
   height: 50px;
   left: 0;
   position: fixed;
@@ -102,7 +111,7 @@ img {
 }
 .nav-links .nav-link {
   display: inline-block;
-  padding: 0 4px;
+  padding: 0 2px;
 }
 .nav-links .nav-link a {
   display: block;
@@ -173,6 +182,7 @@ a:hover .feather-sun {
 .footer span {
   display: block;
   font-size: 0.9rem;
+  font-weight: 300;
   padding: 1px 0;
 }
 
@@ -268,7 +278,6 @@ hr {
 
 table {
   border-collapse: collapse;
-  font-size: 1.05rem;
   margin: 30px 0;
   text-align: left;
   display: block;
@@ -330,9 +339,6 @@ table td {
 }
 
 /* SINGLE */
-main#content .post {
-  font-size: 1.2rem;
-}
 .post [role="doc-subtitle"] {
   font-size: 1.2rem;
   font-style: italic;
@@ -341,8 +347,10 @@ main#content .post {
   color: gray;
 }
 .post .post-content {
-  line-height: 1.7;
+  line-height: 26px;
   margin-top: 50px;
+  font-weight: 300;
+  letter-spacing: 0.015em;
 }
 
 /* LIST */
@@ -363,7 +371,6 @@ main#content .post {
   display: inline-block;
 }
 .post-title .post-link {
-  font-size: 1.2rem;
   width: 80%;
 }
 .tags-list .post-tags {
@@ -430,10 +437,6 @@ main#content .post {
     box-sizing: border-box;
     padding: 0 1.5rem;
     width: auto;
-  }
-
-  main#content .post {
-    font-size: 1.05rem;
   }
 
   .home-about {
