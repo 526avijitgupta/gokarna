@@ -347,7 +347,7 @@ table td {
   color: gray;
 }
 .post .post-content {
-  line-height: 26px;
+  line-height: 1.7;
   margin-top: 50px;
   font-weight: 300;
   letter-spacing: 0.015em;
