@@ -22,7 +22,7 @@ This is the default blog post type which will be shown in your "Posts" section a
 title: "Hello, world!"
 date: 2021-01-01
 description: "A blog post"
-image: "path/to/image.png"
+image: "/path/to/image.png"
 type: "post"
 tags: ["blog"]
 ---
@@ -38,7 +38,7 @@ We introduced this type to distinguish between blog posts and normal markdown pa
 ```markdown
 ---
 title: "Hello, world!"
-image: "path/to/image.png"
+image: "/path/to/image.png"
 type: "page"
 ---
 
@@ -124,7 +124,7 @@ We make sure your pages are social media ready.
 ```markdown
 ---
 title: "Hello, world!"
-image: "path/to/image.png"
+image: "/path/to/image.png"
 ---
 ```
 
