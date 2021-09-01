@@ -26,6 +26,10 @@ a:hover .feather-moon {
   color: white;
 }
 
+.social-icons-list .social-icon {
+  fill: var(--dark-text-color);
+}
+
 .post-tags .post-tag:hover {
   background-color: var(--dark-text-color);
   color: rgb(var(--dark-primary-color));

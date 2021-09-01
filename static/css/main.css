@@ -329,6 +329,35 @@ table td {
   width: 15rem;
 }
 
+.social-icons {
+  text-align: center;
+}
+
+.social-icons .social-icons-list {
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.social-icons-list .social-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  fill: var(--light-text-color);
+  height: 24px;
+  margin: 0 8px;
+  width: 24px;
+}
+
+.social-icon a:hover {
+  fill: var(--accent-color);
+}
+
+.social-icon a svg path {
+  transition: fill 0.15s ease;
+}
+
 .home-posts {
   padding-top: 20px;
 }

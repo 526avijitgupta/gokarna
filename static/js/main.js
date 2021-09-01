@@ -12,6 +12,13 @@ function ready() {
     feather.replace({ 'stroke-width': 1, width: 20, height: 20 });
     setThemeByUserPref();
 
+    // Elements to inject
+    const mySVGsToInject = document.querySelectorAll('img.inject-me');
+    console.log(mySVGsToInject.length)
+
+    // Do the injection
+    SVGInjector(mySVGsToInject);
+
     document.getElementById('hamburger-menu-toggle').addEventListener('click', () => {
         const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0]
         if (hamburgerMenu.classList.contains('visibility-hidden')) {
