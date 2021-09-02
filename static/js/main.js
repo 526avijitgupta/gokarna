@@ -13,11 +13,9 @@ function ready() {
     setThemeByUserPref();
 
     // Elements to inject
-    const mySVGsToInject = document.querySelectorAll('img.inject-me');
-    console.log(mySVGsToInject.length)
-
+    const svgsToInject = document.querySelectorAll('img.svg-inject');
     // Do the injection
-    SVGInjector(mySVGsToInject);
+    SVGInjector(svgsToInject);
 
     document.getElementById('hamburger-menu-toggle').addEventListener('click', () => {
         const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0]

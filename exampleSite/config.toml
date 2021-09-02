@@ -46,15 +46,15 @@ pygmentsStyle = "monokai"
     weight = 4
 
   [[menu.main]]
-    identifier = "coffee"
-    pre = "<span data-feather='coffee'></span>"
-    url = "https://www.buymeacoffee.com/avijitgupta"
-    weight = 5
-
-  [[menu.main]]
     identifier = "github"
     pre = "<span data-feather='github'></span>"
     url = "https://github.com/526avijitgupta/gokarna"
+    weight = 5
+
+  [[menu.main]]
+    identifier = "buymeacoffee"
+    pre = "<img class='svg-inject' src='/icons/buymeacoffee.svg' />"
+    url = "https://www.buymeacoffee.com/avijitgupta"
     weight = 6
 
   [[menu.main]]
