@@ -7,6 +7,7 @@
 html {
   background-color: rgb(var(--dark-primary-color));
   color: var(--dark-text-color);
+  fill: var(--dark-text-color);
 }
 
 .header {
