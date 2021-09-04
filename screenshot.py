@@ -1,29 +1,91 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-import sys
+from PIL import Image
+import os
+
+
+"""
+Setup:
+    pip install selenium pillow
+
+    Add geckodriver to $PATH. Link: https://github.com/mozilla/geckodriver/releases
+"""
 
 BASE_URL = 'http://localhost:1313'
 options = Options()
-options.add_argument("--headless")
-driver = webdriver.Firefox(options=options)
-screenshot_options = [
-    {'path': '/', 'filename': 'screenshot-{color_pref}-home.png', 'resize': ''},
-    {'path': '/posts/', 'filename': 'screenshot-{color_pref}-list.png', 'resize': ''}
+options.add_argument('--headless')
+DRIVER = webdriver.Firefox(options=options)
+DRIVER.set_window_size(1600, 900)
+
+SCREENSHOT_OPTIONS = [
+    {'path': '/', 'filename': 'screenshot-{color_pref}-home.png'},
+    {'path': '/posts/', 'filename': 'screenshot-{color_pref}-list.png'},
+    {'path': '/posts/theme-documentation-basics/', 'filename': 'screenshot-{color_pref}-post.png'},
 ]
 
-for opt in screenshot_options:
-    driver.get(BASE_URL + opt['path'])
-    driver.save_screenshot(opt['filename'].format(color_pref='color-a'))
-    for elem in driver.find_elements_by_class_name('dark-theme-toggle'):
-        try:
-            elem.click()
-            print('Clicked')
-        except:
-            print('Except')
-            pass
-    driver.save_screenshot(opt['filename'].format(color_pref='color-b'))
+DARK_THEME = (32, 32, 32, 255)
+LIGHT_THEME = (255, 255, 255, 255)
 
-    if opt['resize']:
-        break
+def get_dominant_color(img_path):
+    pil_img = Image.open(img_path)
+    img = pil_img.copy()
+    img.convert("RGB")
+    img.resize((1, 1), resample=0)
+    dominant_color = img.getpixel((0, 0))
+    return dominant_color
 
-driver.quit()
+def take_screenshots(driver, screenshot_options):
+    for opt in screenshot_options:
+        driver.get(BASE_URL + opt['path'])
+        color_a_filename = opt['filename'].format(color_pref='color-a')
+        color_b_filename = opt['filename'].format(color_pref='color-b')
+
+        driver.save_screenshot(color_a_filename)
+
+        # Change theme by clicking the theme toggle button
+        for elem in driver.find_elements_by_class_name('dark-theme-toggle'):
+            # Hidden hamburger menu for mobile raises Exception on clicking
+            if elem.is_displayed():
+                elem.click()
+
+        driver.save_screenshot(color_b_filename)
+
+        for f in (color_a_filename, color_b_filename):
+            if get_dominant_color(f) == LIGHT_THEME:
+                os.rename(f, opt['filename'].format(color_pref='light'))
+            elif get_dominant_color(f) == DARK_THEME:
+                os.rename(f, opt['filename'].format(color_pref='dark'))
+            else:
+                raise Exception('Image does not match theme')
+
+        print(f'Saved {opt["path"]}')
+
+def merge_home_images():
+    light_home = Image.open('screenshot-light-home.png')
+    dark_home = Image.open('screenshot-dark-home.png')
+    if light_home.size != dark_home.size:
+        raise Exception('Image sizes should be same')
+
+    width, height = light_home.size
+
+    light_home_half = light_home.crop((0, 0, int(width/2), height))
+    dark_home_half = dark_home.crop((int(width/2), 0, width, height))
+
+    merged_img = Image.new('RGB', (width, height))
+    # Since we are merging horizontally, we will keep the offset of x-axis
+    x_offset = 0
+    for img in (light_home_half, dark_home_half):
+        merged_img.paste(img, (x_offset, 0))
+        x_offset += img.size[0]
+
+    # As per hugo guidelines we need to have a dimension of at least 1500×1000 in pixels
+    # So we will use 1920x1080
+    merged_img = merged_img.resize((1920, 1080))
+
+    merged_img.save('screenshot.png')
+    merged_img.save('tn.png')
+    print('Created merged image for hugo showcase')
+
+take_screenshots(DRIVER, SCREENSHOT_OPTIONS)
+merge_home_images()
+DRIVER.quit()
