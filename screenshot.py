@@ -79,8 +79,7 @@ def merge_home_images():
         x_offset += img.size[0]
 
     # As per hugo guidelines we need to have a dimension of at least 1500×1000 in pixels
-    # So we will use 1920x1080
-    merged_img = merged_img.resize((1920, 1080))
+    merged_img = merged_img.resize((1500, 1000))
 
     merged_img.save('screenshot.png')
     merged_img.save('tn.png')
