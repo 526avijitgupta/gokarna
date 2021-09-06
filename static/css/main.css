@@ -343,8 +343,9 @@ table td {
   box-sizing: border-box;
   display: inline-block;
   fill: var(--light-text-color);
-  height: 24px;
+  height: auto;
   margin: 0 6px;
+  max-height: 24px;
   width: auto;
 }
 
