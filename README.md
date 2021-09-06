@@ -24,6 +24,7 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 - SEO Ready
 - Option to add custom javascript and css
 - RSS Feed
+- Math typesetting using [Katex](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#katex)
 
 ## Screenshots
 
