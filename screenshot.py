@@ -13,14 +13,17 @@ Setup:
 
 BASE_URL = 'http://localhost:1313'
 options = Options()
+if os.path.exists('/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'):
+    options.binary_location = '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
 options.add_argument('--headless')
 DRIVER = webdriver.Firefox(options=options)
-DRIVER.set_window_size(1600, 900)
+# To offset screen size based on window size
+DRIVER.set_window_size(1500, 1085)
 
 SCREENSHOT_OPTIONS = [
-    {'path': '/', 'filename': 'screenshot-{color_pref}-home.png'},
-    {'path': '/posts/', 'filename': 'screenshot-{color_pref}-list.png'},
-    {'path': '/posts/theme-documentation-basics/', 'filename': 'screenshot-{color_pref}-post.png'},
+    {'path': '/', 'filename': 'images/screenshot-{color_pref}-home.png'},
+    {'path': '/posts/', 'filename': 'images/screenshot-{color_pref}-list.png'},
+    {'path': '/posts/theme-documentation-basics/', 'filename': 'images/screenshot-{color_pref}-post.png'},
 ]
 
 DARK_THEME = (32, 32, 32, 255)
@@ -61,8 +64,8 @@ def take_screenshots(driver, screenshot_options):
         print(f'Saved {opt["path"]}')
 
 def merge_home_images():
-    light_home = Image.open('screenshot-light-home.png')
-    dark_home = Image.open('screenshot-dark-home.png')
+    light_home = Image.open('images/screenshot-light-home.png')
+    dark_home = Image.open('images/screenshot-dark-home.png')
     if light_home.size != dark_home.size:
         raise Exception('Image sizes should be same')
 
@@ -78,11 +81,8 @@ def merge_home_images():
         merged_img.paste(img, (x_offset, 0))
         x_offset += img.size[0]
 
-    # As per hugo guidelines we need to have a dimension of at least 1500×1000 in pixels
-    merged_img = merged_img.resize((1500, 1000))
-
-    merged_img.save('screenshot.png')
-    merged_img.save('tn.png')
+    merged_img.save('images/screenshot.png')
+    merged_img.save('images/tn.png')
     print('Created merged image for hugo showcase')
 
 take_screenshots(DRIVER, SCREENSHOT_OPTIONS)
