@@ -66,6 +66,9 @@ socialIcons = [
     {name = "twitter", url = "https://example.com"},
     {name = "linkedin", url = "https://example.com"},
     {name = "stackoverflow", url = "https://example.com"},
+    {name = "dribbble", url = "https://example.com"},
+    {name = "instagram", url = "https://example.com"},
+    {name = "youtube", url = "https://example.com"},
   ]
 ```
 
