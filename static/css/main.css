@@ -335,8 +335,7 @@ table td {
 .social-icons .social-icons-list {
   display: inline-block;
   list-style-type: none;
-  margin-top: 20px;
-  padding: 10px;
+  padding: 0;
   text-align: center;
 }
 
@@ -345,8 +344,8 @@ table td {
   display: inline-block;
   fill: var(--light-text-color);
   height: 24px;
-  margin: 0 8px;
-  width: 24px;
+  margin: 0 6px;
+  width: auto;
 }
 
 .social-icon a svg path {
