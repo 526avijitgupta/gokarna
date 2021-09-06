@@ -11,13 +11,13 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 ## Content Types
 
-This theme supports two types of content types: `post` and `page`. To specify them, you need to add them in your markdown metadata. 
+This theme supports two types of content types: `post` and `page`. To specify them, you need to add them in your markdown metadata.
 
 ### Post
 
 This is the default blog post type which will be shown in your "Posts" section and who's tags will be indexed. Basically, a normal blog post.
 
-```markdown
+```toml
 ---
 title: "Hello, world!"
 date: 2021-01-01
@@ -35,7 +35,7 @@ This is my blog.
 
 We introduced this type to distinguish between blog posts and normal markdown pages. The reason to create this was to give the user complete freedom in creating their website. You can use this to create a portfolio of your projects or showcase your designs. The possibilites are endless and the choice is yours.
 
-```markdown
+```toml
 ---
 title: "Hello, world!"
 image: "/path/to/image.png"
@@ -66,9 +66,6 @@ socialIcons = [
     {name = "twitter", url = "https://example.com"},
     {name = "linkedin", url = "https://example.com"},
     {name = "stackoverflow", url = "https://example.com"},
-    {name = "dribbble", url = "https://example.com"},
-    {name = "instagram", url = "https://example.com"},
-    {name = "youtube", url = "https://example.com"},
   ]
 ```
 
@@ -122,7 +119,7 @@ We preferred privacy friendly tools like [Umami](https://umami.is/) & [Fathom An
 
 Giving users the freedom to add anything in the HTML via config.toml seemed like an elegant way to solve the problem.
 
-```markdown
+```toml
 [params]
   customHeadHTML = """
     <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
@@ -133,7 +130,7 @@ Giving users the freedom to add anything in the HTML via config.toml seemed like
 
 Katex is a math typesetting library for the web which lets you write beautiful equations. To use it, add the javascript as mentioned in [their documentation](https://katex.org/docs/browser.html) in our `params.customHeadHTML`.
 
-```markdown
+```toml
 [params]
   customHeadHTML = """
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
@@ -175,7 +172,7 @@ We make sure your pages are social media ready.
 
 ![Social Media Preview](/images/theme-documentation-advanced/preview.png "Social Media Preview")
 
-```markdown
+```toml
 ---
 title: "Hello, world!"
 image: "/path/to/image.png"
@@ -188,7 +185,7 @@ image: "/path/to/image.png"
 
 The keywords relevant for SEO are composed of the page `tags` as defined below:
 
-```markdown
+```toml
 ---
 title: "Hello, world!"
 tags: ["hello", "world"]
@@ -197,7 +194,7 @@ tags: ["hello", "world"]
 
 and the `metaKeywords` specified in the config.toml:
 
-```markdown
+```toml
 [params]
   metaKeywords = ["blog", "gokarna", "hugo"]
 ```
