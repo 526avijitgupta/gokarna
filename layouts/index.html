@@ -11,40 +11,19 @@
 
 <div class="flex-break"></div>
 
+{{ if isset .Site.Params "socialicons" }}
 <section class="social-icons">
     <ul class="social-icons-list">
-        <li class="social-icon github">
-            <a href="https://github.com/526avijitgupta">
-                <img class="svg-inject" src="/icons/github.svg" />
+        {{ range .Site.Params.SocialIcons }}
+        <li class="social-icon">
+            <a href="{{ .url }}">
+                <img class="svg-inject" src="/icons/{{ .name }}.svg" />
             </a>
         </li>
-        <li class="social-icon linkedin">
-            <a href="https://github.com/526avijitgupta">
-                <img class="svg-inject" src="/icons/linkedin.svg" />
-            </a>
-        </li>
-        <li class="social-icon stackoverflow">
-            <a href="https://github.com/526avijitgupta">
-                <img class="svg-inject" src="/icons/stackoverflow.svg" />
-            </a>
-        </li>
-        <li class="social-icon dribbble">
-            <a href="https://github.com/526avijitgupta">
-                <img class="svg-inject" src="/icons/dribbble.svg" />
-            </a>
-        </li>
-        <li class="social-icon twitter">
-            <a href="https://github.com/526avijitgupta">
-                <img class="svg-inject" src="/icons/twitter.svg" />
-            </a>
-        </li>
-        <li class="social-icon buymeacoffee">
-            <a href="https://github.com/526avijitgupta">
-                <img class="svg-inject" src="/icons/buymeacoffee.svg" />
-            </a>
-        </li>
+        {{ end }}
     </ul>
 </section>
+{{ end }}
 
 {{ if isset .Site.Params "showpostsonhomepage" }}
 
