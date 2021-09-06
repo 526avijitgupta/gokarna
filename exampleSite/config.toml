@@ -53,7 +53,7 @@ pygmentsStyle = "monokai"
 
   [[menu.main]]
     identifier = "buymeacoffee"
-    pre = "<img class='svg-inject' src='/icons/buymeacoffee.svg' />"
+    pre = "<span data-feather='coffee'></span>"
     url = "https://www.buymeacoffee.com/avijitgupta"
     weight = 6
 

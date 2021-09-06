@@ -54,19 +54,46 @@ The `weight` attribute can be added in the markdown metadata for `post` types. W
 2. Show recent posts on home page if the value is set to `recent`
 3. Do not show anything if the variable is unset or an empty string.
 
-## Icons in header
+## Icons
+Gokarna supports popular social media icons (Github, Linkedin, Twitter, StackOverflow, Dribbble, etc.) out of the box. See full list of supported icons [here](https://github.com/526avijitgupta/gokarna/tree/main/static/icons).
 
-We have used [feather](https://feathericons.com) as our icons library. Here is an example of how to add custom icons in the header:
+### Icons on homepage
 
+Populate the `socialIcons` config param with a list of name and url of each icon. The specified `name` should exactly match one of the names from [here](https://github.com/526avijitgupta/gokarna/tree/main/static/icons).
+
+```toml
+socialIcons = [
+    {name = "twitter", url = "https://example.com"},
+    {name = "linkedin", url = "https://example.com"},
+    {name = "stackoverflow", url = "https://example.com"},
+  ]
 ```
+
+### Icons in header
+
+[Feather](https://feathericons.com) icons has a comprehensive list of icons which are more general purpose and not limited to social media.
+Therefore, we use feather as an additional source of icons. Here is an example of how to add custom icons in the header using feather:
+
+```toml
   [[menu.main]]
     identifier = "github"
     url = "https://github.com"
     weight = 3
-
-    # We use feather-icons
+    # Using feather-icons
     pre = "<span data-feather='github'></span>"
 ```
+
+The same icon in this case could also be added without feather:
+
+```toml
+  [[menu.main]]
+    identifier = "github"
+    url = "https://www.buymeacoffee.com/"
+    weight = 3
+    # Without using feather-icons
+    pre = "<img class='svg-inject' src='/icons/github.svg' />"
+```
+
 
 ## Custom Head HTML
 
