@@ -103,7 +103,7 @@ The goal of this feature is to give the user more control over the theme. It's f
 
 Add your own JavaScript or CSS by putting them in the `static/` folder and importing them into your HTML.
 
-```markdown
+```toml
 [params]
   customHeadHTML = """
     <script>console.log("Custom script or import");</script>
@@ -119,7 +119,7 @@ We preferred privacy friendly tools like [Umami](https://umami.is/) & [Fathom An
 
 Giving users the freedom to add anything in the HTML via config.toml seemed like an elegant way to solve the problem.
 
-```markdown
+```toml
 [params]
   customHeadHTML = """
     <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
@@ -130,7 +130,7 @@ Giving users the freedom to add anything in the HTML via config.toml seemed like
 
 Katex is a math typesetting library for the web which lets you write beautiful equations. To use it, add the javascript as mentioned in [their documentation](https://katex.org/docs/browser.html) in our `params.customHeadHTML`.
 
-```markdown
+```toml
 [params]
   customHeadHTML = """
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
