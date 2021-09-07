@@ -1,0 +1,35 @@
+1631036576982	geckodriver	INFO	Listening on 127.0.0.1:63557
+1631036577998	mozrunner::runner	INFO	Running command: "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/km/5sblvl2s717_5d42_5g1nk3h0000gp/T/rust_mozprofile5DWpnz"
+*** You are running in headless mode.
+1631036578472	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/km/5sblvl2s717_5d42_5g1nk3h0000gp/T/rust_mozprofile5DWpnz/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+1631036579841	Marionette	INFO	Listening on port 63564
+1631036579916	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1631036616728	geckodriver	INFO	Listening on 127.0.0.1:63632
+1631036617742	mozrunner::runner	INFO	Running command: "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/km/5sblvl2s717_5d42_5g1nk3h0000gp/T/rust_mozprofile14Wjat"
+*** You are running in headless mode.
+1631036618194	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/km/5sblvl2s717_5d42_5g1nk3h0000gp/T/rust_mozprofile14Wjat/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+1631036619977	Marionette	INFO	Listening on port 63639
+1631036620051	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1631036636303	geckodriver	INFO	Listening on 127.0.0.1:63714
+1631036637321	mozrunner::runner	INFO	Running command: "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/km/5sblvl2s717_5d42_5g1nk3h0000gp/T/rust_mozprofileZ0Nh5n"
+*** You are running in headless mode.
+1631036637993	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/km/5sblvl2s717_5d42_5g1nk3h0000gp/T/rust_mozprofileZ0Nh5n/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+1631036641071	Marionette	INFO	Listening on port 63721
+1631036641143	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1631036645349	Marionette	INFO	Stopped listening on port 63721
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
