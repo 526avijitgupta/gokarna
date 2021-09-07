@@ -59,14 +59,16 @@ Gokarna supports popular social media icons (Github, Linkedin, Twitter, StackOve
 
 ### Icons on homepage
 
-Populate the `socialIcons` config param with a list of name and url of each icon. The specified `name` should exactly match one of the names from [here](https://github.com/526avijitgupta/gokarna/tree/main/static/icons).
+To display icons on the homepage, simply update the `socialIcons` config param with a list of name and url of each icon. The specified `name` should exactly match one of the names from [here](https://github.com/526avijitgupta/gokarna/tree/main/static/icons).
+If you want to add more icons, you can download the svg directly from [here](https://simpleicons.org/)  and place them in your local icons directory (`/static/icons/`)
 
 ```toml
-socialIcons = [
-    {name = "twitter", url = "https://example.com"},
-    {name = "linkedin", url = "https://example.com"},
-    {name = "stackoverflow", url = "https://example.com"},
-  ]
+  [params]
+    socialIcons = [
+      {name = "twitter", url = "https://example.com"},
+      {name = "linkedin", url = "https://example.com"},
+      {name = "stackoverflow", url = "https://example.com"},
+    ]
 ```
 
 Preview:
