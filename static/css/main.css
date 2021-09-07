@@ -3,6 +3,7 @@
 
   --light-primary-color: 255, 255, 255;
   --light-secondary-color: #dddddd;
+  --light-tertiary-color: #272822;
   --light-text-color: black;
 }
 
@@ -230,7 +231,7 @@ a:hover .feather-sun {
 /* CODE BLOCKS */
 code,
 pre {
-  background-color: #272822 !important;
+  background-color: var(--light-tertiary-color);
   box-sizing: border-box;
   color: white;
 }
