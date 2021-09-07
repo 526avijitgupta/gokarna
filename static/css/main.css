@@ -43,6 +43,7 @@ a {
 /* This is set in partials/head.html and is populated via config */
 a:hover {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 main#content {
@@ -111,6 +112,12 @@ img {
 .nav-links .nav-link a {
   display: block;
   padding: 0 6px;
+}
+.nav-link a svg {
+  height: 20px;
+  margin: -3px auto;
+  stroke-width: 2;
+  width: 20px;
 }
 .nav-links .nav-link.icon a {
   padding: 0 8px;
@@ -194,14 +201,6 @@ a:hover .feather-sun {
 
 .header-shadow {
   box-shadow: rgb(220, 220, 220) 0px 1px 5px;
-}
-
-/* ICONS */
-.feather {
-  height: 20px;
-  margin: -3px auto;
-  stroke-width: 2;
-  width: 20px;
 }
 
 /* TAGS */
@@ -327,6 +326,30 @@ table td {
 .home-about .avatar img.size-xl {
   height: 15rem;
   width: 15rem;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons .social-icons-list {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.social-icons-list .social-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  fill: var(--light-text-color);
+  height: 24px;
+  margin: 0 6px;
+  width: 24px;
+}
+
+.social-icon a svg path {
+  transition: fill 0.15s ease;
 }
 
 .home-posts {

@@ -7,6 +7,7 @@
 html {
   background-color: rgb(var(--dark-primary-color));
   color: var(--dark-text-color);
+  fill: var(--dark-text-color);
 }
 
 .header {
@@ -24,6 +25,10 @@ html {
 a:hover .feather-moon {
   fill: white;
   color: white;
+}
+
+.social-icons-list .social-icon {
+  fill: var(--dark-text-color);
 }
 
 .post-tags .post-tag:hover {

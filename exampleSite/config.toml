@@ -21,7 +21,14 @@ pygmentsStyle = "monokai"
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
   """
-  showPostsOnHomePage = "popular"
+  socialIcons = [
+    {name = "twitter", url = "https://example.com"},
+    {name = "linkedin", url = "https://example.com"},
+    {name = "stackoverflow", url = "https://example.com"},
+    {name = "dribbble", url = "https://example.com"},
+    {name = "instagram", url = "https://example.com"},
+    {name = "twitch", url = "https://example.com"},
+  ]
   metaKeywords = ["blog", "gokarna", "hugo"]
 
 [menu]
@@ -46,15 +53,15 @@ pygmentsStyle = "monokai"
     weight = 4
 
   [[menu.main]]
-    identifier = "coffee"
-    pre = "<span data-feather='coffee'></span>"
-    url = "https://www.buymeacoffee.com/avijitgupta"
-    weight = 5
-
-  [[menu.main]]
     identifier = "github"
     pre = "<span data-feather='github'></span>"
     url = "https://github.com/526avijitgupta/gokarna"
+    weight = 5
+
+  [[menu.main]]
+    identifier = "buymeacoffee"
+    pre = "<span data-feather='coffee'></span>"
+    url = "https://www.buymeacoffee.com/avijitgupta"
     weight = 6
 
   [[menu.main]]

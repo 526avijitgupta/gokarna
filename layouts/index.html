@@ -11,6 +11,20 @@
 
 <div class="flex-break"></div>
 
+{{ if isset .Site.Params "socialicons" }}
+<section class="social-icons">
+    <ul class="social-icons-list">
+        {{ range .Site.Params.SocialIcons }}
+        <li class="social-icon">
+            <a href="{{ .url }}">
+                <img class="svg-inject" src="/icons/{{ .name }}.svg" />
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
+
 {{ if isset .Site.Params "showpostsonhomepage" }}
 
     <div class="home-posts list-posts">
