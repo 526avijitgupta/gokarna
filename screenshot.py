@@ -26,7 +26,7 @@ SCREENSHOT_OPTIONS = [
     {'path': '/posts/theme-documentation-basics/', 'filename': 'images/screenshot-{color_pref}-post.png'},
 ]
 
-DARK_THEME = (32, 32, 32, 255)
+DARK_THEME = (34, 39, 45, 255)
 LIGHT_THEME = (255, 255, 255, 255)
 
 def get_dominant_color(img_path):
