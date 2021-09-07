@@ -69,6 +69,11 @@ socialIcons = [
   ]
 ```
 
+Preview:
+
+![Icons on homepage Preview](/images/theme-documentation-advanced/icons-homepage-preview.png "Icons on homepage Preview")
+
+
 ### Icons in header
 
 [Feather](https://feathericons.com) icons has a comprehensive list of icons which are more general purpose and not limited to social media.
