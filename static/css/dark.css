@@ -1,7 +1,8 @@
 :root {
-  --dark-primary-color: 32, 32, 32;
+  --dark-primary-color: 34, 39, 46;
+  --dark-secondary-color: #2d333b;
+  --dark-tertiary-color: #646464;
   --dark-text-color: white;
-  --dark-secondary-color: #555;
 }
 
 html {
@@ -67,8 +68,13 @@ table th {
   border-bottom-color: var(--dark-secondary-color);
 }
 
-:not(pre) > code {
+code,
+pre {
   background-color: var(--dark-secondary-color) !important;
+}
+
+:not(pre) > code {
+  background-color: var(--dark-tertiary-color) !important;
   color: var(--dark-text-color);
 }
 

@@ -112,10 +112,10 @@ Add your own JavaScript or CSS by putting them in the `static/` folder and impor
 
 ```toml
 [params]
-  customHeadHTML = """
+  customHeadHTML = '''
     <script>console.log("Custom script or import");</script>
     <script src="/js/custom.js"></script>
-  """
+  '''
 ```
 
 ### Analytics
@@ -128,9 +128,9 @@ Giving users the freedom to add anything in the HTML via config.toml seemed like
 
 ```toml
 [params]
-  customHeadHTML = """
+  customHeadHTML = '''
     <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
-  """
+  '''
 ```
 
 ### Katex
@@ -139,7 +139,7 @@ Katex is a math typesetting library for the web which lets you write beautiful e
 
 ```toml
 [params]
-  customHeadHTML = """
+  customHeadHTML = '''
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
@@ -148,7 +148,7 @@ Katex is a math typesetting library for the web which lets you write beautiful e
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
-  """
+  '''
 ```
 
 > Note: Make sure you use the latest version of katex and use the correct script tags as described in [their documentation](https://katex.org/docs/browser.html)
