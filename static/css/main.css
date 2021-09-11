@@ -385,6 +385,11 @@ table td {
 .post-content h5 {
   margin-top: 20px;
 }
+.post-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* LIST */
 .list-posts .list-title {
