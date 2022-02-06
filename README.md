@@ -19,7 +19,7 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 - Customizable header
 - Responsive
 - Available in light and dark themes
-- Native fonts and support for [feather icons](https://feathericons.com/) and [svg icons](http://localhost:1313/posts/theme-documentation-advanced/#icons-on-homepage)
+- Native fonts and support for [feather icons](https://feathericons.com/) and [svg icons](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#icons-on-homepage)
 - Syntax highlighting
 - SEO Ready
 - Option to add custom javascript and css
