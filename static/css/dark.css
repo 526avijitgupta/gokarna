@@ -28,8 +28,7 @@ a:hover .feather-moon {
   color: white;
 }
 
-.social-icons-list .social-icon,
-.social-icons-list .social-icon a:visited  {
+.social-icons-list .social-icon {
   fill: var(--dark-text-color);
 }
 
