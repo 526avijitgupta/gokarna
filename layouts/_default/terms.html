@@ -5,7 +5,7 @@
     <ul class="post-tags">
         {{ range $.Site.Taxonomies.tags.ByCount }}
         <li class="post-tag">
-            <a href="/tags/{{ .Name | urlize }}/">
+            <a href="{{ $.Site.BaseURL }}/tags/{{ .Name | urlize }}/">
                 <div class="tag-name">{{ .Name }}</div>
                 <div class="tag-posts-count">{{ .Count }}</div>
             </a>
