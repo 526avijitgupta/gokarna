@@ -2,7 +2,7 @@
 <section class="home-about">
 	<div class="avatar">
         {{ if isset .Site.Params "avatarurl" }}
-        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Site.Params.AvatarURL }}'>
+        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Site.BaseURL }}{{ .Site.Params.AvatarURL }}'>
         {{ end }}
 	</div>
     <h1>{{ .Site.Title }}</h1>
@@ -17,7 +17,7 @@
         {{ range .Site.Params.SocialIcons }}
         <li class="social-icon">
             <a href="{{ .url }}">
-                <img class="svg-inject" src="/icons/{{ .name }}.svg" />
+                <img class="svg-inject" src="{{ .Site.BaseURL }}/icons/{{ .name }}.svg" />
             </a>
         </li>
         {{ end }}

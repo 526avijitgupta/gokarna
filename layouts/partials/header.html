@@ -4,7 +4,7 @@
         {{ if isset .Site.Params "avatarurl" }}
         <div class="avatar">
             <a href="{{ .Site.BaseURL }}">
-                <img src="{{ .Site.Params.AvatarURL }}" alt="avatar" />
+                <img src="{{ .Site.BaseURL }}{{ .Site.Params.AvatarURL }}" alt="avatar" />
             </a>
         </div>
         {{ end }}
@@ -16,7 +16,7 @@
         <div class="nav-links">
             {{ range .Site.Menus.main }}
             <div class="nav-link">
-                <a href="{{ .URL }}">
+                <a href="{{ .URL | absURL }}">
                     {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                 </a>
             </div>
@@ -39,7 +39,7 @@
             <ul class="nav-hamburger-list visibility-hidden">
                 {{ range .Site.Menus.main }}
                 <li class="nav-item">
-                    <a href="{{ .URL }}">
+                    <a href="{{ .URL | absURL }}">
                         {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                     </a>
                 </li>

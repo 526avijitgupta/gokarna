@@ -9,7 +9,7 @@
 
         <ul class="post-tags">
         {{ range .Params.tags }}
-            <li class="post-tag"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+            <li class="post-tag"><a href="{{ "/tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
         {{ end }}
         </ul>
     </div>
