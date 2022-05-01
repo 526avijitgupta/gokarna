@@ -1,5 +1,6 @@
 :root {
-  --content-width: 810px;
+  --content-width: 1120px;
+  --container-width: 810px;
 
   --light-primary-color: 255, 255, 255;
   --light-secondary-color: #dddddd;
@@ -50,6 +51,45 @@ a:hover {
 main#content {
   margin: 90px auto 0;
   width: var(--content-width);
+}
+
+main#content > .container {
+  margin: auto;
+  width: var(--container-width);
+}
+
+.post.container {
+  display: inline-block;
+}
+
+.post-toc {
+  display: inline-block;
+  margin-left: 25px;
+  vertical-align: top;
+  width: 280px;
+}
+
+#toc {
+  position: fixed;
+  top: 120px;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+#toc ul li {
+  margin-top: 12px;
+}
+
+#toc ul ul {
+  padding-inline-start: 5px;
 }
 
 img {
@@ -368,6 +408,9 @@ table td {
   line-height: 1.7;
   margin-top: 50px;
   letter-spacing: 0.5px;
+}
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  scroll-margin-top: 55px;
 }
 .post-content h1 {
   margin-top: 40px;

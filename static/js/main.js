@@ -12,6 +12,12 @@ function ready() {
     feather.replace({ 'stroke-width': 1, width: 20, height: 20 });
     setThemeByUserPref();
 
+    if (document.querySelector('main#content > .container').classList.contains('post')) {
+        console.log('post page');
+        addAnchorsToPostHeadings();
+        addSmoothScroll();
+    }
+
     // Elements to inject
     const svgsToInject = document.querySelectorAll('img.svg-inject');
     // Do the injection
@@ -35,6 +41,41 @@ window.addEventListener('scroll', () => {
         toggleHeaderShadow(100);
     }
 });
+
+function addAnchorsToPostHeadings() {
+    document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5').forEach($heading => {
+
+        //create id from heading text
+      var id = $heading.getAttribute("id") || $heading.innerText.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ +/g, '-');
+
+      //add id to heading
+      $heading.setAttribute('id', id);
+
+      //append parent class to heading
+      $heading.classList.add('anchor-heading');
+
+      //create anchor
+      $anchor = document.createElement('a');
+      $anchor.className = 'anchor-link';
+      $anchor.href = '#' + id;
+      $anchor.innerText = '#';
+
+      //append anchor after heading text
+      $heading.appendChild($anchor);
+    });
+}
+
+function addSmoothScroll() {
+    document.querySelectorAll('a.anchor-link').forEach($anchor => {
+        $anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' //scroll to top of the target element
+            });
+        });
+    });
+}
 
 function toggleHeaderShadow(scrollY) {
     if (window.scrollY > scrollY) {
