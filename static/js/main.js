@@ -12,7 +12,8 @@ function ready() {
     feather.replace({ 'stroke-width': 1, width: 20, height: 20 });
     setThemeByUserPref();
 
-    if (document.querySelector('main#content > .container').classList.contains('post')) {
+    if (document.querySelector('main#content > .container') !== null &&
+            document.querySelector('main#content > .container').classList.contains('post')) {
         buildToc();
         addSmoothScroll();
         createScrollSpy();
