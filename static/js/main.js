@@ -13,9 +13,9 @@ function ready() {
     setThemeByUserPref();
 
     if (document.querySelector('main#content > .container').classList.contains('post')) {
-        console.log('post page');
-        addAnchorsToPostHeadings();
+        buildToc();
         addSmoothScroll();
+        createScrollSpy();
     }
 
     // Elements to inject
@@ -42,10 +42,11 @@ window.addEventListener('scroll', () => {
     }
 });
 
-function addAnchorsToPostHeadings() {
-    document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5').forEach($heading => {
+function buildToc() {
+    const tocUL = document.querySelector('#toc > .post-toc-content');
+    document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4').forEach($heading => {
 
-        //create id from heading text
+      //create id from heading text
       var id = $heading.getAttribute("id") || $heading.innerText.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ +/g, '-');
 
       //add id to heading
@@ -58,21 +59,53 @@ function addAnchorsToPostHeadings() {
       $anchor = document.createElement('a');
       $anchor.className = 'anchor-link';
       $anchor.href = '#' + id;
-      $anchor.innerText = '#';
+      $anchor.innerText = $heading.innerText;
 
-      //append anchor after heading text
-      $heading.appendChild($anchor);
+      //create li element
+      $li = document.createElement('li');
+      $li.appendChild($anchor);
+      switch($heading.tagName) {
+        case 'H1':
+          $li.className = 'level-1';
+          break;
+        case 'H2':
+          $li.className = 'level-2';
+          break;
+        case 'H3':
+          $li.className = 'level-3';
+          break;
+        case 'H4':
+          $li.className = 'level-4';
+          break;
+      }
+
+      tocUL.appendChild($li);
     });
 }
 
 function addSmoothScroll() {
-    document.querySelectorAll('a.anchor-link').forEach($anchor => {
+    document.querySelectorAll('#toc a').forEach($anchor => {
         $anchor.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start' //scroll to top of the target element
             });
+        });
+    });
+}
+
+function createScrollSpy() {
+    var elements = document.querySelectorAll('#toc a');
+    document.addEventListener('scroll', function () {
+        elements.forEach(function (element) {
+          const boundingRect = document.querySelector(element.getAttribute('href')).getBoundingClientRect();
+          if (boundingRect.top <= 55 && boundingRect.bottom >= 0) {
+            elements.forEach(function (elem) {
+              elem.classList.remove('active');
+            });
+            element.classList.add('active');
+          }
         });
     });
 }
