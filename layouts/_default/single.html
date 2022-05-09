@@ -1,9 +1,11 @@
 {{ define "main" }}
     {{ if eq .Type "post" }}
         {{- partial "post.html" . -}}
+        {{- partial "toc.html" . -}}
     {{ end }}
 
     {{ if eq .Type "page" }}
         {{- partial "page.html" . -}}
+        {{- partial "toc.html" . -}}
     {{ end }}
 {{ end }}

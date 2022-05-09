@@ -55,7 +55,7 @@ main#content {
 
 main#content > .container {
   margin: auto;
-  width: 74%;
+  width: 75%;
   max-width: var(--container-width);
 }
 
@@ -66,15 +66,16 @@ main#content > .container {
 }
 
 .post-toc {
+  box-sizing: border-box;
   display: inline-block;
-  margin-left: 25px;
+  padding-left: 50px;
   vertical-align: top;
-  width: 23%;
+  width: 24%;
 }
 
 #toc {
   position: fixed;
-  top: 120px;
+  top: 80px;
   bottom: 20px;
   overflow-x: hidden;
   overflow-y: auto;
