@@ -117,13 +117,6 @@ main#content > .container {
   color: var(--accent-color);
 }
 
-
-/*
-#toc ul ul {
-  padding-inline-start: 5px;
-}
-*/
-
 img {
   height: auto;
   max-width: 100%;
