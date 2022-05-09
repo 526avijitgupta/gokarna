@@ -70,6 +70,7 @@ main#content > .container {
   display: inline-block;
   padding-left: 50px;
   vertical-align: top;
+  /* Would be 25% had there been no margins or border box on all inline blocks */
   width: 24%;
 }
 

@@ -8,6 +8,13 @@ const THEME_TO_ICON_CLASS = {
 let toggleIcon = '';
 let darkThemeCss = '';
 
+const HEADING_TO_TOC_CLASS = {
+    'H1': 'level-1',
+    'H2': 'level-2',
+    'H3': 'level-3',
+    'H4': 'level-4'
+}
+
 function ready() {
     feather.replace({ 'stroke-width': 1, width: 20, height: 20 });
     setThemeByUserPref();
@@ -65,20 +72,7 @@ function buildToc() {
       //create li element
       $li = document.createElement('li');
       $li.appendChild($anchor);
-      switch($heading.tagName) {
-        case 'H1':
-          $li.className = 'level-1';
-          break;
-        case 'H2':
-          $li.className = 'level-2';
-          break;
-        case 'H3':
-          $li.className = 'level-3';
-          break;
-        case 'H4':
-          $li.className = 'level-4';
-          break;
-      }
+      $li.className = HEADING_TO_TOC_CLASS[$heading.tagName];
 
       tocUL.appendChild($li);
     });
