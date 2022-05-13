@@ -5,6 +5,7 @@ date: 2020-05-06T21:29:01+08:00
 description: "Discover how to maximise Gokarna's potential"
 tags: ["installation", "configuration", "markdown"]
 type: post
+showTableOfContents: true
 ---
 
 Gokarna is an opinionated theme with a focus on minimalism and simplicity.
@@ -45,6 +46,30 @@ type: "page"
 # Projects
 Keep an eye on this space for my upcoming projects
 ```
+
+### Table of Contents
+
+To show `Table of Contents`, update your config by adding 
+```toml
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
+```
+
+And then on each page add the attribute `showTableOfContents: true` **(Note: It is disabled by default)**
+
+```markdown
+---
+title: "Hello, world!"
+image: "/path/to/image.png"
+type: "page"
+showTableOfContents: true
+---
+```
+
+Detailed configuration can be found on [Hugo's official documentation](https://gohugo.io/getting-started/configuration-markup/#table-of-contents)
 
 ## Weights
 
