@@ -21,7 +21,7 @@ function ready() {
 
     if (document.querySelector('main#content > .container') !== null &&
             document.querySelector('main#content > .container').classList.contains('post')) {
-        buildToc();
+        //buildToc();
         addSmoothScroll();
         createScrollSpy();
     }
