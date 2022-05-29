@@ -93,19 +93,19 @@ main#content > .container {
   margin-top: 12px;
 }
 
-#toc ul li.level-1 {
+#toc ul li a.level-1 {
   padding-left: 0;
 }
 
-#toc ul li.level-2 {
+#toc ul li a.level-2 {
   padding-left: 10px;
 }
 
-#toc ul li.level-3 {
+#toc ul li a.level-3 {
   padding-left: 20px;
 }
 
-#toc ul li.level-4 {
+#toc ul li a.level-4 {
   padding-left: 30px;
 }
 

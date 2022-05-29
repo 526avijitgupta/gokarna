@@ -21,7 +21,7 @@ function ready() {
 
     if (document.querySelector('main#content > .container') !== null &&
             document.querySelector('main#content > .container').classList.contains('post')) {
-        //buildToc();
+        fixTocItemsIndent();
         addSmoothScroll();
         createScrollSpy();
     }
@@ -50,31 +50,10 @@ window.addEventListener('scroll', () => {
     }
 });
 
-function buildToc() {
-    const tocUL = document.querySelector('#toc > .post-toc-content');
-    document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4').forEach($heading => {
-
-      //create id from heading text
-      var id = $heading.getAttribute("id") || $heading.innerText.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ +/g, '-');
-
-      //add id to heading
-      $heading.setAttribute('id', id);
-
-      //append parent class to heading
-      $heading.classList.add('anchor-heading');
-
-      //create anchor
-      $anchor = document.createElement('a');
-      $anchor.className = 'anchor-link';
-      $anchor.href = '#' + id;
-      $anchor.innerText = $heading.innerText;
-
-      //create li element
-      $li = document.createElement('li');
-      $li.appendChild($anchor);
-      $li.className = HEADING_TO_TOC_CLASS[$heading.tagName];
-
-      tocUL.appendChild($li);
+function fixTocItemsIndent() {
+    document.querySelectorAll('#TableOfContents a').forEach($tocItem => {
+      const itemId = $tocItem.getAttribute("href").substring(1)
+      $tocItem.classList.add(HEADING_TO_TOC_CLASS[document.getElementById(itemId).tagName]);
     });
 }
 
