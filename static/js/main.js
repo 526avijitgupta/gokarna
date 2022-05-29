@@ -8,9 +8,27 @@ const THEME_TO_ICON_CLASS = {
 let toggleIcon = '';
 let darkThemeCss = '';
 
+const HEADING_TO_TOC_CLASS = {
+    'H1': 'level-1',
+    'H2': 'level-2',
+    'H3': 'level-3',
+    'H4': 'level-4'
+}
+
 function ready() {
     feather.replace({ 'stroke-width': 1, width: 20, height: 20 });
     setThemeByUserPref();
+
+    if (document.querySelector('main#content > .container') !== null &&
+            document.querySelector('main#content > .container').classList.contains('post')) {
+        if (document.getElementById('TableOfContents') !== null) {
+            fixTocItemsIndent();
+            addSmoothScroll();
+            createScrollSpy();
+        } else {
+            document.querySelector('main#content > .container.post').style.display = "block";
+        }
+    }
 
     // Elements to inject
     const svgsToInject = document.querySelectorAll('img.svg-inject');
@@ -35,6 +53,40 @@ window.addEventListener('scroll', () => {
         toggleHeaderShadow(100);
     }
 });
+
+function fixTocItemsIndent() {
+    document.querySelectorAll('#TableOfContents a').forEach($tocItem => {
+      const itemId = $tocItem.getAttribute("href").substring(1)
+      $tocItem.classList.add(HEADING_TO_TOC_CLASS[document.getElementById(itemId).tagName]);
+    });
+}
+
+function addSmoothScroll() {
+    document.querySelectorAll('#toc a').forEach($anchor => {
+        $anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' //scroll to top of the target element
+            });
+        });
+    });
+}
+
+function createScrollSpy() {
+    var elements = document.querySelectorAll('#toc a');
+    document.addEventListener('scroll', function () {
+        elements.forEach(function (element) {
+          const boundingRect = document.querySelector(element.getAttribute('href')).getBoundingClientRect();
+          if (boundingRect.top <= 55 && boundingRect.bottom >= 0) {
+            elements.forEach(function (elem) {
+              elem.classList.remove('active');
+            });
+            element.classList.add('active');
+          }
+        });
+    });
+}
 
 function toggleHeaderShadow(scrollY) {
     if (window.scrollY > scrollY) {

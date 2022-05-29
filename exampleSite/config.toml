@@ -69,3 +69,9 @@ pygmentsStyle = "monokai"
     pre = "<span data-feather='rss'></span>"
     url = "/index.xml"
     weight = 7
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+    ordered = false

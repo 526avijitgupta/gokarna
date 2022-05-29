@@ -1,5 +1,6 @@
 :root {
-  --content-width: 810px;
+  --content-width: 1120px;
+  --container-width: 810px;
 
   --light-primary-color: 255, 255, 255;
   --light-secondary-color: #dddddd;
@@ -50,6 +51,70 @@ a:hover {
 main#content {
   margin: 90px auto 0;
   width: var(--content-width);
+}
+
+main#content > .container {
+  margin: auto;
+  width: 75%;
+  max-width: var(--container-width);
+}
+
+.post.container {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.post-toc {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-left: 50px;
+  vertical-align: top;
+  /* Would be 25% had there been no margins or border box on all inline blocks */
+  width: 24%;
+}
+
+#toc {
+  position: fixed;
+  top: 80px;
+  bottom: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+#toc ul li {
+  margin-top: 12px;
+}
+
+#toc ul li a.level-1 {
+  padding-left: 0;
+}
+
+#toc ul li a.level-2 {
+  padding-left: 10px;
+}
+
+#toc ul li a.level-3 {
+  padding-left: 20px;
+}
+
+#toc ul li a.level-4 {
+  padding-left: 30px;
+}
+
+#toc ul li a {
+  text-decoration: none;
+}
+
+#toc ul li a.active {
+  color: var(--accent-color);
 }
 
 img {
@@ -369,6 +434,9 @@ table td {
   margin-top: 50px;
   letter-spacing: 0.5px;
 }
+.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+  scroll-margin-top: 55px;
+}
 .post-content h1 {
   margin-top: 40px;
 }
@@ -446,6 +514,12 @@ table td {
   text-align: center;
 }
 
+@media only screen and (max-width: 1120px) {
+  main#content {
+    width: auto;
+  }
+}
+
 @media only screen and (max-width: 820px) {
   body {
     font-size: 0.95rem;
@@ -476,8 +550,16 @@ table td {
     width: auto;
   }
 
+  main#content .container {
+    width: 100%;
+  }
+
   .home-about {
     margin: 0 auto;
+  }
+
+  #toc {
+    display:none;
   }
 
   .list-posts {
