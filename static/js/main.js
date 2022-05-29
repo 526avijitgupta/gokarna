@@ -21,9 +21,14 @@ function ready() {
 
     if (document.querySelector('main#content > .container') !== null &&
             document.querySelector('main#content > .container').classList.contains('post')) {
-        fixTocItemsIndent();
-        addSmoothScroll();
-        createScrollSpy();
+        // if toc enabled
+        if (document.getElementById('TableOfContents') !== null) {
+            fixTocItemsIndent();
+            addSmoothScroll();
+            createScrollSpy();
+        } else {
+            document.querySelector('main#content > .container.post').style.display = "block";
+        }
     }
 
     // Elements to inject

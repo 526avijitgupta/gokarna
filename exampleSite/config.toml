@@ -73,5 +73,5 @@ pygmentsStyle = "monokai"
 [markup]
   [markup.tableOfContents]
     startLevel = 1
-    endLevel = 3
+    endLevel = 4
     ordered = false

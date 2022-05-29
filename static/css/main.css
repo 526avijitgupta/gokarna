@@ -520,12 +520,6 @@ table td {
   }
 }
 
-@media only screen and (max-width: 980px) {
-  #toc {
-    display:none;
-  }
-}
-
 @media only screen and (max-width: 820px) {
   body {
     font-size: 0.95rem;
@@ -562,6 +556,10 @@ table td {
 
   .home-about {
     margin: 0 auto;
+  }
+
+  #toc {
+    display:none;
   }
 
   .list-posts {
