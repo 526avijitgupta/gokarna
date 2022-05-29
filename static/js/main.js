@@ -21,7 +21,6 @@ function ready() {
 
     if (document.querySelector('main#content > .container') !== null &&
             document.querySelector('main#content > .container').classList.contains('post')) {
-        // if toc enabled
         if (document.getElementById('TableOfContents') !== null) {
             fixTocItemsIndent();
             addSmoothScroll();
