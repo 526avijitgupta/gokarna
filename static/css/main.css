@@ -418,7 +418,9 @@ table td {
 }
 
 .home-posts {
+  margin: auto;
   padding-top: 20px;
+  width: 80%;
 }
 
 /* SINGLE */
