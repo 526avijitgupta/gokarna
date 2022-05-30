@@ -65,7 +65,7 @@ function addSmoothScroll() {
     document.querySelectorAll('#toc a').forEach($anchor => {
         $anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            document.getElementById(this.getAttribute('href').substring(1)).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start' //scroll to top of the target element
             });
@@ -77,7 +77,7 @@ function createScrollSpy() {
     var elements = document.querySelectorAll('#toc a');
     document.addEventListener('scroll', function () {
         elements.forEach(function (element) {
-          const boundingRect = document.querySelector(element.getAttribute('href')).getBoundingClientRect();
+          const boundingRect = document.getElementById(element.getAttribute('href').substring(1)).getBoundingClientRect();
           if (boundingRect.top <= 55 && boundingRect.bottom >= 0) {
             elements.forEach(function (elem) {
               elem.classList.remove('active');
