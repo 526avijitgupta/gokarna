@@ -33,6 +33,10 @@ a:hover .feather-moon {
   fill: var(--dark-text-color);
 }
 
+.social-icons-list .social-icon a:hover {
+  fill: var(--accent-color);
+}
+
 .post-tags .post-tag:hover {
   background-color: var(--dark-text-color);
   color: rgb(var(--dark-primary-color));
