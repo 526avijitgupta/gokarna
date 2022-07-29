@@ -41,6 +41,7 @@ pygmentsStyle = "monokai"
     {name = "dribbble", url = "https://example.com"},
     {name = "instagram", url = "https://example.com"},
     {name = "twitch", url = "https://example.com"},
+    {name = "email", url = "mailto:example@example.com"}
   ]
   metaKeywords = ["blog", "gokarna", "hugo"]
 
