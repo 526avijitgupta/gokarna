@@ -357,7 +357,7 @@ table td {
 }
 
 /* HOME PAGE */
-.home-about {
+.home-about, .home-content {
   text-align: center;
 }
 
@@ -556,7 +556,7 @@ table td {
     width: 100%;
   }
 
-  .home-about {
+  .home-about, .home-content {
     margin: 0 auto;
   }
 

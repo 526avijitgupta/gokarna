@@ -25,6 +25,14 @@
 </section>
 {{ end }}
 
+{{ if isset .Site.Params "enablefrontmatter" }}
+    {{ if eq .Site.Params.EnableFrontMatter "true" }}
+    <section class="home-content">
+        {{ .Content }}
+    </section>
+    {{ end }}
+{{ end }}
+
 {{ if isset .Site.Params "showpostsonhomepage" }}
 
     <div class="home-posts list-posts">
