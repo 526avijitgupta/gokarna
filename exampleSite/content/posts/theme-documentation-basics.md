@@ -221,7 +221,7 @@ Text to display in the footer section
   footer = "Text in footer"
 ```
 
-### Enable Front Matter
+### Displaying content on the homepage
 
 Content to display on homepage below the social icons, using the contents of `content/_index.md`.
 
