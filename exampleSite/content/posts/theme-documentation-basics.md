@@ -223,11 +223,19 @@ Text to display in the footer section
 
 #### Display a license header
 
-If you copyright your content using the same license, write the header using Markdown.
+Apply a copyright license to all of your pages.
+
+Markdown is permitted, to add links for example:
 
 ```toml
 [params]
   licenseHeader = "This work is licensed under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/)."
+```
+
+Or use a different license on individual pages.
+
+```yaml
+licenseHeaderOverride: "Verbatim copying and distribution of this entire article are permitted worldwide, without royalty, in any medium, provided this notice is preserved."
 ```
 
 ### Custom Head HTML
