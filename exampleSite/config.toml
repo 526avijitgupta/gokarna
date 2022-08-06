@@ -44,6 +44,7 @@ pygmentsStyle = "monokai"
     {name = "email", url = "mailto:example@example.com"}
   ]
   metaKeywords = ["blog", "gokarna", "hugo"]
+  licenseHeader = "This code is licensed under [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)"
 
 [menu]
   [[menu.main]]
