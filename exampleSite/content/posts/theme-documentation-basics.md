@@ -162,9 +162,6 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
 
   # Footer text
   footer = "The Marauders"
-
-  # Add front matter to the homepage, using content/_index.md
-  enableFrontMatter = "true"
 ```
 
 ### Avatar URL
