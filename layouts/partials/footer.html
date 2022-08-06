@@ -1,6 +1,8 @@
 <footer class="footer">
     <span>&copy; {{ now.Year }} {{ .Site.Params.Footer}}</span>
-    {{ if isset .Site.Params "licenseheader" }}
+    {{ if isset .Params "licenseheaderoverride" }}
+        <span>{{ .Params.LicenseHeaderOverride | markdownify }}</span>
+        {{ else if isset .Site.Params "licenseheader" }}
         <span>{{ .Site.Params.LicenseHeader | markdownify }}</span>
     {{ end }}
     <span>
