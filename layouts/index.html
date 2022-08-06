@@ -27,6 +27,7 @@
 
 {{ if isset .Site.Params "enablefrontmatter" }}
     {{ if eq .Site.Params.EnableFrontMatter "true" }}
+    <hr>
     <section class="home-content">
         {{ .Content }}
     </section>
