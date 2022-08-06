@@ -221,6 +221,15 @@ Text to display in the footer section
   footer = "Text in footer"
 ```
 
+#### Display a license header
+
+If you copyright your content using the same license, write the header using Markdown.
+
+```toml
+[params]
+  licenseHeader = "This work is licensed under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/)."
+```
+
 ### Custom Head HTML
 
 You can add custom HTML in head section
