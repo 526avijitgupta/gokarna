@@ -5,6 +5,10 @@ const THEME_TO_ICON_CLASS = {
     'dark': 'feather-moon',
     'light':'feather-sun'
 };
+const THEME_TO_ICON_TEXT_CLASS = {
+    'dark': 'Dark mode',
+    'light':'Light mode'
+};
 let toggleIcon = '';
 let darkThemeCss = '';
 
@@ -102,7 +106,7 @@ function toggleHeaderShadow(scrollY) {
 
 function setThemeByUserPref() {
     darkThemeCss = document.getElementById("dark-theme");
-    const savedTheme = localStorage.getItem(THEME_PREF_STORAGE_KEY) || 
+    const savedTheme = localStorage.getItem(THEME_PREF_STORAGE_KEY) ||
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark': 'light');
     const darkThemeToggles = document.querySelectorAll('.dark-theme-toggle');
     setTheme(savedTheme, darkThemeToggles);
@@ -120,7 +124,7 @@ function setTheme(themeToSet, targets) {
     localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
     darkThemeCss.disabled = themeToSet === 'light';
     targets.forEach((target) => {
-            target.querySelector('a').innerHTML = feather.icons[THEME_TO_ICON_CLASS[themeToSet].split('-')[1]].toSvg();
+        target.querySelector('a').innerHTML = feather.icons[THEME_TO_ICON_CLASS[themeToSet].split('-')[1]].toSvg();
+        target.querySelector("#dark-theme-toggle-screen-reader-target").textContent = [THEME_TO_ICON_TEXT_CLASS[themeToSet]];
     });
 }
-
