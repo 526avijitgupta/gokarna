@@ -2,6 +2,9 @@
 <div class="container tags-list">
 
     <h1 class="list-title">Tags</h1>
+    {{if eq (len $.Site.Taxonomies.tags) 0}}
+        Nothing to see here, yet 😉
+    {{else}}
     <ul class="post-tags">
         {{ range $.Site.Taxonomies.tags.ByCount }}
         <li class="post-tag">
@@ -12,6 +15,7 @@
         </li>
         {{ end }}
     </ul>
+    {{ end }}
 
 </div>
 {{ end }}
