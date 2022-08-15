@@ -221,15 +221,6 @@ Text to display in the footer section
   footer = "Text in footer"
 ```
 
-### Displaying content on the homepage
-
-Content to display on homepage below the social icons, using the contents of `content/_index.md`.
-
-```toml
-[params]
-  enableFrontMatter = "true"
-```
-
 ### Custom Head HTML
 
 You can add custom HTML in head section
