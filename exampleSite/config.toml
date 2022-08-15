@@ -5,6 +5,7 @@ languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
+enableGitInfo = true
 
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
