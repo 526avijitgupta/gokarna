@@ -428,7 +428,7 @@ table td {
   font-size: 1.1em;
   font-style: italic;
 }
-.post .post-date {
+.post .post-date, .post-lastmod {
   color: gray;
 }
 .post .post-content {
