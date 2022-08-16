@@ -25,13 +25,12 @@
 </section>
 {{ end }}
 
-{{ if isset .Site.Params "enablefrontmatter" }}
-    {{ if eq .Site.Params.EnableFrontMatter "true" }}
-    <hr>
-    <section class="home-content">
-        {{ .Content }}
-    </section>
-    {{ end }}
+<!-- Render content/_index.md if it exists and isn't empty -->
+{{ if (and (fileExists "content/_index.md") .Content) }}
+<hr>
+<section class="home-content">
+    {{ .Content }}
+</section>
 {{ end }}
 
 {{ if isset .Site.Params "showpostsonhomepage" }}
@@ -53,5 +52,4 @@
     </div>
 
 {{ end }}
-
 {{ end }}
