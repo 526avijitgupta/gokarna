@@ -25,7 +25,8 @@
 </section>
 {{ end }}
 
-{{ if fileExists "content/_index.md" }}
+<!-- Render content/_index.md if it exists and isn't empty -->
+{{ if (and (fileExists "content/_index.md") .Content) }}
 <hr>
 <section class="home-content">
     {{ .Content }}
