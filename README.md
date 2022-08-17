@@ -62,7 +62,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 For a complete guide on customization, please go through our [basic](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/) and [advanced](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/) theme documentation. A gist of things you can customize:
 
 - Navigation menu
-- Avatar image and size
+- Avatar image, size, and alt text
 - Accent color
 - Theme mode (Auto, Light & Dark)
 - Custom HTML in head section for loading any scripts
