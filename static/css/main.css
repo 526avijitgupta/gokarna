@@ -428,7 +428,7 @@ table td {
   font-size: 1.1em;
   font-style: italic;
 }
-.post .post-date {
+.post .post-date, .post-lastmod, .prev-post-date, .next-post-date {
   color: gray;
 }
 .post .post-content {
@@ -587,4 +587,18 @@ table td {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.prev-post {
+    float: left;
+    text-align: left;
+}
+
+.next-post {
+    float: right;
+    text-align: right;
+}
+
+.prev-post, .next-post {
+    max-width: 33%;
 }
