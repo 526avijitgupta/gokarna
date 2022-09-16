@@ -20,6 +20,8 @@
     </div>
 
     <div class="prev-next">
-        {{ partial "prev-next.html" . }}
+        {{ if or .PrevInSection .NextInSection }}
+            {{ partial "prev-next.html" . }}
+        {{ end }}
     </div>
 </div>

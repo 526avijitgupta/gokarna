@@ -1,28 +1,25 @@
-{{ if or .PrevInSection .NextInSection }}
-<hr>
-    {{ with .PrevInSection }}
-    <div class="prev-post">
-        <p>
-            &#8592;
-            Previous:
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </p>
-        <p class="prev-post-date">
+{{ with .PrevInSection }}
+<div class="prev-post">
+    <p>
+        &#8592;
+        Previous:
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </p>
+    <p class="prev-post-date">
+        {{ dateFormat "January 2, 2006" .Date }}
+    </p>
+</div>
+{{ end }}
+
+{{ with .NextInSection }}
+<div class="next-post">
+    <p>
+        Next:
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        &#8594; 
+    </p>
+        <p class="next-post-date">
             {{ dateFormat "January 2, 2006" .Date }}
         </p>
-    </div>
-    {{ end }}
-
-    {{ with .NextInSection }}
-    <div class="next-post">
-        <p>
-            Next:
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            &#8594; 
-        </p>
-            <p class="next-post-date">
-                {{ dateFormat "January 2, 2006" .Date }}
-            </p>
-    </div>
-    {{ end }}
+</div>
 {{ end }}
