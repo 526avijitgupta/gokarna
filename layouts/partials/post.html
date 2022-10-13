@@ -20,8 +20,10 @@
     </div>
 
     <div class="prev-next">
-        {{ if or .PrevInSection .NextInSection }}
-            {{ partial "prev-next.html" . }}
+        {{ if eq .Site.Params.TogglePreviousAndNextButtons "true" }}
+            {{ if or .PrevInSection .NextInSection }}
+                {{ partial "prev-next.html" . }}
+            {{ end }}
         {{ end }}
     </div>
 </div>
