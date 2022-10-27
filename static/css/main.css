@@ -590,15 +590,15 @@ table td {
 }
 
 .prev-post {
-    float: left;
-    text-align: left;
+  float: left;
+  text-align: left;
 }
 
 .next-post {
-    float: right;
-    text-align: right;
+  float: right;
+  text-align: right;
 }
 
 .prev-post, .next-post {
-    max-width: 33%;
+  max-width: 33%;
 }
