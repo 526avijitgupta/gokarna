@@ -6,7 +6,7 @@
 
     <h2 class="posts-year">{{ .Key }}</h2>
 
-    {{- range .Pages  -}}
+    {{- range .Pages -}}
         {{- partial "list-posts.html" . -}}
     {{ end }}
     {{ end }}
