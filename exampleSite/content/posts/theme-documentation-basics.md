@@ -221,6 +221,19 @@ Text to display in the footer section
   footer = "Text in footer"
 ```
 
+### Previous and Next buttons
+
+At the bottom of a post, show the previous and next post chronologically.
+
+**Warning**: Not compatible with the `.Weight` parameter.
+
+If any post YAML contains `weight:`, the posts will not appear by Date. See [Hugo's default sort](https://gohugo.io/templates/lists#default-weight--date--linktitle--filepath).
+
+```toml
+[params]
+  togglePreviousAndNextButtons = "true"
+```
+
 ### Displaying content on the homepage
 
 Content to display on homepage below the social icons, using the contents of `content/_index.md`.

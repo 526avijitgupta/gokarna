@@ -1,0 +1,29 @@
+{{ with .PrevInSection }}
+<div class="prev-post">
+    <p>
+        <a href="{{ .RelPermalink }}">
+            &#8592;
+            Previous:
+            {{ .Title }}
+        </a>
+    </p>
+    <p class="prev-post-date">
+        {{ dateFormat "January 2, 2006" .Date }}
+    </p>
+</div>
+{{ end }}
+
+{{ with .NextInSection }}
+<div class="next-post">
+    <p>
+        <a href="{{ .RelPermalink }}">
+            Next:
+            {{ .Title }}
+            &#8594;
+        </a>
+    </p>
+        <p class="next-post-date">
+            {{ dateFormat "January 2, 2006" .Date }}
+        </p>
+</div>
+{{ end }}
