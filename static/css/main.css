@@ -478,6 +478,10 @@ table td {
   display: inline-block;
 }
 .post-title .post-link {
+  /* This magic number is the largest width that keeps the post-date div from
+   *  causing the line to wrap with the longest possible date string
+   *  "September 22, 2022"
+   */
   width: 73%;
 }
 .tags-list .post-tags {
