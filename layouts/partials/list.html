@@ -1,14 +1,21 @@
 <div class="container list-posts">
 
-    <h1 class="list-title">{{ .Name }}</h2>
+    <h1 class="list-title">{{ .Name }}</h1>
 
-    {{ range (where .Pages "Params.type" "post" ).GroupByDate "2006" }}
+    {{ .Content }}
 
-    <h2 class="posts-year">{{ .Key }}</h2>
+    {{if eq (len (where .Pages "Params.type" "post") ) 0}}
+        {{ i18n "nothing" }}
+    {{else}}
 
-    {{- range .Pages -}}
-        {{- partial "list-posts.html" . -}}
-    {{ end }}
+        {{ range (where .Pages "Params.type" "post" ).GroupByDate "2006" }}
+
+            <h2 class="posts-year">{{ .Key }}</h2>
+
+            {{- range .Pages -}}
+                {{- partial "list-posts.html" . -}}
+            {{ end }}
+        {{ end }}
     {{ end }}
 
 </div>
