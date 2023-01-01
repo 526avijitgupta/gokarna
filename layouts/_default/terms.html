@@ -3,7 +3,7 @@
 
     <h1 class="list-title">Tags</h1>
     {{if eq (len $.Site.Taxonomies.tags) 0}}
-        Nothing to see here, yet 😉
+        {{ i18n "nothing" }}
     {{else}}
     <ul class="post-tags">
         {{ range $.Site.Taxonomies.tags.ByCount }}
