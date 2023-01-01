@@ -162,6 +162,9 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
 
   # Footer text
   footer = "The Marauders"
+
+  # Show preview images in list views
+  ShowPreviewImages = "false"
 ```
 
 ### Avatar URL

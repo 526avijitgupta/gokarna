@@ -45,6 +45,7 @@ pygmentsStyle = "monokai"
     {name = "email", url = "mailto:example@example.com"}
   ]
   metaKeywords = ["blog", "gokarna", "hugo"]
+  ShowPreviewImages = "false"
 
 [menu]
   [[menu.main]]

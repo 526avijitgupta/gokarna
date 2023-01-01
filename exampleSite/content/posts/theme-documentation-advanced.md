@@ -26,6 +26,7 @@ description: "A blog post"
 image: "/path/to/image.png"
 type: "post"
 tags: ["blog"]
+previewIcon: <span data-feather='truck'></span>
 ---
 
 # Hello World!

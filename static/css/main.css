@@ -484,6 +484,30 @@ table td {
    */
   width: 73%;
 }
+.post-title .post-link img {
+  vertical-align: middle;
+  display: inline-block;
+}
+.preview-image {
+  display: inline-block;
+  width: 100px;
+  margin-right: 2%;
+}
+.preview-image.not-available {
+  background-color: #646464;
+  height: 84px;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  display: inline-block;
+  font-size: small;
+}
+.preview-image.not-available .icon {
+  height: 100%;
+  display: block;
+  vertical-align: middle;
+  margin-top: 30px;
+}
 .tags-list .post-tags {
   margin-top: 50px;
 }

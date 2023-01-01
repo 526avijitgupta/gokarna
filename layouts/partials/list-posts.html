@@ -1,5 +1,28 @@
 <article class="post-title">
-    <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+    <a href="{{ .Permalink }}" class="post-link">
+        {{ if eq .Site.Params.ShowPreviewImages "true" }}
+            {{ $image := index (.Resources.ByType "image") 0 }}
+
+            {{ if eq $image nil }}
+                <div class="preview-image not-available">
+                    <div class="icon">
+                    {{ if eq .Params.PreviewIcon nil }}
+                        {{ i18n "not-available" }}
+                    {{ else }}
+                    {{ .Params.PreviewIcon | safeHTML }}
+                    {{ end }}
+                    </div>
+                </div>
+            {{ else }}
+                {{ $image := $image.Resize "x100" }}
+
+                {{ with $image }}
+                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="preview-image">
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ .Title }}</a>
     <div class="flex-break"></div>
     <span class="post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
 </article>
