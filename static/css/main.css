@@ -62,7 +62,6 @@ main#content > .container {
 .post.container {
   box-sizing: border-box;
   display: inline-block;
-  padding-left: 20px;
 }
 
 .post-toc {
