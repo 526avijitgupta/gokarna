@@ -17,6 +17,11 @@
         <p>
             {{ .Content }}
         </p>
+        {{ if .Site.DisqusShortname }}
+        <div class="post-comments">
+            {{ template "_internal/disqus.html" . }}
+        </div>
+        {{ end }}
     </div>
 
     <div class="prev-next">
