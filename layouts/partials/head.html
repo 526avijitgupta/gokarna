@@ -24,14 +24,15 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:description" content="{{ $description }}">
-    <meta property="og:image" content="{{ path.Join .Site.BaseURL $image }}">
+    <meta property="og:image" content="{{ absURL $image }}">
+    <meta property="og:image:secure_url" content="{{ absURL $image }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title }}">
     <meta name="twitter:description" content="{{ $description }}">
     <meta property="twitter:domain" content="{{ .Permalink }}">
     <meta property="twitter:url" content="{{ .Permalink }}">
-    <meta name="twitter:image" content="{{ path.Join .Site.BaseURL $image }}">
+    <meta name="twitter:image" content="{{ absURL $image }}">
 
     <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
     <link rel="canonical" href="{{ .Permalink }}" />
