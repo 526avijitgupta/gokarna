@@ -65,7 +65,7 @@ For a complete guide on customization, please go through our [basic](https://gok
 - Avatar image and size
 - Accent color
 - Theme mode (Auto, Light & Dark)
-- Custom HTML in head section for loading any scripts
+- Custom HTML in head and footer section for loading any scripts
 - Syntax highlighting
 - Option to show posts recent or popular homepage.
 - Footer
