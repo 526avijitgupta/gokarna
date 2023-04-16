@@ -127,7 +127,7 @@ The same icon in this case could also be added without feather:
 ```
 
 
-## Custom Head HTML
+## Custom Head and Footer HTML
 
 The goal of this feature is to give the user more control over the theme. It's functioning is very straightforward - "You can inject any HTML you want in the `<head>` tag" . This may seem simple at first, but it opens up a lot of possibilities.
 
@@ -138,6 +138,11 @@ Add your own JavaScript or CSS by putting them in the `static/` folder and impor
 ```toml
 [params]
   customHeadHTML = '''
+    <script>console.log("Custom script or import");</script>
+    <script src="/js/custom.js"></script>
+  '''
+  customFooterHTML = '''
+    <div>Comment SDK Integration</div>
     <script>console.log("Custom script or import");</script>
     <script src="/js/custom.js"></script>
   '''
@@ -192,6 +197,22 @@ Then the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` wrapped by doub
    $$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$
 
 The equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` wrapped by single `$` would be displayed inline as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$.
+
+### Comments
+
+Integration with any comments SDK is possible. All you have to do is add the relevant HTML/JavaScript in the `customFooterHTML` param.
+
+An example with commento:
+
+```toml
+[params]
+  customHeadHTML = '''
+    <div id="commento"></div>
+    <script defer src="{{ .Site.Params.CommentoURL }}/js/commento.js"></script>
+    <noscript>Please enable JavaScript to load the comments.</noscript>
+  '''
+```
+
 
 ## Syntax Highlighting
 
