@@ -206,7 +206,7 @@ An example with commento:
 
 ```toml
 [params]
-  customHeadHTML = '''
+  customFooterHTML = '''
     <div id="commento"></div>
     <script defer src="{{ .Site.Params.CommentoURL }}/js/commento.js"></script>
     <noscript>Please enable JavaScript to load the comments.</noscript>
