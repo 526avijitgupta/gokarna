@@ -9,7 +9,7 @@
     {{ if isset .Site.Params "usemarkdownaboutdescription" }}
         {{ $about := where .Site.Pages "Params.type" "about" }}
         {{ range $about | first 1 }}
-            {{- partial "about" . -}}
+            {{- partial "about-description" . -}}
         {{ end }}
     {{ else }}
         <h1>{{ .Site.Title }}</h1>
