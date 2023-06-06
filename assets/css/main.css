@@ -396,6 +396,13 @@ table td {
   text-align: center;
 }
 
+.home-about .markdown-content {
+  line-height: 1.25;
+  text-align: justify;
+  width: 50%;
+  margin: 0 25%;
+}
+
 .social-icons .social-icons-list {
   display: inline-block;
   list-style-type: none;
@@ -557,6 +564,11 @@ table td {
     box-sizing: border-box;
     padding: 0 1.5rem;
     width: auto;
+  }
+
+  .home-about .markdown-content {
+    width: auto;
+    margin: 0;
   }
 
   main#content .container {

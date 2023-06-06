@@ -5,8 +5,17 @@
         <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Site.BaseURL }}{{ .Site.Params.AvatarURL }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
         {{ end }}
 	</div>
-    <h1>{{ .Site.Title }}</h1>
-    <h3>{{ .Site.Params.Description }}</h3>
+
+    {{ if isset .Site.Params "usemarkdownaboutdescription" }}
+        {{ $about := where .Site.Pages "Params.type" "about" }}
+        {{ range $about | first 1 }}
+            {{- partial "about" . -}}
+        {{ end }}
+    {{ else }}
+        <h1>{{ .Site.Title }}</h1>
+        <h3>{{ .Site.Params.Description }}</h3>
+    {{ end }}
+
 </section>
 
 <div class="flex-break"></div>
