@@ -41,10 +41,10 @@
     <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}" media="print" onload="this.media='all'">
 
     {{ $cssMain := resources.Get "css/main.css" | minify }}
-    <link rel="stylesheet" type="text/css" href="{{ $cssMain.RelPermalink }}">
+    <link rel="stylesheet" type="text/css" href="{{ $cssMain.RelPermalink }}" onload="this.media='all'">
 
     {{ $cssDark := resources.Get "css/dark.css" | minify }}
-    <link id="dark-theme" rel="stylesheet" href="{{ $cssDark.RelPermalink }}">
+    <link id="dark-theme" rel="stylesheet" href="{{ $cssDark.RelPermalink }}" onload="this.media='all'">
 
     {{ $jsSvgInjector := resources.Get "js/svg-injector.min.js" | resources.Fingerprint "sha256" }}
     <script src="{{ $jsSvgInjector.RelPermalink }}" integrity="{{ $jsSvgInjector.Data.Integrity }}"></script>
