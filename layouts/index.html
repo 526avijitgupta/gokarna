@@ -16,7 +16,7 @@
     <ul class="social-icons-list">
         {{ range .Site.Params.SocialIcons }}
         <li class="social-icon">
-            <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+            <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} aria-label="Learn more on {{ .name }}">
                 <img class="svg-inject" src="{{ $.Site.BaseURL }}/svg/icons/{{ .name }}.svg" />
             </a>
         </li>
