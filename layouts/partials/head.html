@@ -46,14 +46,8 @@
     {{ $cssDark := resources.Get "css/dark.css" | minify }}
     <link id="dark-theme" rel="stylesheet" href="{{ $cssDark.RelPermalink }}">
 
-    {{ $jsSvgInjector := resources.Get "js/svg-injector.min.js" | resources.Fingerprint "sha256" }}
-    <script src="{{ $jsSvgInjector.RelPermalink }}" integrity="{{ $jsSvgInjector.Data.Integrity }}"></script>
-
-    {{ $jsFeatherIcons := resources.Get "js/feather-icons.min.js" | resources.Fingerprint "sha256" }}
-    <script src="{{ $jsFeatherIcons.RelPermalink }}" integrity="{{ $jsFeatherIcons.Data.Integrity }}"></script>
-
-    {{ $jsMain := resources.Get "js/main.js" | minify | resources.Fingerprint "sha256" }}
-    <script src="{{ $jsMain.RelPermalink }}" integrity="{{ $jsMain.Data.Integrity }}"></script>
+    {{ $jsBundle := resources.Match "js/**.js" | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "sha256" }}
+    <script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
 
     <!-- Option for user to inject custom html -->
     {{ if .Site.Params.CustomHeadHTML }}
