@@ -6,14 +6,16 @@
         {{ end }}
 	</div>
 
-    {{ if isset .Site.Params "usemarkdownaboutdescription" }}
+    <h1>{{ .Site.Title }}</h1>
+    {{ if isset .Site.Params "description" }}
+        <h3>{{ .Site.Params.Description }}</h3>
+    {{ end }}
+
+    {{ if .Site.Params.useMDAbout }}
         {{ $about := where .Site.Pages "Params.type" "about" }}
         {{ range $about | first 1 }}
             {{- partial "about-description" . -}}
         {{ end }}
-    {{ else }}
-        <h1>{{ .Site.Title }}</h1>
-        <h3>{{ .Site.Params.Description }}</h3>
     {{ end }}
 
 </section>

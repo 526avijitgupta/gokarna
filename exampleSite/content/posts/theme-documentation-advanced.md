@@ -84,13 +84,13 @@ The `weight` attribute can be added in the markdown metadata for `post` types. W
 ### About description text
 
 In extension to the basic configuration with the `description` field, it's also possible to write the about section using markdown.
-Set the flag `useMarkdownAboutDescription` in the configuration to `true` to enable this (default = false).
+Set the flag `useMDAbout` in the configuration to `true` to enable this (default = false).
 
 ```toml
   [params]
     description = "content of this is ignored"
-    # useMarkdownAboutDescription enables the markdown content 
-    useMarkdownAboutDescription = true
+    # useMDAbout enables the markdown content 
+    useMDAbout = true
 ```
 
 Then you have to create another content element with the content type `about`.

@@ -149,7 +149,7 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # If you want to render contents of a markdown file rather than displaying the text
   # configured in the "description" field. This is useful for longer, more complext styled text on the homepage
   # see advanced configuration for usage
-  useMarkdownAboutDescription = false
+  useMDAbout = false
   
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#FF4D4D"
