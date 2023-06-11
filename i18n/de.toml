@@ -10,3 +10,5 @@
     other = 'Vorheriger Eintrag'
 [next]
     other = 'Nächster Eintrag'
+[tags]
+    other = 'Tags'
