@@ -52,10 +52,10 @@ Keep an eye on this space for my upcoming projects
 To show `Table of Contents`, update your config by adding
 ```toml
 [markup]
-[markup.tableOfContents]
-startLevel = 1
-endLevel = 3
-ordered = false
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
 ```
 
 And then on each page add the attribute `showTableOfContents: true` **(Note: It is disabled by default)**
@@ -128,11 +128,11 @@ If you want to add more icons, you can download the svg directly from [here](htt
 
 ```toml
   [params]
-socialIcons = [
-{name = "twitter", url = "https://example.com"},
-{name = "linkedin", url = "https://example.com"},
-{name = "stackoverflow", url = "https://example.com"},
-]
+    socialIcons = [
+      {name = "twitter", url = "https://example.com"},
+      {name = "linkedin", url = "https://example.com"},
+      {name = "stackoverflow", url = "https://example.com"},
+    ]
 ```
 
 Preview:
@@ -147,22 +147,22 @@ Therefore, we use feather as an additional source of icons. Here is an example o
 
 ```toml
   [[menu.main]]
-identifier = "github"
-url = "https://github.com"
-weight = 3
-# Using feather-icons
-pre = "<span data-feather='github'></span>"
+    identifier = "github"
+    url = "https://github.com"
+    weight = 3
+    # Using feather-icons
+    pre = "<span data-feather='github'></span>"
 ```
 
 The same icon in this case could also be added without feather:
 
 ```toml
   [[menu.main]]
-identifier = "github"
-url = "https://www.buymeacoffee.com/"
-weight = 3
-# Without using feather-icons
-pre = "<img class='svg-inject' src='/icons/github.svg' />"
+    identifier = "github"
+    url = "https://www.buymeacoffee.com/"
+    weight = 3
+    # Without using feather-icons
+    pre = "<img class='svg-inject' src='/icons/github.svg' />"
 ```
 
 
@@ -176,11 +176,11 @@ Add your own JavaScript or CSS by putting them in the `static/` folder and impor
 
 ```toml
 [params]
-customHeadHTML = '''
+  customHeadHTML = '''
     <script>console.log("Custom script or import");</script>
     <script src="/js/custom.js"></script>
   '''
-customFooterHTML = '''
+  customFooterHTML = '''
     <div>Comment SDK Integration</div>
     <script>console.log("Custom script or import");</script>
     <script src="/js/custom.js"></script>
@@ -197,7 +197,7 @@ Giving users the freedom to add anything in the HTML via config.toml seemed like
 
 ```toml
 [params]
-customHeadHTML = '''
+  customHeadHTML = '''
     <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
   '''
 ```
@@ -208,7 +208,7 @@ Katex is a math typesetting library for the web which lets you write beautiful e
 
 ```toml
 [params]
-customHeadHTML = '''
+  customHeadHTML = '''
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
@@ -233,7 +233,7 @@ customHeadHTML = '''
 
 Then the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` wrapped by double `$$` would be displayed as:
 
-$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$
+   $$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$
 
 The equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` wrapped by single `$` would be displayed inline as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$.
 
@@ -245,7 +245,7 @@ An example with commento:
 
 ```toml
 [params]
-customFooterHTML = '''
+  customFooterHTML = '''
     <div id="commento"></div>
     <script defer src="{{ .Site.Params.CommentoURL }}/js/commento.js"></script>
     <noscript>Please enable JavaScript to load the comments.</noscript>
@@ -299,5 +299,5 @@ and the `metaKeywords` specified in the config.toml:
 
 ```markdown
 [params]
-metaKeywords = ["blog", "gokarna", "hugo"]
+  metaKeywords = ["blog", "gokarna", "hugo"]
 ```
