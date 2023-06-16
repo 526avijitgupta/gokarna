@@ -3,7 +3,7 @@
         <h1>{{ .Title }}</h1>
         <small role="doc-subtitle">{{ .Description }}</small>
         <p class="post-date">
-            {{ dateFormat "January 2, 2006" .Date }}
+            {{ dateFormat "January 2, 2006" .Date }}{{ if lt .Date .Lastmod }} | Updated {{ dateFormat "January 2, 2006" .Lastmod }}{{ end }}
         </p>
 
         <ul class="post-tags">
