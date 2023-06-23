@@ -103,11 +103,10 @@ hugo new posts/first_post.md
 
 Feel free to edit the post file by adding some sample content and replacing the title value in the beginning of the file.
 
-For posts you need to add `type: "post"` in the markdown metadata. We currently support 3 types of content:
+For posts you need to add `type: "post"` in the markdown metadata. We currently support 2 types of content:
 
 1. Post (`type: "post"`): A normal blog-post with tags, date, & content.
 2. Page (`type: "page"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/posts/theme-documentation-advanced/#content-types) page.
-3. About (`type: "about"`): This is for displaying more content on the homepage rather than just a single line. It's a drop-in replacement for the `description` field from the configuration. See [Theme Documentation - About description text](/posts/theme-documentation-advanced/#about-description-text).
 
 ### e. Launching the Website Locally
 
@@ -146,11 +145,6 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # Description to display on homepage
   description = "Sky above, sand below & peace within"
 
-  # If you want to render contents of a markdown file rather than displaying the text
-  # configured in the "description" field. This is useful for longer, more complext styled text on the homepage
-  # see advanced configuration for usage
-  useMDAbout = false
-  
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#FF4D4D"
 

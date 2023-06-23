@@ -11,11 +11,10 @@
         <h3>{{ .Site.Params.Description }}</h3>
     {{ end }}
 
-    {{ if .Site.Params.useMDAbout }}
-        {{ $about := where .Site.Pages "Params.type" "about" }}
-        {{ range $about | first 1 }}
-            {{- partial "about-description" . -}}
-        {{ end }}
+    {{ if os.FileExists "index-about.md" }}
+    <div class="markdown-content">
+        {{ readFile "index-about.md" | markdownify }}
+    </div>
     {{ end }}
 
 </section>

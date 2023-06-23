@@ -84,24 +84,11 @@ The `weight` attribute can be added in the markdown metadata for `post` types. W
 ### About description text
 
 In extension to the basic configuration with the `description` field, it's also possible to write the about section using markdown.
-Set the flag `useMDAbout` in the configuration to `true` to enable this (default = false).
+Create a file called `index-about.md` in the `content` directory and write your content there.
 
-```toml
-  [params]
-    description = "content of this is ignored"
-    # useMDAbout enables the markdown content 
-    useMDAbout = true
-```
-
-Then you have to create another content element with the content type `about`.
-
-> **Attention**: make sure to only create a single one! More won't get displayed
+> **Attention**: Don't use frontmatter in this file. It would also render it.
 
 ```markdown
----
-type: about
----
-
 # Gokarna
 Gokarna is a small temple town located in the Uttara Kannada district of Karnataka state in southern India.
 

@@ -12,7 +12,6 @@ pygmentsStyle = "monokai"
 [params]
   footer = "The Marauders"
   description = "Sky above, sand below and peace within"
-  useMDAbout = true # set this to true to use the extended home page description with markdown
   avatarURL = "/images/avatar.webp"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
