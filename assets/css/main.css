@@ -392,6 +392,10 @@ table td {
   width: 15rem;
 }
 
+.home-about h1 {
+  font-size: 2em;
+}
+
 .social-icons {
   text-align: center;
 }
