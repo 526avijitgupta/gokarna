@@ -1,26 +1,18 @@
+"""
+Open firefox in headless mode and take screenshots of
+all the pages in both light and dark mode
+
+Setup:
+    pip install selenium==4.10.0 pillow soldier
+    Add geckodriver to $PATH. Link: https://github.com/mozilla/geckodriver/releases
+"""
+
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from PIL import Image
 import os
 import soldier
-
-
-"""
-Setup:
-    pip install selenium==4.10.0 pillow
-    Add geckodriver to $PATH. Link: https://github.com/mozilla/geckodriver/releases
-"""
-
-BASE_URL = 'http://127.0.0.1:1313'
-process = soldier.run('cd exampleSite && hugo serve', background=True, shell=True)
-options = Options()
-if os.path.exists('/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'):
-    options.binary_location = '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
-options.add_argument('--headless')
-DRIVER = webdriver.Firefox(options=options)
-# To offset screen size based on window size
-DRIVER.set_window_size(1500, 1085)
 
 SCREENSHOT_OPTIONS = [
     {'path': '/', 'filename': 'images/screenshot-{color_pref}-home.png'},
@@ -39,9 +31,9 @@ def get_dominant_color(img_path):
     dominant_color = img.getpixel((0, 0))
     return dominant_color
 
-def take_screenshots(driver, screenshot_options):
+def take_screenshots(driver, base_url, screenshot_options):
     for opt in screenshot_options:
-        driver.get(BASE_URL + opt['path'])
+        driver.get(base_url + opt['path'])
         color_a_filename = opt['filename'].format(color_pref='color-a')
         color_b_filename = opt['filename'].format(color_pref='color-b')
 
@@ -87,7 +79,24 @@ def merge_home_images():
     merged_img.save('images/tn.png')
     print('Created merged image for hugo showcase')
 
-take_screenshots(DRIVER, SCREENSHOT_OPTIONS)
-merge_home_images()
-DRIVER.quit()
-process.kill(with_honor=False)
+def main():
+    sever_process = soldier.run('cd exampleSite && hugo serve', background=True, shell=True)
+
+    options = Options()
+    options.add_argument('--headless')
+    if os.path.exists('/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'):
+        options.binary_location = '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
+
+    driver = webdriver.Firefox(options=options)
+    # To offset screen size based on window size
+    driver.set_window_size(1500, 1085)
+
+    base_url = 'http://127.0.0.1:1313'
+    take_screenshots(driver, base_url, SCREENSHOT_OPTIONS)
+    merge_home_images()
+
+    driver.quit()
+    sever_process.kill(with_honor=False)
+
+if __name__ == '__main__':
+    main()
