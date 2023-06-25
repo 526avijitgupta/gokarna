@@ -11,12 +11,6 @@
         <h3>{{ .Site.Params.Description }}</h3>
     {{ end }}
 
-    {{ if os.FileExists "index-about.md" }}
-    <div class="markdown-content">
-        {{ readFile "index-about.md" | markdownify }}
-    </div>
-    {{ end }}
-
 </section>
 
 <div class="flex-break"></div>
@@ -35,12 +29,10 @@
 </section>
 {{ end }}
 
-<!-- Render content/_index.md if it exists and isn't empty -->
-{{ if (and (fileExists "content/_index.md") .Content) }}
-<hr>
-<section class="home-content">
-    {{ .Content }}
-</section>
+{{ if os.FileExists "index-about.md" }}
+<div class="markdown-content">
+    {{ readFile "index-about.md" | markdownify }}
+</div>
 {{ end }}
 
 {{ if isset .Site.Params "showpostsonhomepage" }}
