@@ -19,7 +19,8 @@ if os.path.exists('/Applications/Firefox Developer Edition.app/Contents/MacOS/fi
     options.binary_location = '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
 options.add_argument('--headless')
 DRIVER = webdriver.Firefox(options=options)
-# To offset screen size based on window size DRIVER.set_window_size(1500, 1085)
+# To offset screen size based on window size
+DRIVER.set_window_size(1500, 1085)
 
 SCREENSHOT_OPTIONS = [
     {'path': '/', 'filename': 'images/screenshot-{color_pref}-home.png'},
@@ -89,4 +90,4 @@ def merge_home_images():
 take_screenshots(DRIVER, SCREENSHOT_OPTIONS)
 merge_home_images()
 DRIVER.quit()
-process.kill(with_honor=True)
+process.kill(with_honor=False)
