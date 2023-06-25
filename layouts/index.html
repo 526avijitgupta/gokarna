@@ -5,8 +5,18 @@
         <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Site.BaseURL }}{{ .Site.Params.AvatarURL }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
         {{ end }}
 	</div>
+
     <h1>{{ .Site.Title }}</h1>
-    <h3>{{ .Site.Params.Description }}</h3>
+    {{ if isset .Site.Params "description" }}
+        <h3>{{ .Site.Params.Description }}</h3>
+    {{ end }}
+
+    {{ if os.FileExists "index-about.md" }}
+    <div class="markdown-content">
+        {{ readFile "index-about.md" | markdownify }}
+    </div>
+    {{ end }}
+
 </section>
 
 <div class="flex-break"></div>

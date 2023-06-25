@@ -49,7 +49,7 @@ Keep an eye on this space for my upcoming projects
 
 ### Table of Contents
 
-To show `Table of Contents`, update your config by adding 
+To show `Table of Contents`, update your config by adding
 ```toml
 [markup]
   [markup.tableOfContents]
@@ -78,6 +78,32 @@ The `weight` attribute can be added in the markdown metadata for `post` types. W
 1. Show popular posts on home page if the value is set to `popular`. It sorts the all the posts by it's weight attribute in ascending order.
 2. Show recent posts on home page if the value is set to `recent`
 3. Do not show anything if the variable is unset or an empty string.
+
+## Homepage
+
+### About description text
+
+In extension to the basic configuration with the `description` field, it's also possible to write the about section using markdown.
+Create a file called `index-about.md` in the `content` directory and write your content there.
+
+> **Attention**: Don't use frontmatter in this file. It would also render it.
+
+```markdown
+# Gokarna
+Gokarna is a small temple town located in the Uttara Kannada district of Karnataka state in southern India.
+
+## Beaches
+Something about beaches, **which is *very* important**.
+
+- every
+- beach
+- is beautiful
+```
+
+Having the above about section in place, results in the following homepage:
+
+![Markdown about description](/images/theme-documentation-advanced/homepage-markdown-about-description.png "Markdown about description")
+
 
 ## Icons
 Gokarna supports popular social media icons (Github, Linkedin, Twitter, StackOverflow, Dribbble, etc.) out of the box. See full list of supported icons [here](https://github.com/526avijitgupta/gokarna/tree/main/static/icons).
