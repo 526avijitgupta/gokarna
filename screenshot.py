@@ -1,24 +1,25 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.by import By
 from PIL import Image
 import os
+import soldier
 
 
 """
 Setup:
-    pip install selenium pillow
-
+    pip install selenium==4.10.0 pillow
     Add geckodriver to $PATH. Link: https://github.com/mozilla/geckodriver/releases
 """
 
-BASE_URL = 'http://localhost:1313'
+BASE_URL = 'http://127.0.0.1:1313'
+process = soldier.run('cd exampleSite && hugo serve', background=True, shell=True)
 options = Options()
 if os.path.exists('/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'):
     options.binary_location = '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
 options.add_argument('--headless')
 DRIVER = webdriver.Firefox(options=options)
-# To offset screen size based on window size
-DRIVER.set_window_size(1500, 1085)
+# To offset screen size based on window size DRIVER.set_window_size(1500, 1085)
 
 SCREENSHOT_OPTIONS = [
     {'path': '/', 'filename': 'images/screenshot-{color_pref}-home.png'},
@@ -46,7 +47,7 @@ def take_screenshots(driver, screenshot_options):
         driver.save_screenshot(color_a_filename)
 
         # Change theme by clicking the theme toggle button
-        for elem in driver.find_elements_by_class_name('dark-theme-toggle'):
+        for elem in driver.find_elements(By.CLASS_NAME, 'dark-theme-toggle'):
             # Hidden hamburger menu for mobile raises Exception on clicking
             if elem.is_displayed():
                 elem.click()
@@ -88,3 +89,4 @@ def merge_home_images():
 take_screenshots(DRIVER, SCREENSHOT_OPTIONS)
 merge_home_images()
 DRIVER.quit()
+process.kill(with_honor=True)
