@@ -11,6 +11,12 @@
         <h3>{{ .Site.Params.Description }}</h3>
     {{ end }}
 
+    {{ if os.FileExists "index-about.md" }}
+    <div class="markdown-content">
+        {{ readFile "index-about.md" | markdownify }}
+    </div>
+    {{ end }}
+
 </section>
 
 <div class="flex-break"></div>
@@ -27,12 +33,6 @@
         {{ end }}
     </ul>
 </section>
-{{ end }}
-
-{{ if os.FileExists "index-about.md" }}
-<div class="markdown-content">
-    {{ readFile "index-about.md" | markdownify }}
-</div>
 {{ end }}
 
 {{ if isset .Site.Params "showpostsonhomepage" }}
