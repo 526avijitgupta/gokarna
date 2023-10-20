@@ -27,6 +27,7 @@ html {
   font-size: 17.5px;
   min-height: 100%;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 body {
