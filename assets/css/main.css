@@ -624,3 +624,22 @@ table td {
 .prev-post, .next-post {
   max-width: 33%;
 }
+
+/* back to top button  */
+.arrow-logo {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the icon at the bottom of the page */
+  right: 30px; /* Place the icon 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: transparent; /* Remove the background color */
+  color: var(--accent-color); /* Icon color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Adjust the padding as needed */
+  border-radius: 50%; /* Make it a circle */
+  font-size: 24px; /* Increase font size */
+}
+
+.arrow-logo:hover {
+  fill:  var(--accent-color); 
+}
