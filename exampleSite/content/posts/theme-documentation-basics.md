@@ -27,7 +27,9 @@ cd my_website
 
 The theme’s repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
 
-You can clone this repository to the `themes` directory:
+You can download the [latest release :books: .zip file](https://github.com/526avijitgupta/gokarna/releases) of the theme and extract it in the `themes` directory.
+
+Alternatively, clone this repository to the `themes` directory:
 
 ```bash
 git clone https://github.com/526avijitgupta/gokarna.git themes/gokarna
