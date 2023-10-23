@@ -146,6 +146,9 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#FF4D4D"
 
+  # Display "back to top" button on posts
+  ShowBackToTopButton = true
+
   # You can use this to inject any HTML in the <head> tag.
   # Ideal usecase for this is to import custom js/css or add your analytics snippet
   customHeadHTML = ""
