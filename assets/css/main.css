@@ -638,6 +638,8 @@ table td {
   position: fixed;
   right: 30px;
   z-index: 5;
+  background-color: #6c94bd;
+  border-radius: 10px;
 }
 
 .arrow-logo:hover {
