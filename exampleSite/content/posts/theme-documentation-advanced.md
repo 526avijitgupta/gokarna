@@ -152,6 +152,17 @@ The same icon in this case could also be added without feather:
     pre = "<img class='svg-inject' src='/icons/github.svg' />"
 ```
 
+You can add `params` allowing menu link to open in a new tab, for example: 
+```toml
+[[menu.main]]
+  identifier = "github"
+  url = "https://github.com/zerodahero"
+  weight = 4
+  # We use feather-icons: https://feathericons.com/
+  pre = "<span data-feather='github'></span>"
+  [menu.main.params]
+    newPage = true
+```
 
 ## Custom Head and Footer HTML
 
