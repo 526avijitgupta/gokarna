@@ -634,11 +634,13 @@ table td {
   display: none;
   font-size: 24px;
   padding: 10px;
+  padding-right: 8px;
   position: fixed;
   right: 20px;
   z-index: 5;
   background-color: var(--light-tertiary-color);
-  border-radius: 10px;
+  width: 25px;
+  height: 25px;
 }
 
 .arrow-logo path{
