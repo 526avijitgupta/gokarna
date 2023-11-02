@@ -87,6 +87,10 @@ pre {
   box-shadow: rgb(33, 38, 45) 0px -1px 0px 0px inset;
 }
 
+.arrow-logo { 
+  background-color: var(--dark-secondary-color);
+}
+
 /* TODO: Check if this is needed or not */
 /* 
 img,
