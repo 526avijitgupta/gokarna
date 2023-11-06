@@ -15,7 +15,6 @@ pygmentsStyle = "monokai"
   avatarURL = "/images/avatar.webp"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
-  repo = "526avijitgupta/gokarna"
   ShowBackToTopButton = true # true or false for "back to top" button on posts
   customHeadHTML = """
     <!-- KaTeX -->
@@ -36,6 +35,16 @@ pygmentsStyle = "monokai"
         });
       });
     </script>
+  """
+  customCommentHTML = """
+  <div id="comment-section">
+    <script src="https://utteranc.es/client.js"
+        repo="526avijitgupta/gokarna"
+        issue-term="title"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async></script>
+  </div>
   """
   socialIcons = [
     {name = "twitter", url = "https://example.com"},
