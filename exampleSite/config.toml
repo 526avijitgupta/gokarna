@@ -15,6 +15,7 @@ pygmentsStyle = "monokai"
   avatarURL = "/images/avatar.webp"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
+  repo = "526avijitgupta/gokarna"
   ShowBackToTopButton = true # true or false for "back to top" button on posts
   customHeadHTML = """
     <!-- KaTeX -->
