@@ -70,6 +70,8 @@
         }
     </script>
     {{ if .Site.Params.CustomCommentHTML }}
-    {{ .Site.Params.CustomCommentHTML | safeHTML }}
+    <div id="comment-secton">
+        {{ .Site.Params.CustomCommentHTML | safeHTML }}
+    </div>
     {{ end }}
 </div>

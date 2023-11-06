@@ -168,6 +168,22 @@ You can add `params` allowing menu link to open in a new tab, for example:
 
 The goal of this feature is to give the user more control over the theme. It's functioning is very straightforward - "You can inject any HTML you want in the `<head>` tag" . This may seem simple at first, but it opens up a lot of possibilities.
 
+## Custom Comment HTML 
+
+Here you can add custom HTML for comments at the end of every post. By default, its in a `<div>` with an id of `comment-section`
+
+### For example
+```toml 
+customCommentHTML = """
+<script src="https://utteranc.es/client.js"
+    repo="526avijitgupta/gokarna"
+    issue-term="title"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async></script>
+"""
+```
+
 ### Bring your own scripts
 
 Add your own JavaScript or CSS by putting them in the `static/` folder and importing them into your HTML.
