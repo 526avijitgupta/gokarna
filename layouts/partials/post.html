@@ -40,7 +40,7 @@
     </svg>
     {{ end }}
     <script>
-        let mybutton = document.getElementById("btt-button");
+        let backToTopButton = document.getElementById("btt-button");
 
         window.onscroll = function() {
             scrollFunction()
@@ -48,9 +48,9 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
+                backToTopButton.style.display = "block";
             } else {
-                mybutton.style.display = "none";
+                backToTopButton.style.display = "none";
             }
         }
 
@@ -70,7 +70,7 @@
         }
     </script>
     {{ if .Site.Params.CustomCommentHTML }}
-    <div id="comment-secton">
+    <div id="comments">
         {{ .Site.Params.CustomCommentHTML | safeHTML }}
     </div>
     {{ end }}
