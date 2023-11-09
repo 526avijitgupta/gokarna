@@ -69,4 +69,9 @@
             scrollToTop();
         }
     </script>
+    {{ if .Site.Params.CustomCommentHTML }}
+    <div id="comment-secton">
+        {{ .Site.Params.CustomCommentHTML | safeHTML }}
+    </div>
+    {{ end }}
 </div>
