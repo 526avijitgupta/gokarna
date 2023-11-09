@@ -170,7 +170,9 @@ The goal of this feature is to give the user more control over the theme. It's f
 
 ## Custom Comment HTML 
 
-Here you can add custom HTML for comments at the end of every post. By default, its in a `<div>` with an id of `comment-section`
+Similar to custom head and footer HTML, you can add custom HTML for comments at the end of every post. Its in a `<div>` with the id `comments` which can be then customized with your external CSS.
+
+The purpose of this is to freely use any comments platform of your choosing
 
 ### For example
 ```toml 
