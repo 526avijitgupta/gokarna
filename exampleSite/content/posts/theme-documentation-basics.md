@@ -213,6 +213,14 @@ If you want to display posts on the homepage, the options are:
   showPostsOnHomePage = "popular"
 ```
 
+### Date format 
+Change date format 
+
+```toml 
+[params]
+  dateFormat = "2 January, 2006"
+```
+
 ### Footer
 
 Text to display in the footer section

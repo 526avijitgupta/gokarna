@@ -1,5 +1,10 @@
 <article class="post-title">
     <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
     <div class="flex-break"></div>
-    <span class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</span>
+    <span class="post-date">
+        {{ if .Site.Params.dateFormat }} 
+            {{ dateFormat .Site.Params.dateFormat .Date }}
+        {{ else }}
+            {{ dateFormat "January 2, 2006" .Date }} 
+        {{ end }} </span>
 </article>
