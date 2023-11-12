@@ -214,7 +214,7 @@ If you want to display posts on the homepage, the options are:
 ```
 
 ### Date format 
-Change date format 
+The date format being used across can be chaged. For valid date strings see: https://pkg.go.dev/time#pkg-constants
 
 ```toml 
 [params]
