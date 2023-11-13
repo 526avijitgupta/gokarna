@@ -239,12 +239,14 @@ a:hover .feather-sun {
   bottom: 0;
   color: inherit;
   left: 0;
+  margin-left: 30%;
   overflow: hidden;
   padding: 40px 0;
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 40%;
 }
+
 
 .footer span {
   display: block;
@@ -290,6 +292,7 @@ a:hover .feather-sun {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
+  
 }
 
 /* CODE BLOCKS */
