@@ -596,6 +596,7 @@ table td {
   }
 
   .footer {
+    margin-left: 0;
     width: 100%;
   }
 }
