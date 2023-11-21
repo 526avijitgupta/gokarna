@@ -594,6 +594,10 @@ table td {
   .list-posts .post-date {
     color: gray;
   }
+
+  .footer {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 820px) {
