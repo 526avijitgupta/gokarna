@@ -184,6 +184,12 @@ img {
   stroke-width: 2;
   width: 20px;
 }
+.nav-item a svg {
+  height: 20px;
+  margin: -3px auto;
+  stroke-width: 2;
+  width: 20px;
+}
 .nav-links .nav-link.icon a {
   padding: 0 8px;
 }
