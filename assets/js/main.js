@@ -27,7 +27,6 @@ function ready() {
             document.querySelector('main#content > .container').classList.contains('post')) {
         if (document.getElementById('TableOfContents') !== null) {
             fixTocItemsIndent();
-            addSmoothScroll();
             createScrollSpy();
         } else {
             document.querySelector('main#content > .container.post').style.display = "block";
@@ -62,18 +61,6 @@ function fixTocItemsIndent() {
     document.querySelectorAll('#TableOfContents a').forEach($tocItem => {
       const itemId = $tocItem.getAttribute("href").substring(1)
       $tocItem.classList.add(HEADING_TO_TOC_CLASS[document.getElementById(itemId).tagName]);
-    });
-}
-
-function addSmoothScroll() {
-    document.querySelectorAll('#toc a').forEach($anchor => {
-        $anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.getElementById(this.getAttribute('href').substring(1)).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start' //scroll to top of the target element
-            });
-        });
     });
 }
 
