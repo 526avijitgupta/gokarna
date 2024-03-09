@@ -245,7 +245,7 @@ If any post YAML contains `weight:`, the posts will not appear by Date. See [Hug
 
 ### Displaying content on the homepage
 
-Content to display on homepage below the social icons, using the contents of `content/_index.md`.
+Content to display on homepage below the social icons, using the contents of `content/index-about.md`.
 
 ### Custom Head HTML
 
