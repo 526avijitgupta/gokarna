@@ -4,7 +4,7 @@
         {{ if isset .Site.Params "avatarurl" }}
         <div class="avatar">
             <a href="{{ .Site.BaseURL }}">
-                <img src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
+                <img src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}">
             </a>
         </div>
         {{ end }}
@@ -24,14 +24,14 @@
 
             <span class="nav-icons-divider"></span>
             <div class="nav-link dark-theme-toggle">
-                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
                 <a>
-                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
                 </a>
             </div>
 
             <div class="nav-link" id="hamburger-menu-toggle">
-                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
                 <a>
                     <span data-feather="menu"></span>
                 </a>
@@ -47,9 +47,9 @@
                 </li>
                 {{ end }}
                 <li class="nav-item dark-theme-toggle">
-                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
                     <a>
-                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
                     </a>
                 </li>
             </ul>

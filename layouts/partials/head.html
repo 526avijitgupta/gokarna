@@ -35,7 +35,7 @@
     <meta name="twitter:image" content="{{ absURL $image }}">
 
     <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
-    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="canonical" href="{{ .Permalink }}">
 
     {{ $cssNormalize := resources.Get "css/normalize.min.css" }}
     <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}" media="print">

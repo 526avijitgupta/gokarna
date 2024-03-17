@@ -2,7 +2,7 @@
 <section class="home-about">
 	<div class="avatar">
         {{ if isset .Site.Params "avatarurl" }}
-        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
+        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}">
         {{ end }}
 	</div>
 
@@ -16,17 +16,17 @@
 <div class="flex-break"></div>
 
 {{ if isset .Site.Params "socialicons" }}
-<section class="social-icons">
+<div class="social-icons">
     <ul class="social-icons-list">
         {{ range .Site.Params.SocialIcons }}
         <li class="social-icon">
             <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} aria-label="Learn more on {{ .name }}">
-                <img class="svg-inject" src="/svg/icons/{{ .name }}.svg" />
+                <img class="svg-inject" src="/svg/icons/{{ .name }}.svg" alt="">
             </a>
         </li>
         {{ end }}
     </ul>
-</section>
+</div>
 {{ end }}
 
 {{ if os.FileExists "index-about.md" }}
