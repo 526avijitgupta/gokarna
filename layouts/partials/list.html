@@ -4,11 +4,11 @@
 
     {{ range (where .Pages "Params.type" "post" ).GroupByDate "2006" }}
 
-    <h2 class="posts-year">{{ .Key }}</h2>
+        <h2 class="posts-year">{{ .Key }}</h2>
 
-    {{- range .Pages -}}
-        {{- partial "list-posts.html" . -}}
-    {{ end }}
+        {{- range .Pages -}}
+            {{- partial "list-posts.html" . -}}
+        {{ end }}
     {{ end }}
 
 </div>
