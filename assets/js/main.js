@@ -103,17 +103,21 @@ function setThemeByUserPref() {
 function toggleTheme(event) {
     toggleIcon = event.currentTarget.querySelector("a svg.feather");
     if (toggleIcon.classList[1] === THEME_TO_ICON_CLASS.dark) {
-        setTheme('light', [event.currentTarget]);
+        setThemeAndStore('light', [event.currentTarget]);
     } else if (toggleIcon.classList[1] === THEME_TO_ICON_CLASS.light) {
-        setTheme('dark', [event.currentTarget]);
+        setThemeAndStore('dark', [event.currentTarget]);
     }
 }
 
 function setTheme(themeToSet, targets) {
-    localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
     darkThemeCss.disabled = themeToSet === 'light';
     targets.forEach((target) => {
         target.querySelector('a').innerHTML = feather.icons[THEME_TO_ICON_CLASS[themeToSet].split('-')[1]].toSvg();
         target.querySelector(".dark-theme-toggle-screen-reader-target").textContent = [THEME_TO_ICON_TEXT_CLASS[themeToSet]];
     });
+}
+
+function setThemeAndStore(themeToSet, targets) {
+    setTheme(themeToSet, targets);
+    localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
 }
