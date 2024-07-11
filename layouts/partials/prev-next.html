@@ -8,7 +8,7 @@
         </a>
     </p>
     <p class="prev-post-date">
-        {{ dateFormat "January 2, 2006" .Date }}
+        {{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}
     </p>
 </div>
 {{ end }}
@@ -23,7 +23,7 @@
         </a>
     </p>
         <p class="next-post-date">
-            {{ dateFormat "January 2, 2006" .Date }}
+            {{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}
         </p>
 </div>
 {{ end }}
