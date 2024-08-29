@@ -317,3 +317,24 @@ and the `metaKeywords` specified in the config.toml:
 [params]
   metaKeywords = ["blog", "gokarna", "hugo"]
 ```
+
+## Hide tags
+
+Tags can be used to categorize posts (e.g.: Project or Blog), and be hidden on
+the posts. Simply set the `params.hiddenTags` field in `hugo.toml`.
+
+```toml
+[params]
+  hiddenTags = ["project", "blog"]
+  [menu]
+    [[menu.main]]
+      identifier = "projects"
+      url = "/tags/project/"
+      name = "My Projects"
+      weight = 1
+    [[menu.main]]
+      identifier = "blog"
+      url = "/tags/blog/"
+      name = "Blog"
+      weight = 2
+```
