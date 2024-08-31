@@ -1,10 +1,38 @@
 <div class="post container">
     <div class="post-header-section">
         <h1>{{ .Title }}</h1>
-        <small role="doc-subtitle">{{ .Description }}</small>
-        <p class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}
-        {{ if lt .Date .Lastmod }} | Updated {{ dateFormat .Site.Params.dateFormat .Lastmod }}{{ end }}
-        </p>
+
+        {{/* Display the date only if the post doesn't have a tag listed in tagsHidePostDate */}}
+        {{ $displayDate := true }}
+        {{ if isset .Site.Params "tagshidepostdate" }}
+         {{ $tagsHidePostDate := .Site.Params.TagsHidePostDate }}
+         {{ range $tag := .Params.Tags }}
+          {{ if in $tagsHidePostDate $tag }}
+           {{ $displayDate = false }}
+          {{ end }}
+         {{ end }}
+        {{ end }}
+
+        {{/* Display the description only if the post doesn't have a tag listed in tagsHidePostDescription */}}
+        {{ $displayDescription := true }}
+        {{ if isset .Site.Params "tagshidepostdescription" }}
+         {{ $tagsHidePostDescription := .Site.Params.TagsHidePostDescription }}
+         {{ range $tag := .Params.Tags }}
+          {{ if in $tagsHidePostDescription $tag }}
+           {{ $displayDescription = false }}
+          {{ end }}
+         {{ end }}
+        {{ end }}
+
+	{{ if eq $displayDescription true }}
+          <small role="doc-subtitle">{{ .Description }}</small>
+	{{ end }}
+
+	{{ if eq $displayDate true }}
+          <p class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}
+           {{ if lt .Date .Lastmod }} | Updated {{ dateFormat .Site.Params.dateFormat .Lastmod }}{{ end }}
+          </p>
+	{{ end }}
 
         <ul class="post-tags">
 	 {{ $hiddenTags := .Site.Params.HiddenTags }}
