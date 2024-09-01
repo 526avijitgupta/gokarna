@@ -2,26 +2,25 @@
     <div class="post-header-section">
         <h1>{{ .Title }}</h1>
 
-        {{/* Display the date only if the post doesn't have a tag listed in tagsHidePostDate */}}
+        {{/* Determine whether to display the date & description based on tags */}}
+
         {{ $displayDate := true }}
-        {{ if isset .Site.Params "tagshidepostdate" }}
-         {{ $tagsHidePostDate := .Site.Params.TagsHidePostDate }}
-         {{ range $tag := .Params.Tags }}
-          {{ if in $tagsHidePostDate $tag }}
-           {{ $displayDate = false }}
-          {{ end }}
-         {{ end }}
+	{{ $displayDescription := true }}
+	{{ $tagsHidePostDate := slice }}
+        {{ $tagsHidePostDescription := slice }}
+
+        {{ with .Site.Params }}
+            {{ $tagsHidePostDate = .TagsHidePostDate | default slice }}
+            {{ $tagsHidePostDescription = .TagsHidePostDescription | default slice }}
         {{ end }}
 
-        {{/* Display the description only if the post doesn't have a tag listed in tagsHidePostDescription */}}
-        {{ $displayDescription := true }}
-        {{ if isset .Site.Params "tagshidepostdescription" }}
-         {{ $tagsHidePostDescription := .Site.Params.TagsHidePostDescription }}
-         {{ range $tag := .Params.Tags }}
-          {{ if in $tagsHidePostDescription $tag }}
-           {{ $displayDescription = false }}
-          {{ end }}
-         {{ end }}
+        {{ range .Params.Tags }}
+            {{ if in $tagsHidePostDate . }}
+                {{ $displayDate = false }}
+            {{ end }}
+            {{ if in $tagsHidePostDescription . }}
+                {{ $displayDescription = false }}
+            {{ end }}
         {{ end }}
 
 	{{ if $displayDescription }}
