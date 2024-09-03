@@ -1,18 +1,16 @@
 <div class="post-title">
      <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
-     {{/* Display the date only if the post doesn't have a tag listed in tagsHidePostDate */}}
+     {{/* Decide to display the date based on the tags */}}
      {{ $displayDate := true }}
-     {{ if isset .Site.Params "tagshidepostdate" }}
-      {{ $tagsHidePostDate := .Site.Params.TagsHidePostDate }}
-      {{ range $tag := .Params.Tags }}
-       {{ if in $tagsHidePostDate $tag }}
-        {{ $displayDate = false }}
-       {{ end }}
-      {{ end }}
+     {{ $tagsHidePostDate := or .Site.Params.Hidden.TagsPostDate slice }}
+     {{ $postTags := or .Params.Tags slice }}
+
+     {{ if gt ($tagsHidePostDate | intersect $postTags | len) 0 }}
+       {{ $displayDate = false }}
      {{ end }}
 
-    {{ if eq $displayDate true }}
-     <div class="flex-break"></div>
-     <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}</span>
-    {{ end }}
+     {{ if eq $displayDate true }}
+      <div class="flex-break"></div>
+      <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}</span>
+     {{ end }}
 </div>

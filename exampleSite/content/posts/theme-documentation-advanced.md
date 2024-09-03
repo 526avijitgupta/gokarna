@@ -328,9 +328,10 @@ A post's date and description can be hidden if it has at least one tag listed in
 
 ```toml
 [params]
-  hiddenTags = ["project", "blog"]
-  tagsHidePostDate = ["project"]
-  tagsHidePostDescription = ["project"]
+  [params.hidden]
+  tags = ["project", "blog"]
+  tagsPostDate = ["project"]
+  tagsPostDescription = ["project"]
   [menu]
     [[menu.main]]
       identifier = "projects"

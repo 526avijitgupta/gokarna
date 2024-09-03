@@ -6,22 +6,18 @@
 
         {{ $displayDate := true }}
 	{{ $displayDescription := true }}
-	{{ $tagsHidePostDate := slice }}
-        {{ $tagsHidePostDescription := slice }}
+	{{ $postTags := or .Params.Tags slice }}
+	{{ $hiddenTags := or .Site.Params.Hidden.Tags slice }}
+	{{ $tagsHidePostDate := or .Site.Params.Hidden.TagsPostDate slice }}
+        {{ $tagsHidePostDescription := or .Site.Params.Hidden.TagsPostDescription slice }}
 
-        {{ with .Site.Params }}
-            {{ $tagsHidePostDate = .TagsHidePostDate | default slice }}
-            {{ $tagsHidePostDescription = .TagsHidePostDescription | default slice }}
-        {{ end }}
+	{{ if gt ($tagsHidePostDate | intersect $postTags | len) 0 }}
+	  {{ $displayDate = false }}
+	{{ end }}
 
-        {{ range .Params.Tags }}
-            {{ if in $tagsHidePostDate . }}
-                {{ $displayDate = false }}
-            {{ end }}
-            {{ if in $tagsHidePostDescription . }}
-                {{ $displayDescription = false }}
-            {{ end }}
-        {{ end }}
+	{{ if gt ($tagsHidePostDescription | intersect $postTags | len) 0 }}
+	  {{ $displayDescription = false }}
+	{{ end }}
 
 	{{ if $displayDescription }}
           <small role="doc-subtitle">{{ .Description }}</small>
@@ -34,8 +30,7 @@
 	{{ end }}
 
         <ul class="post-tags">
-	 {{ $hiddenTags := .Site.Params.HiddenTags }}
-          {{ range $tag := .Params.tags }}
+          {{ range $tag := $postTags }}
            {{ if not (in $hiddenTags $tag) }}
              <li class="post-tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
            {{ end }}
