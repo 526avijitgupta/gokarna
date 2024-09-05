@@ -1,5 +1,16 @@
 <div class="post-title">
-    <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
-    <div class="flex-break"></div>
-    <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}</span>
+     <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+     {{/* Decide to display the date based on the tags */}}
+     {{ $displayDate := true }}
+     {{ $tagsHidePostDate := or .Site.Params.Hidden.TagsPostDate slice }}
+     {{ $postTags := or .Params.Tags slice }}
+
+     {{ if gt ($tagsHidePostDate | intersect $postTags | len) 0 }}
+       {{ $displayDate = false }}
+     {{ end }}
+
+     {{ if eq $displayDate true }}
+      <div class="flex-break"></div>
+      <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}</span>
+     {{ end }}
 </div>

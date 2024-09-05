@@ -1,14 +1,36 @@
 <div class="post container">
     <div class="post-header-section">
         <h1>{{ .Title }}</h1>
-        <small role="doc-subtitle">{{ .Description }}</small>
-        <p class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}
-        {{ if lt .Date .Lastmod }} | Updated {{ dateFormat .Site.Params.dateFormat .Lastmod }}{{ end }}
-        </p>
+
+        {{/* Determine whether to display the date & description based on tags */}}
+
+        {{ $displayDate := true }}
+	{{ $displayDescription := true }}
+	{{ $postTags := or .Params.Tags slice }}
+	{{ $hiddenTags := or .Site.Params.Hidden.Tags slice }}
+	{{ $tagsHidePostDate := or .Site.Params.Hidden.TagsPostDate slice }}
+        {{ $tagsHidePostDescription := or .Site.Params.Hidden.TagsPostDescription slice }}
+
+	{{ if gt ($tagsHidePostDate | intersect $postTags | len) 0 }}
+	  {{ $displayDate = false }}
+	{{ end }}
+
+	{{ if gt ($tagsHidePostDescription | intersect $postTags | len) 0 }}
+	  {{ $displayDescription = false }}
+	{{ end }}
+
+	{{ if $displayDescription }}
+          <small role="doc-subtitle">{{ .Description }}</small>
+	{{ end }}
+
+	{{ if $displayDate }}
+          <p class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}
+           {{ if lt .Date .Lastmod }} | Updated {{ dateFormat .Site.Params.dateFormat .Lastmod }}{{ end }}
+          </p>
+	{{ end }}
 
         <ul class="post-tags">
-	 {{ $hiddenTags := .Site.Params.HiddenTags }}
-          {{ range $tag := .Params.tags }}
+          {{ range $tag := $postTags }}
            {{ if not (in $hiddenTags $tag) }}
              <li class="post-tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
            {{ end }}

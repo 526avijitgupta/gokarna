@@ -318,14 +318,20 @@ and the `metaKeywords` specified in the config.toml:
   metaKeywords = ["blog", "gokarna", "hugo"]
 ```
 
-## Hide tags
+## Hide tags, date or description of posts
 
 Tags can be used to categorize posts (e.g.: Project or Blog), and be hidden on
-the posts. Simply set the `params.hiddenTags` field in `hugo.toml`.
+the posts. Use the `params.hiddenTags` field in `hugo.toml`.  
+A post's date and description can be hidden if it has at least one tag listed in
+`params.tagsHidePostDate` or `params.tagsHidePostDescription`, respectively.
+
 
 ```toml
 [params]
-  hiddenTags = ["project", "blog"]
+  [params.hidden]
+  tags = ["project", "blog"]
+  tagsPostDate = ["project"]
+  tagsPostDescription = ["project"]
   [menu]
     [[menu.main]]
       identifier = "projects"
