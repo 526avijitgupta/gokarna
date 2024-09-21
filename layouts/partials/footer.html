@@ -4,9 +4,17 @@
     {{ .Site.Params.CustomFooterHTML | safeHTML }}
     {{ end }}
 
-    {{ if .Site.Params.footer }}
-    <span>&copy; {{ now.Year }} {{ .Site.Params.Footer}}</span>
+    {{/* Print a year range if .Date and .Lastmod are present */}}
+    {{ if and (.Date) (.Lastmod) (.Site.Params.Footer) (eq .Kind "page") (gt (time.Format "2006" .Lastmod) (time.Format "2006" .Date)) }}
+    <span>&copy; {{ time.Format "2006" .Date }}-{{ time.Format "2006" .Lastmod }} {{ .Site.Params.Footer }} {{ .Site.Copyright }}</span>
+    {{/* Use .Date as the copyright year */}}
+    {{ else if and (.Date) (.Site.Params.Footer) (eq .Kind "page") }}
+        <span>&copy; {{ time.Format "2006" .Date }} {{ .Site.Params.Footer }} {{ .Site.Copyright }}</span>
+    {{/* Use the current year for other Kinds, and pages without Date or Lastmod */}}
+    {{ else if (.Site.Params.Footer) }}
+        <span>&copy; {{ now.Year }} {{ .Site.Params.Footer }}</span>
     {{ end }}
+
     <span>
         Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
     </span>
