@@ -344,3 +344,24 @@ A post's date and description can be hidden if it has at least one tag listed in
       name = "Blog"
       weight = 2
 ```
+
+## Site-wide copyright notice
+
+Define the [copyright notice for your site](https://gohugo.io/methods/site/copyright/). The notice will only be displayed on [page Kinds](#content-types).
+
+For example, the following configuration in `config.toml` and front matter respectively...
+
+```toml
+copyright = "Verbatim copying and distribution of this entire article are permitted worldwide, without royalty, in any medium, provided this notice is preserved."
+```
+
+```
+date: 2020-06-17
+lastmod: 2024-02-05
+```
+
+Will produce this footer:
+
+> © 2020-2024 The Marauders Verbatim copying and distribution of this entire article are permitted worldwide, without royalty, in any medium, provided this notice is preserved.
+
+The years of `.Date` and `.Lastmod` are used to create a date range for your copyrighted material. [dateFormat](/posts/theme-documentation-basics/#date-format) **must** be set in `config.toml` if `.Lastmod` is present in any front matter.
