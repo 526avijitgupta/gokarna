@@ -230,6 +230,8 @@ Text to display in the footer section
   footer = "Text in footer"
 ```
 
+`footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
+
 ### Previous and Next buttons
 
 At the bottom of a post, show the previous and next post chronologically.
