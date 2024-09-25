@@ -4,9 +4,35 @@
     {{ .Site.Params.CustomFooterHTML | safeHTML }}
     {{ end }}
 
-    {{ if .Site.Params.footer }}
-    <span>&copy; {{ now.Year }} {{ .Site.Params.Footer}}</span>
+    {{ .Scratch.Set "footerText" "" }}
+
+    {{ if (.Site.Params.Footer) }}
+
+        {{ if and (eq .Kind "page") (.Date) }}
+            {{ .Scratch.Add "footerText" (.Date | time.Format "2006") }}
+        {{ else }}
+            {{ .Scratch.Add "footerText" (time.Now | time.Format "2006") }}
+        {{ end }}
+
+        {{ if and (eq .Kind "page") (.Lastmod) (gt (time.Format "2006" .Lastmod) (time.Format "2006" .Date)) }}
+            {{ .Scratch.Add "footerText" "-" }}
+            {{ .Scratch.Add "footerText" (.Lastmod | time.Format "2006") }}
+        {{ end }}
+
+        {{ .Scratch.Add "footerText" " " }}
+        {{ .Scratch.Add "footerText" .Site.Params.Footer }}
+
+        {{ if and (eq .Kind "page") (.Site.Copyright) }}
+            {{ .Scratch.Add "footerText" " " }}
+            {{ .Scratch.Add "footerText" .Site.Copyright }}
+        {{ end }}
+
     {{ end }}
+
+    {{ if (gt (.Scratch.Get "footerText" | len) 0) }}
+        <span>&copy; {{ .Scratch.Get "footerText" }}</span>
+    {{ end }}
+
     <span>
         Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
     </span>
