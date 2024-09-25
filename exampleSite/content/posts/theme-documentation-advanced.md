@@ -364,4 +364,6 @@ Will produce this footer:
 
 > © 2020-2024 The Marauders Verbatim copying and distribution of this entire article are permitted worldwide, without royalty, in any medium, provided this notice is preserved.
 
+`copyright` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
+
 The years of `.Date` and `.Lastmod` are used to create a date range for your copyrighted material. [dateFormat](/posts/theme-documentation-basics/#date-format) **must** be set in `config.toml` if `.Lastmod` is present in any front matter.
