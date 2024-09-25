@@ -30,7 +30,7 @@
     {{ end }}
 
     {{ if (gt (.Scratch.Get "footerText" | len) 0) }}
-        <span>&copy; {{ .Scratch.Get "footerText" }}</span>
+        <span>&copy; {{ .Scratch.Get "footerText" | markdownify }}</span>
     {{ end }}
 
     <span>
