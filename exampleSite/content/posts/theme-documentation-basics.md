@@ -161,6 +161,10 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # or "" (do not display, default option)
   showPostsOnHomePage = ""
 
+  # Defines number of posts displayed on homepage if showPostsOnHomePage option is set
+  # Default value is 5
+  numberPostsOnHomePage = 4
+
   # Footer text
   footer = "The Marauders"
 ```
@@ -208,9 +212,12 @@ If you want to display posts on the homepage, the options are:
 - `recent`: Show recent posts on home page if the value is set to recent
 - Do not show anything if the variable is unset or an empty string.
 
+You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is absent (empty) or zero the default value is used.
+
 ```toml
 [params]
   showPostsOnHomePage = "popular"
+  numberPostsOnHomePage = 3
 ```
 
 ### Date format 
