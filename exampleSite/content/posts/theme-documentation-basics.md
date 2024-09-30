@@ -162,7 +162,7 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   showPostsOnHomePage = ""
 
   # Defines number of posts displayed on homepage if showPostsOnHomePage option is set
-  # Default value is 5
+  # Default value is 4
   numberPostsOnHomePage = 4
 
   # Footer text
