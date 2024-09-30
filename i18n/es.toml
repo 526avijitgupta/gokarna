@@ -1,5 +1,7 @@
 [Recent]
-  other = 'Recientes'
+  other = 'Recientes entradas'
+[Popular]
+  other = 'Entradas'
 [error404]
   other = 'Esta página no existe, prueba de nuevo desde el'
 [home]
