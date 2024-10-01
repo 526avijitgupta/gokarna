@@ -38,16 +38,16 @@
 {{ if isset .Site.Params "showpostsonhomepage" }}
 
     <div class="home-posts list-posts">
-        <h2>{{ i18n (.Site.Params.ShowPostsOnHomePage | humanize) }} Posts</h2>
+        <h2>{{ i18n (.Site.Params.ShowPostsOnHomePage | humanize) }}</h2>
 
     {{ $posts := where .Site.Pages "Params.type" "post" }}
 
     {{ if eq .Site.Params.ShowPostsOnHomePage "popular" }}
-        {{ range $posts.ByWeight | first 4 }}
+        {{ range $posts.ByWeight | first (or .Site.Params.NumberPostsOnHomePage 4) }}
             {{- partial "list-posts.html" . -}}
         {{ end }}
     {{ else if eq .Site.Params.ShowPostsOnHomePage "recent" }}
-        {{ range $posts.ByDate.Reverse | first 4 }}
+        {{ range $posts.ByDate.Reverse | first (or .Site.Params.NumberPostsOnHomePage 4) }}
             {{- partial "list-posts.html" . -}}
         {{ end }}
     {{ end }}
