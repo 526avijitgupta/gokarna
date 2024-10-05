@@ -137,8 +137,8 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # URL for the avatar on homepage
   avatarURL = ""
 
-  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
-  avatarSize = ""
+  # Choose one of size-xs, size-s, size-m, size-l & size-xl
+  avatarSize = "size-m"
 
   # Description to display on homepage
   description = "Sky above, sand below & peace within"
@@ -158,11 +158,10 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
 
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)
-  # or "" (do not display, default option)
+  # or "" (do not display)
   showPostsOnHomePage = ""
 
   # Defines number of posts displayed on homepage if showPostsOnHomePage option is set
-  # Default value is 4
   numberPostsOnHomePage = 4
 
   # Footer text
@@ -180,11 +179,11 @@ This is the image url for the avatar on the homepage and the header.
 
 ### Avatar Size
 
-You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`. (Default: `size-m`)
+You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`
 
 ```toml
 [params]
-  avatarSize = "size-l"
+  avatarSize = "size-m"
 ```
 
 ### Description
@@ -197,11 +196,11 @@ Description to display on homepage below the title and avatar.
 
 ### Accent Color
 
-Accent color is displayed when you hover over `<a>` tags. It takes a hex/rgb color code. Default is `#FF4D4D`
+Accent color is displayed when you hover over `<a>` tags. It takes a hex/rgb color code.
 
 ```toml
 [params]
-  accentColor = "#08F"
+  accentColor = "#FF4D4D"
 ```
 
 ### Posts on home page
