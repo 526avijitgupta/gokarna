@@ -27,16 +27,9 @@ cd my_website
 
 The theme’s repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
 
-You can clone this repository to the `themes` directory:
+Make this repository a submodule of your Git project:
 
 ```bash
-git clone https://github.com/526avijitgupta/gokarna.git themes/gokarna
-```
-
-Or, create an empty git repository and make this repository a submodule of your site directory:
-
-```bash
-git init
 git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 ```
 
