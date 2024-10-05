@@ -162,7 +162,9 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
 
 ### Avatar URL
 
-This is the image url for the avatar on the homepage and the header.
+This is the resource URL for the avatar displayed on the [home page](/) and header (top-left).
+
+Images are typically placed in to the [`assets/`](https://gohugo.io/getting-started/directory-structure/#assets) or [`static/`](https://gohugo.io/getting-started/directory-structure/#static) directories (which are copied to the top-level directory [at build time](#f-build-the-website)).
 
 ```toml
 [params]
