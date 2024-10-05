@@ -105,7 +105,7 @@ Launch by using the following command:
 hugo serve
 ```
 
-Go to `http://localhost:1313`.
+Go to [`http://localhost:1313`](http://localhost:1313/) (if no other Hugo servers are running; Hugo will use an [ephemeral port](https://en.wikipedia.org/wiki/Ephemeral_port) if one or more servers are running concurrently on the host).
 
 ### f. Build the Website
 
