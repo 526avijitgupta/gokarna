@@ -135,36 +135,36 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # size-xs, size-s, size-m, size-l & size-xl
   avatarSize = "size-m"
 
+  # Choose the color shown when hyperlinks are hovered over
+  accentColor = "#FF4D4D"
+
+  # Inject arbitrary HTML in to the <head> tag
+  # Best used for importing custom JavaScript, CSS, or adding an analytics snippet
+  customHeadHTML = ""
+
   # Description (subheading) shown on the home page
   description = ""
 
-  # Choose the color shown when hyperlinks are hovered over
-  accentColor = "#FF4D4D"
+  # Footer text
+  footer = ""
+
+  # Define SEO keywords
+  # Valid data types: (String: ""), (Array [ "", "", "" ])
+  metaKeywords = []
+
+  # Define how many posts are displayed on the home page (see above)
+  numberPostsOnHomePage = 4
 
   # Display a "back to top" button on posts and pages (may not render on
   # smaller screen sizes)
   # Valid data types: (Boolean: true, false)
   showBackToTopButton = false
 
-  # Inject arbitrary HTML in to the <head> tag
-  # Best used for importing custom JavaScript, CSS, or adding an analytics snippet
-  customHeadHTML = ""
-
-  # Define SEO keywords
-  # Valid data types: (String: ""), (Array [ "", "", "" ])
-  metaKeywords = []
-
   # Display posts on the home page:
   # "popular" (order posts by weight)
   # "recent" (order posts by date)
   # "" or unset (do not display)
   showPostsOnHomePage = ""
-
-  # Define how many posts are displayed on the home page (see above)
-  numberPostsOnHomePage = 4
-
-  # Footer text
-  footer = ""
 ```
 
 ### Avatar URL
@@ -175,7 +175,7 @@ Images are typically placed in to the [`assets/`](https://gohugo.io/getting-star
 
 ```toml
 [params]
-  avatarURL = "/images/avatar.jpg"
+  avatarURL = "/images/avatar.webp"
 ```
 
 ### Avatar Size
@@ -193,7 +193,7 @@ Description to display on homepage below the title and avatar.
 
 ```toml
 [params]
-  description = "Hello, world!"
+  description = "Sky above, sand below & peace within"
 ```
 
 ### Accent color
@@ -240,7 +240,7 @@ Text to display in the footer section
 
 ```toml
 [params]
-  footer = "Text in footer"
+  footer = "The Marauders"
 ```
 
 `footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
