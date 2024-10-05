@@ -211,12 +211,11 @@ If you want to display posts on the homepage, the options are:
 - `recent`: Show recent posts on home page if the value is set to recent
 - Do not show anything if the variable is unset or an empty string.
 
-You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is absent (empty) or zero the default value is used.
+You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value is used.
 
 ```toml
 [params]
-  showPostsOnHomePage = "popular"
-  numberPostsOnHomePage = 3
+  numberPostsOnHomePage = 4
 ```
 
 ### Date format 
