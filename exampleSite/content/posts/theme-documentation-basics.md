@@ -145,7 +145,7 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # Description (subheading) shown on the home page
   description = ""
 
-  # Footer text
+  # Footer text (typically the author/project name)
   footer = ""
 
   # Define SEO keywords
