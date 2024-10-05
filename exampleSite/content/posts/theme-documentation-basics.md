@@ -40,14 +40,11 @@ The following is a basic configuration for the Gokarna theme:
 ```toml
 baseURL = "http://example.org/"
 defaultContentLanguage = "en"
-languageCode = "en"
-
-title = "My New Hugo Site"
-
-theme = "gokarna"
-
 # Automatically generate robots.txt
 enableRobotsTXT = true
+languageCode = "en"
+theme = "gokarna"
+title = "My New Hugo Site"
 
 [menu]
   [[menu.main]]
