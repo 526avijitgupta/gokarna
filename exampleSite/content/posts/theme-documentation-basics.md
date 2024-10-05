@@ -56,6 +56,9 @@ theme = "gokarna"
 # Automatically generate robots.txt
 enableRobotsTXT = true
 
+# Automatically set last modified dates using Git commit dates
+enableGitInfo = true
+
 [menu]
   [[menu.main]]
     # Unique identifier for a menu item
@@ -164,6 +167,11 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # Defines number of posts displayed on homepage if showPostsOnHomePage option is set
   # Default value is 4
   numberPostsOnHomePage = 4
+
+  # Configure how post dates are displayed
+  # dateFormat must be set if lastmod is declared in front matter, or enableGitInfo
+  # is true
+  dateFormat = "January 2, 2006"
 
   # Footer text
   footer = "The Marauders"
