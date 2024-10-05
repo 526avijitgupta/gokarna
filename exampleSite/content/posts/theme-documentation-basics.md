@@ -200,16 +200,21 @@ Accent color is displayed when you hover over `<a>` tags. It accepts an [RGB val
 
 ### Posts on home page
 
-If you want to display posts on the homepage, the options are:
+Recent and popular posts can be shown on the home page:
 
-- `popular`: Show popular posts on home page if the value is set to popular. It sorts the all the posts by it’s weight attribute in ascending order. Read more about it [here](/posts/theme-documentation-advanced/#weights).
-- `recent`: Show recent posts on home page if the value is set to recent
-- Do not show anything if the variable is unset or an empty string.
+- `popular`: Sort posts in ascending order of their [Weight](https://gohugo.io/methods/page/weight/)
+
+  **If any post on your site defines `weight`, you cannot enable [Previous and Next buttons](#previous-and-next-buttons).**
+
+- `recent`: Sort posts in ascending order of [Date](https://gohugo.io/methods/page/date/)
+
+- Do not show anything if the variable is unset, or an empty string
 
 You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value is used.
 
 ```toml
 [params]
+  showPostsOnHomePage = ""
   numberPostsOnHomePage = 4
 ```
 
