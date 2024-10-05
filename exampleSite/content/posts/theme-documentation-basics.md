@@ -152,7 +152,8 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # or "" (do not display)
   showPostsOnHomePage = ""
 
-  # Defines number of posts displayed on homepage if showPostsOnHomePage option is set
+  # Defines number of posts displayed on homepage if showPostsOnHomePage option
+  # is set
   numberPostsOnHomePage = 4
 
   # Footer text
