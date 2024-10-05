@@ -194,9 +194,9 @@ Description to display on homepage below the title and avatar.
   description = "Hello, world!"
 ```
 
-### Accent Color
+### Accent color
 
-Accent color is displayed when you hover over `<a>` tags. It takes a hex/rgb color code.
+Accent color is displayed when you hover over `<a>` tags. It accepts an [RGB value, expressed as a hexadecimal number](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color).
 
 ```toml
 [params]
