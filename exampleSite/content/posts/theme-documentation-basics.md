@@ -180,7 +180,7 @@ Images are typically placed in to the [`assets/`](https://gohugo.io/getting-star
 
 ### Avatar Size
 
-You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`.
+Set the avatar's size as: `size-xs`, `size-s`, `size-m`, `size-l`, or `size-xl`.
 
 ```toml
 [params]
@@ -189,7 +189,7 @@ You have an option to change the avatar size on the homepage. Options are: `size
 
 ### Description
 
-Description to display on homepage below the title and avatar.
+Description to display on the home page, below the title and avatar.
 
 ```toml
 [params]
@@ -198,7 +198,7 @@ Description to display on homepage below the title and avatar.
 
 ### Accent color
 
-Accent color is displayed when you hover over `<a>` tags. It accepts an [RGB value, expressed as a hexadecimal number](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color).
+The color displayed when a user hovers over hyperlinks (`<a>` tags), expressed as a [hexadecimal](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color).
 
 ```toml
 [params]
@@ -236,7 +236,7 @@ You can define how many posts will be displayed on homepage by setting `numberPo
 
 ### Footer
 
-Text to display in the footer section
+Text to display in the footer section, typically the name of the author or project.
 
 ```toml
 [params]
@@ -255,27 +255,27 @@ If any post YAML contains `weight:`, the posts will not appear by Date. See [Hug
 
 ```toml
 [params]
-  togglePreviousAndNextButtons = "true"
+  togglePreviousAndNextButtons = true
 ```
 
 ### Displaying content on the homepage
 
-Content to display on homepage below the social icons, using the contents of `content/index-about.md`.
+Display the contents of `content/index-about.md` on the home page, below the social icons.
 
 ### Custom Head HTML
 
-You can add custom HTML in head section
+Add arbitrary HTML code to the [`<head>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
 ```toml
 [params]
   customHeadHTML = "<script>console.log('Any HTML')</script>"
 ```
 
-Read more in the advanced section [here](/posts/theme-documentation-advanced/#custom-head-html)
+Examples are available in the [advanced documentation](/posts/theme-documentation-advanced/#bring-your-own-scripts).
 
 ### robots.txt
 
-Automatically generate robots.txt
+[Automatically generate](https://gohugo.io/templates/robots/) a `robots.txt` file, used to ['manage crawler traffic to your site'](https://developers.google.com/search/docs/crawling-indexing/robots/intro).
 
 ```toml
 enableRobotsTXT = true
@@ -283,7 +283,7 @@ enableRobotsTXT = true
 
 ### Favicons, Browserconfig, Manifest
 
-It is recommended to put your own favicons:
+Place favicons in to the `static/` directory. The following files are supported:
 
 * apple-touch-icon.png (180x180)
 * favicon-32x32.png (32x32)
@@ -292,5 +292,4 @@ It is recommended to put your own favicons:
 * android-chrome-192x192.png (192x192)
 * android-chrome-512x512.png (512x512)
 
-into `/static` directory. They’re easily created via [favicon.io](https://favicon.io) or [realfavicongenerator.net](https://realfavicongenerator.net/).
-
+Favicons can be generated using services such as [favicon.io](https://favicon.io), or [realfavicongenerator.net](https://realfavicongenerator.net/).
