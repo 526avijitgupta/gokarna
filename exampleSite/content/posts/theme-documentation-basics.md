@@ -42,7 +42,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 
 ### c. Basic Configuration {#basic-configuration}
 
-The following is a basic configuration for the gokarna theme:
+The following is a basic configuration for the Gokarna theme:
 
 ```toml
 baseURL = "http://example.org/"
@@ -130,7 +130,7 @@ The website can be automatically published and hosted with [Netlify](https://www
 
 ## Configuration
 
-In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **gokarna** lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default).
+In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), Gokarna lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default):
 
 ```toml
 [params]
@@ -179,7 +179,7 @@ This is the image url for the avatar on the homepage and the header.
 
 ### Avatar Size
 
-You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`
+You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`.
 
 ```toml
 [params]
@@ -189,6 +189,7 @@ You have an option to change the avatar size on the homepage. Options are: `size
 ### Description
 
 Description to display on homepage below the title and avatar.
+
 ```toml
 [params]
   description = "Hello, world!"
