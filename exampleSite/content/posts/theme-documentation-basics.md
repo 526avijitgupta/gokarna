@@ -83,18 +83,19 @@ title = "My New Hugo Site"
 
 ### d. Create Your First Post
 
-Here is the way to create your first post:
+Create your first post with the `new` subcommand:
 
 ```bash
 hugo new posts/first_post.md
 ```
 
-Feel free to edit the post file by adding some sample content and replacing the title value in the beginning of the file.
+You need to add `type: "post"` to the Markdown YAML/front matter of posts. Two content types are supported in Gokarna:
 
-For posts you need to add `type: "post"` in the markdown metadata. We currently support 2 types of content:
+1. Post (`type: "post"`): A blog post consisting of a title, subtitle (description), creation and last modified dates, tags, and Markdown content.
 
-1. Post (`type: "post"`): A normal blog-post with tags, date, & content.
-2. Page (`type: "page"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/posts/theme-documentation-advanced/#content-types) page.
+2. Page (`type: "page"`): A standalone page which only renders Markdown. Best used for custom pages (e.g. your portfolio), which should not feature in your [Posts](/posts/) timeline.
+
+    Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
 
 ### e. Launching the Website Locally
 
