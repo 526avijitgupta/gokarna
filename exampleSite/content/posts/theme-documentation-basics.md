@@ -121,43 +121,50 @@ The website can be automatically published and hosted with [Netlify](https://www
 
 ## Configuration
 
-In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), Gokarna lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default):
+In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), Gokarna lets you define the following [parameters](https://gohugo.io/methods/site/params/) in your site configuration (see this sample `config.toml`, which uses Gokarna's default values):
 
 ```toml
 [params]
-  # URL for the avatar on homepage
+  # Resource URL for the avatar (seen on the home page and header)
   avatarURL = ""
 
-  # Choose one of size-xs, size-s, size-m, size-l & size-xl
+  # Describe the avatar for screen readers
+  avatarAltText = ""
+
+  # Set the avatar's size. Valid values include:
+  # size-xs, size-s, size-m, size-l & size-xl
   avatarSize = "size-m"
 
-  # Description to display on homepage
-  description = "Sky above, sand below & peace within"
+  # Description (subheading) shown on the home page
+  description = ""
 
-  # Accent color is displayed when you hover over <a> tags
+  # Choose the color shown when hyperlinks are hovered over
   accentColor = "#FF4D4D"
 
-  # Display "back to top" button on posts and pages
-  showBackToTopButton = true
+  # Display a "back to top" button on posts and pages (may not render on
+  # smaller screen sizes)
+  # Valid data types: (Boolean: true, false)
+  showBackToTopButton = false
 
-  # You can use this to inject any HTML in the <head> tag.
-  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  # Inject arbitrary HTML in to the <head> tag
+  # Best used for importing custom JavaScript, CSS, or adding an analytics snippet
   customHeadHTML = ""
 
-  # Keywords relevant for SEO
-  metaKeywords = ["blog", "gokarna", "hugo"]
+  # Define SEO keywords
+  # Valid data types: (String: ""), (Array [ "", "", "" ])
+  metaKeywords = []
 
-  # If you want to display posts on the homepage, the options are
-  # "popular" (order posts by weight), "recent" (order posts by date)
-  # or "" (do not display)
+  # Display posts on the home page:
+  # "popular" (order posts by weight)
+  # "recent" (order posts by date)
+  # "" or unset (do not display)
   showPostsOnHomePage = ""
 
-  # Defines number of posts displayed on homepage if showPostsOnHomePage option
-  # is set
+  # Define how many posts are displayed on the home page (see above)
   numberPostsOnHomePage = 4
 
   # Footer text
-  footer = "The Marauders"
+  footer = ""
 ```
 
 ### Avatar URL
