@@ -220,7 +220,8 @@ You can define how many posts will be displayed on homepage by setting `numberPo
 ```
 
 ### Date format 
-The date format being used across can be chaged. For valid date strings see: https://pkg.go.dev/time#pkg-constants
+
+[Configure how posts dates are displayed](https://gohugo.io/functions/time/format/), using [date strings](https://pkg.go.dev/time#pkg-constants).
 
 ```toml 
 [params]
