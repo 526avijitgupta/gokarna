@@ -16,10 +16,10 @@
 <div class="flex-break"></div>
 
 {{ if isset .Site.Params "socialicons" }}
-<div class="social-icons">
-    <ul class="social-icons-list">
+<div class="gk-social-icons">
+    <ul class="gk-social-icons-list">
         {{ range .Site.Params.SocialIcons }}
-        <li class="social-icon">
+        <li class="gk-social-icon">
             <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} aria-label="Learn more on {{ .name }}">
                 <img class="svg-inject" src="/svg/icons/{{ .name | lower }}.svg" alt="">
             </a>

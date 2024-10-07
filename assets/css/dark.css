@@ -28,12 +28,12 @@ a:hover .feather-moon {
   color: white;
 }
 
-.social-icons-list .social-icon,
-.social-icons-list .social-icon a:visited  {
+.gk-social-icons-list .gk-social-icon,
+.gk-social-icons-list .gk-social-icon a:visited  {
   fill: var(--dark-text-color);
 }
 
-.social-icons-list .social-icon a:hover {
+.gk-social-icons-list .gk-social-icon a:hover {
   fill: var(--accent-color);
 }
 
@@ -87,15 +87,15 @@ pre {
   box-shadow: rgb(33, 38, 45) 0px -1px 0px 0px inset;
 }
 
-.arrow-logo { 
+.arrow-logo {
   background-color: var(--dark-secondary-color);
 }
 
 /* TODO: Check if this is needed or not */
-/* 
+/*
 img,
 video {
   filter: hue-rotate(180deg) contrast(100%) invert(100%);
   -webkit-filter: hue-rotate(180deg) contrast(100%) invert(100%);
-} 
+}
 */

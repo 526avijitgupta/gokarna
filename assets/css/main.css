@@ -416,18 +416,18 @@ table td {
   font-size: 2em;
 }
 
-.social-icons {
+.gk-social-icons {
   text-align: center;
 }
 
-.social-icons .social-icons-list {
+.gk-social-icons .gk-social-icons-list {
   display: inline-block;
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
 
-.social-icons-list .social-icon {
+.gk-social-icons-list .gk-social-icon {
   box-sizing: border-box;
   display: inline-block;
   fill: var(--light-text-color);
@@ -436,7 +436,7 @@ table td {
   width: 24px;
 }
 
-.social-icon a svg path {
+.gk-social-icon a svg path {
   transition: fill 0.15s ease;
 }
 
@@ -673,7 +673,7 @@ table td {
 }
 
 .arrow-logo:hover {
-  fill:  var(--accent-color); 
+  fill:  var(--accent-color);
 }
 
 @media screen and (max-width: 600px) {
