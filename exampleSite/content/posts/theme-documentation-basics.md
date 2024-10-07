@@ -96,7 +96,7 @@ enableRobotsTXT = true
 Here is the way to create your first post:
 
 ```bash
-hugo new posts/first_post.md
+hugo new "content/posts/My First Post.md"
 ```
 
 Feel free to edit the post file by adding some sample content and replacing the title value in the beginning of the file.
@@ -105,6 +105,15 @@ For posts you need to add `type: "post"` in the markdown metadata. We currently 
 
 1. Post (`type: "post"`): A normal blog-post with tags, date, & content.
 2. Page (`type: "page"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/posts/theme-documentation-advanced/#content-types) page.
+
+#### Using archetypes
+
+`hugo new` will automatically use an appropriate [archetype](https://gohugo.io/content-management/archetypes/) (see [`archetypes/`](https://github.com/526avijitgupta/gokarna/tree/main/archetypes)) and insert [front matter](https://gohugo.io/content-management/front-matter/) depending on the location of your content:
+
+- `hugo new content/posts/$PostName.md` uses `archetypes/posts.md`, and automatically sets `type: "post"`
+- `hugo new content/$PageName.md` uses `archetypes/default.md`, and automatically sets `type: "page"`
+
+Gokarna employs [custom front matter](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#content-types), which is included in the archetypes. The creation date of the content is included in the front matter, and the Markdown filename is used as the default title.
 
 ### e. Launching the Website Locally
 
