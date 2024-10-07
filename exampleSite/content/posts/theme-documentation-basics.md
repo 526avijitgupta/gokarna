@@ -123,13 +123,13 @@ Go to [`http://localhost:1313`](http://localhost:1313/) (if no other Hugo server
 
 ### f. Build the Website {#build-the-website}
 
-When your site is ready to deploy, run the following command:
+Use the `hugo` command to build your site.
 
 ```bash
 hugo
 ```
 
-A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
+A `public` folder will be generated, containing all static content and assets for your website. It can be hosted on any web server.
 
 The website can be automatically published and hosted with [Netlify](https://www.netlify.com/), [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [GitHub pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and more...
 
