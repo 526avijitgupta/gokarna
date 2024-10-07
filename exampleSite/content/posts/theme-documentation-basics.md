@@ -173,7 +173,7 @@ See this sample `config.toml`, which uses Gokarna's default values:
   # enableGitInfo is true
   dateFormat = "January 2, 2006"
   
-  # Description (subheading) shown on the home page
+  # Meta description shown on the home page
   description = ""
 
   # Footer text (typically the author/project name)
