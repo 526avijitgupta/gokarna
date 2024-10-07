@@ -285,11 +285,11 @@ At the bottom of a post, show the previous and next post chronologically.
 
 **Warning**: Not compatible with the `.Weight` parameter.
 
-If any post YAML contains `weight:`, the posts will not appear by Date. See [Hugo's default sort](https://gohugo.io/templates/lists#default-weight--date--linktitle--filepath).
+If any post front matter contains `weight`, the posts will not appear by Date. See [Hugo's default sort](https://gohugo.io/templates/lists#default-weight--date--linktitle--filepath).
 
 ```toml
 [params]
-  togglePreviousAndNextButtons = true
+  togglePreviousAndNextButtons = "false"
 ```
 
 ### Displaying content on the homepage
