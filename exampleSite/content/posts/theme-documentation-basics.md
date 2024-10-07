@@ -95,8 +95,6 @@ Use the [`new` subcommand](https://gohugo.io/commands/hugo_new/#hugo-new) to cre
 hugo new posts/'My First Post'.md
 ```
 
-In this case, `type: "post"` must be added to the [front matter](https://gohugo.io/content-management/front-matter/#type).
-
 Two [content types](https://gohugo.io/content-management/types/) are supported in Gokarna:
 
 1. `type: "post"`
@@ -118,7 +116,10 @@ Two [content types](https://gohugo.io/content-management/types/) are supported i
 - `hugo new content/posts/$PostName.md` uses `archetypes/posts.md`, and automatically sets `type: "post"`
 - `hugo new content/$PageName.md` uses `archetypes/default.md`, and automatically sets `type: "page"`
 
-Gokarna employs [custom front matter](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#content-types), which is included in the archetypes. The creation date of the content is included in the front matter, and the Markdown filename is used as the default title.
+Gokarna employs [custom front matter](/posts/theme-documentation-advanced/#content-types), which is included in the archetypes:
+
+- The creation date of the file is automatically set (e.g. `date: 2023-12-25`)
+- The file name is used as the default title (e.g. `title: "My First Post"`)
 
 ### e. Launching the Website Locally {#launching-the-website-locally}
 
