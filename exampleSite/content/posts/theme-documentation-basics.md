@@ -201,6 +201,15 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   togglePreviousAndNextButtons = "false"
 ```
 
+### Accent color
+
+The color displayed when a user hovers over hyperlinks (`<a>` tags), expressed as a [hexadecimal](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color).
+
+```toml
+[params]
+  accentColor = "#FF4D4D"
+```
+
 ### Avatar URL
 
 This is the resource URL for the avatar displayed on the [home page](/) and header (top-left).
@@ -221,6 +230,26 @@ Set the avatar's size as: `size-xs`, `size-s`, `size-m`, `size-l`, or `size-xl`.
   avatarSize = "size-m"
 ```
 
+### Custom Head HTML
+
+Add arbitrary HTML code to the [`<head>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
+
+```toml
+[params]
+  customHeadHTML = "<script>console.log('Any HTML')</script>"
+```
+
+Examples are available in the [advanced documentation](/posts/theme-documentation-advanced/#bring-your-own-scripts).
+
+### Date format 
+
+[Configure how posts dates are displayed](https://gohugo.io/functions/time/format/), using [date strings](https://pkg.go.dev/time#pkg-constants).
+
+```toml 
+[params]
+  dateFormat = "2 January, 2006"
+```
+
 ### Description
 
 Description to display on the home page, below the title and avatar.
@@ -230,14 +259,33 @@ Description to display on the home page, below the title and avatar.
   description = "Sky above, sand below & peace within"
 ```
 
-### Accent color
+### Displaying content on the homepage
 
-The color displayed when a user hovers over hyperlinks (`<a>` tags), expressed as a [hexadecimal](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color).
+Display the contents of `content/index-about.md` on the home page, below the social icons.
+
+### Favicons, Browserconfig, Manifest
+
+Place favicons in to the `static/` directory. The following files are supported:
+
+* apple-touch-icon.png (180x180)
+* favicon-32x32.png (32x32)
+* favicon-16x16.png (16x16)
+* mstile-150x150.png (150x150)
+* android-chrome-192x192.png (192x192)
+* android-chrome-512x512.png (512x512)
+
+Favicons can be generated using services such as [favicon.io](https://favicon.io), or [realfavicongenerator.net](https://realfavicongenerator.net/).
+
+### Footer
+
+Text to display in the footer section, typically the name of the author or project.
 
 ```toml
 [params]
-  accentColor = "#FF4D4D"
+  footer = "The Marauders"
 ```
+
+`footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
 
 ### Posts on home page
 
@@ -259,26 +307,6 @@ You can define how many posts will be displayed on homepage by setting `numberPo
   numberPostsOnHomePage = 4
 ```
 
-### Date format 
-
-[Configure how posts dates are displayed](https://gohugo.io/functions/time/format/), using [date strings](https://pkg.go.dev/time#pkg-constants).
-
-```toml 
-[params]
-  dateFormat = "2 January, 2006"
-```
-
-### Footer
-
-Text to display in the footer section, typically the name of the author or project.
-
-```toml
-[params]
-  footer = "The Marauders"
-```
-
-`footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
-
 ### Previous and Next buttons
 
 At the bottom of a post, show the previous and next post chronologically.
@@ -292,21 +320,6 @@ If any post front matter contains `weight`, the posts will not appear by Date. S
   togglePreviousAndNextButtons = "false"
 ```
 
-### Displaying content on the homepage
-
-Display the contents of `content/index-about.md` on the home page, below the social icons.
-
-### Custom Head HTML
-
-Add arbitrary HTML code to the [`<head>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
-
-```toml
-[params]
-  customHeadHTML = "<script>console.log('Any HTML')</script>"
-```
-
-Examples are available in the [advanced documentation](/posts/theme-documentation-advanced/#bring-your-own-scripts).
-
 ### robots.txt
 
 [Automatically generate](https://gohugo.io/templates/robots/) a `robots.txt` file, used to ['manage crawler traffic to your site'](https://developers.google.com/search/docs/crawling-indexing/robots/intro).
@@ -314,16 +327,3 @@ Examples are available in the [advanced documentation](/posts/theme-documentatio
 ```toml
 enableRobotsTXT = true
 ```
-
-### Favicons, Browserconfig, Manifest
-
-Place favicons in to the `static/` directory. The following files are supported:
-
-* apple-touch-icon.png (180x180)
-* favicon-32x32.png (32x32)
-* favicon-16x16.png (16x16)
-* mstile-150x150.png (150x150)
-* android-chrome-192x192.png (192x192)
-* android-chrome-512x512.png (512x512)
-
-Favicons can be generated using services such as [favicon.io](https://favicon.io), or [realfavicongenerator.net](https://realfavicongenerator.net/).
