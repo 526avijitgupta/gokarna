@@ -54,9 +54,6 @@ languageCode = "en"
 theme = "gokarna"
 title = "My New Hugo Site"
 
-# Automatically set last modified dates using Git commit dates
-enableGitInfo = true
-
 [menu]
   [[menu.main]]
     # Display name
