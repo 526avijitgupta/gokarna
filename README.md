@@ -4,8 +4,11 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 ### Authors:
 
-1. [Yash Mehrotra](https://yashmehrotra.com)
-2. [Avijit Gupta](https://twitter.com/526avijit)
+- [Yash Mehrotra](https://yashmehrotra.com)
+- [Avijit Gupta](https://twitter.com/526avijit)
+
+#### Major Contributors
+- [James Davidson](https://jamesdavidson.xyz)
 
 ### Demo: [https://gokarna-hugo.netlify.app](https://gokarna-hugo.netlify.app)
 
