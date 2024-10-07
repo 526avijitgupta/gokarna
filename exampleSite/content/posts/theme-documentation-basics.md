@@ -243,7 +243,7 @@ Examples are available in the [advanced documentation](/posts/theme-documentatio
 
 ### Date format 
 
-[Configure how posts dates are displayed](https://gohugo.io/functions/time/format/), using [date strings](https://pkg.go.dev/time#pkg-constants).
+[Configure how posts date are displayed](https://gohugo.io/functions/time/format/), using [date strings](https://pkg.go.dev/time#pkg-constants).
 
 ```toml 
 [params]
