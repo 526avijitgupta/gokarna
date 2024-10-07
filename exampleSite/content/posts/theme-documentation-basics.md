@@ -24,13 +24,13 @@ If you are new to [Hugo](https://gohugo.io/), we suggest following this [great d
 Hugo provides a `new` command to create a new website:
 
 ```bash
-hugo new site my_website
-cd my_website
+hugo new site my-website
+cd my-website
 ```
 
 ### b. Install the Theme {#install-the-theme}
 
-The theme’s repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
+The theme's repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
 
 Make this repository a submodule of your Git project:
 
