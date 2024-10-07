@@ -12,9 +12,14 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 ## Installation
 
-The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/quick-start/).
+Follow these steps to initialize your new website.
 
-### a. Create Your Project
+If you are new to [Hugo](https://gohugo.io/), we suggest following this [great documentation for beginners](https://gohugo.io/getting-started/quick-start/).
+
+<!-- Set human-readable heading IDs:
+    https://gohugo.io/content-management/cross-references/#heading-ids -->
+
+### a. Create Your Project {#create-your-project}
 
 Hugo provides a `new` command to create a new website:
 
