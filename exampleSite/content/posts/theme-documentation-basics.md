@@ -101,17 +101,17 @@ Two [content types](https://gohugo.io/content-management/types/) are supported i
 
     A blog post consisting of a [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title#page_titles_and_seo), [meta description](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_an_author_and_description), creation/last modified dates, [SEO keywords (tags)](/posts/theme-documentation-advanced/#seo-keywords), and Markdown content.
 
-    Read more about Posts in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
+    Read more about Posts in the [advanced documentation](/posts/theme-documentation-advanced/#post).
 
 2. `type: "page"`
 
     A standalone page which only renders Markdown. Best used for custom pages (e.g. your [portfolio](/projects/)) which should not feature in your [Posts](/posts/) timeline.
     
-    Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
+    Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#page).
 
 #### Using archetypes
 
-`hugo new` will automatically use an appropriate [archetype](https://gohugo.io/content-management/archetypes/) (see [`archetypes/`](https://github.com/526avijitgupta/gokarna/tree/main/archetypes)) and insert [front matter](https://gohugo.io/content-management/front-matter/) depending on the location of your content:
+`hugo new` will automatically use an appropriate [archetype](https://gohugo.io/content-management/archetypes/#lookup-order) (see [`archetypes/`](https://github.com/526avijitgupta/gokarna/tree/main/archetypes)) and insert [front matter](https://gohugo.io/content-management/front-matter/) depending on the location of your content:
 
 - `hugo new content/posts/$post-name.md` automatically sets `type: "post"`
 - `hugo new content/$page-name.md` automatically sets `type: "page"`
@@ -218,7 +218,7 @@ The color displayed when a user hovers over hyperlinks (`<a>` tags), expressed a
 
 The avatar's resource URL, displayed on the [home page](/) and header (top-left).
 
-Images are typically placed into the [`assets/`](https://gohugo.io/getting-started/directory-structure/#assets) or [`static/`](https://gohugo.io/getting-started/directory-structure/#static) directories (which are copied to the top-level directory [at build time](#f-build-the-website)).
+Images are typically placed into the [`assets/`](https://gohugo.io/getting-started/directory-structure/#assets) or [`static/`](https://gohugo.io/getting-started/directory-structure/#static) directories (which are copied to the top-level directory [at build time](#build-the-website)).
 
 ```toml
 [params]
