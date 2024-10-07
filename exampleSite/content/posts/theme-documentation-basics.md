@@ -35,6 +35,7 @@ The theme's repository is: [https://github.com/526avijitgupta/gokarna](https://g
 Make this repository a submodule of your Git project:
 
 ```bash
+git init
 git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 ```
 
