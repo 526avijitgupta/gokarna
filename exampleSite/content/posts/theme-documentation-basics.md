@@ -268,7 +268,7 @@ Examples are available in the [advanced documentation](/posts/theme-documentatio
 
 [Configure how posts date are displayed](https://gohugo.io/functions/time/format/), using [date strings](https://pkg.go.dev/time#pkg-constants).
 
-dateFormat **must be set** if [`enableGitInfo`](https://gohugo.io/methods/page/gitinfo/#prerequisites) is `true`, or `.Lastmod` is present in any front matter.
+dateFormat **must be set** if [`enableGitInfo`](https://gohugo.io/methods/page/gitinfo/#prerequisites) is `true`, or [`.Lastmod`](https://gohugo.io/methods/page/lastmod/) is present in any front matter.
 
 ```toml 
 [params]
