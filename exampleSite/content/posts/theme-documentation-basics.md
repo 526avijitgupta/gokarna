@@ -194,6 +194,11 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # "recent" (order posts by date)
   # "" or unset (do not display)
   showPostsOnHomePage = ""
+
+  # Show the previous and next post in your timeline
+  # Incompatible with Weight
+  # Valid data types: (String: "true", "false")
+  togglePreviousAndNextButtons = "false"
 ```
 
 ### Avatar URL
