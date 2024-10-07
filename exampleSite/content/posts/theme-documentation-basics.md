@@ -203,6 +203,8 @@ See this sample `config.toml`, which uses Gokarna's default values:
   togglePreviousAndNextButtons = "false"
 ```
 
+The following code uses [exampleSite's `config.toml`](https://github.com/526avijitgupta/gokarna/blob/main/exampleSite/config.toml) values for illustration:
+
 ### Accent color
 
 The color displayed when a user hovers over hyperlinks (`<a>` tags), expressed as a [hexadecimal](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color).
