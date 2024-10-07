@@ -23,7 +23,7 @@ hugo new site my_website
 cd my_website
 ```
 
-### b. Install the Theme
+### b. Install the Theme {#install-the-theme}
 
 The theme’s repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
 
@@ -81,7 +81,7 @@ title = "My New Hugo Site"
 ```
 
 
-### d. Create Your First Post
+### d. Create Your First Post {#create-your-first-post}
 
 Create your first post with the `new` subcommand:
 
@@ -97,7 +97,7 @@ You need to add `type: "post"` to the Markdown YAML/front matter of posts. Two c
 
     Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
 
-### e. Launching the Website Locally
+### e. Launching the Website Locally {#launching-the-website-locally}
 
 Launch by using the following command:
 
@@ -107,7 +107,7 @@ hugo serve
 
 Go to [`http://localhost:1313`](http://localhost:1313/) (if no other Hugo servers are running; Hugo will use an [ephemeral port](https://en.wikipedia.org/wiki/Ephemeral_port) if one or more servers are running concurrently on the host).
 
-### f. Build the Website
+### f. Build the Website {#build-the-website}
 
 When your site is ready to deploy, run the following command:
 
