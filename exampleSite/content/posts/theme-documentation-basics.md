@@ -252,7 +252,7 @@ Examples are available in the [advanced documentation](/posts/theme-documentatio
 
 ### Description
 
-Description to display on the home page, below the title and avatar.
+[Meta description](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_an_author_and_description) to display on the home page, below the title and avatar.
 
 ```toml
 [params]
