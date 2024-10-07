@@ -221,7 +221,7 @@ Images are typically placed in to the [`assets/`](https://gohugo.io/getting-star
   avatarURL = "/images/avatar.webp"
 ```
 
-### Avatar Size
+### Avatar size
 
 Set the avatar's size as: `size-xs`, `size-s`, `size-m`, `size-l`, or `size-xl`.
 
@@ -259,11 +259,31 @@ Description to display on the home page, below the title and avatar.
   description = "Sky above, sand below & peace within"
 ```
 
-### Displaying content on the homepage
+### Display content on the home page
 
 Display the contents of `content/index-about.md` on the home page, below the social icons.
 
-### Favicons, Browserconfig, Manifest
+### Display posts on the home page
+
+Recent and popular posts can be shown on the home page:
+
+- `popular`: Sort posts in ascending order of their [Weight](https://gohugo.io/methods/page/weight/)
+
+  **If any post on your site defines `weight`, you cannot enable [Previous and Next buttons](#previous-and-next-buttons).**
+
+- `recent`: Sort posts in ascending order of [Date](https://gohugo.io/methods/page/date/)
+
+- Do not show anything if the variable is unset, or an empty string
+
+You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value is used.
+
+```toml
+[params]
+  showPostsOnHomePage = ""
+  numberPostsOnHomePage = 4
+```
+
+### Favicons
 
 Place favicons in to the `static/` directory. The following files are supported:
 
@@ -286,26 +306,6 @@ Text to display in the footer section, typically the name of the author or proje
 ```
 
 `footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
-
-### Posts on home page
-
-Recent and popular posts can be shown on the home page:
-
-- `popular`: Sort posts in ascending order of their [Weight](https://gohugo.io/methods/page/weight/)
-
-  **If any post on your site defines `weight`, you cannot enable [Previous and Next buttons](#previous-and-next-buttons).**
-
-- `recent`: Sort posts in ascending order of [Date](https://gohugo.io/methods/page/date/)
-
-- Do not show anything if the variable is unset, or an empty string
-
-You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value is used.
-
-```toml
-[params]
-  showPostsOnHomePage = ""
-  numberPostsOnHomePage = 4
-```
 
 ### Previous and Next buttons
 
