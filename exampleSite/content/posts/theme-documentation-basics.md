@@ -212,9 +212,9 @@ The color displayed when a user hovers over hyperlinks (`<a>` tags), expressed a
 
 ### Avatar URL
 
-This is the resource URL for the avatar displayed on the [home page](/) and header (top-left).
+The avatar's resource URL, displayed on the [home page](/) and header (top-left).
 
-Images are typically placed in to the [`assets/`](https://gohugo.io/getting-started/directory-structure/#assets) or [`static/`](https://gohugo.io/getting-started/directory-structure/#static) directories (which are copied to the top-level directory [at build time](#f-build-the-website)).
+Images are typically placed into the [`assets/`](https://gohugo.io/getting-started/directory-structure/#assets) or [`static/`](https://gohugo.io/getting-started/directory-structure/#static) directories (which are copied to the top-level directory [at build time](#f-build-the-website)).
 
 ```toml
 [params]
