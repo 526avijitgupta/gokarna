@@ -54,6 +54,9 @@ languageCode = "en"
 theme = "gokarna"
 title = "My New Hugo Site"
 
+# Automatically set last modified dates using Git commit dates
+enableGitInfo = true
+
 [menu]
   [[menu.main]]
     # Display name
@@ -108,8 +111,17 @@ Two [content types](https://gohugo.io/content-management/types/) are supported i
 2. `type: "page"`
 
     A standalone page which only renders Markdown. Best used for custom pages (e.g. your portfolio) which should not feature in your [Posts](/posts/) timeline.
-
+    
     Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
+
+#### Using archetypes
+
+`hugo new` will automatically use an appropriate [archetype](https://gohugo.io/content-management/archetypes/) (see [`archetypes/`](https://github.com/526avijitgupta/gokarna/tree/main/archetypes)) and insert [front matter](https://gohugo.io/content-management/front-matter/) depending on the location of your content:
+
+- `hugo new content/posts/$PostName.md` uses `archetypes/posts.md`, and automatically sets `type: "post"`
+- `hugo new content/$PageName.md` uses `archetypes/default.md`, and automatically sets `type: "page"`
+
+Gokarna employs [custom front matter](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#content-types), which is included in the archetypes. The creation date of the content is included in the front matter, and the Markdown filename is used as the default title.
 
 ### e. Launching the Website Locally {#launching-the-website-locally}
 
@@ -156,6 +168,11 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   # Best used for importing custom JavaScript, CSS, or adding an analytics snippet
   customHeadHTML = ""
 
+  # Configure how post dates are displayed
+  # dateFormat must be set if lastmod is declared in front matter, or enableGitInfo
+  # is true
+  dateFormat = "January 2, 2006"
+  
   # Description (subheading) shown on the home page
   description = ""
 
