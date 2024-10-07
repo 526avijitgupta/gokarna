@@ -113,10 +113,10 @@ Two [content types](https://gohugo.io/content-management/types/) are supported i
 
 ### e. Launching the Website Locally {#launching-the-website-locally}
 
-Launch by using the following command:
+Use the [`server` subcommand](https://gohugo.io/commands/hugo_server/#synopsis) to view your site.
 
 ```bash
-hugo serve
+hugo server
 ```
 
 Go to [`http://localhost:1313`](http://localhost:1313/) (if no other Hugo servers are running; Hugo will use an [ephemeral port](https://en.wikipedia.org/wiki/Ephemeral_port) if one or more servers are running concurrently on the host).
