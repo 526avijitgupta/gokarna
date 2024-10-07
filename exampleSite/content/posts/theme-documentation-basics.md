@@ -105,7 +105,7 @@ Two [content types](https://gohugo.io/content-management/types/) are supported i
 
 2. `type: "page"`
 
-    A standalone page which only renders Markdown. Best used for custom pages (e.g. your portfolio) which should not feature in your [Posts](/posts/) timeline.
+    A standalone page which only renders Markdown. Best used for custom pages (e.g. your [portfolio](/projects/)) which should not feature in your [Posts](/posts/) timeline.
     
     Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
 
