@@ -167,8 +167,8 @@ In addition to [Hugo global configuration](https://gohugo.io/overview/configurat
   customHeadHTML = ""
 
   # Configure how post dates are displayed
-  # dateFormat must be set if lastmod is declared in front matter, or enableGitInfo
-  # is true
+  # dateFormat must be set if lastmod is declared in front matter, or
+  # enableGitInfo is true
   dateFormat = "January 2, 2006"
   
   # Description (subheading) shown on the home page
