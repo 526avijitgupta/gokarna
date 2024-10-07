@@ -21,7 +21,7 @@ If you are new to [Hugo](https://gohugo.io/), we suggest following this [great d
 
 ### a. Create Your Project {#create-your-project}
 
-Hugo provides a `new` command to create a new website:
+Hugo provides a `new` subcommand to create a new website:
 
 ```bash
 hugo new site my-website
@@ -43,7 +43,7 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 
 A simple Hugo [configuration file](https://gohugo.io/getting-started/configuration/#configuration-file) with [menu items](https://gohugo.io/content-management/menus/#properties-front-matter).
 
-Gokarna supports [adding Feather icons to the header](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#icons-in-header).
+Gokarna supports [adding Feather icons to the header](/posts/theme-documentation-advanced/#icons-in-header).
 
 ```toml
 baseURL = "https://example.org/"
@@ -89,17 +89,25 @@ title = "My New Hugo Site"
 
 ### d. Create Your First Post {#create-your-first-post}
 
-Create your first post with the `new` subcommand:
+Use the [`new` subcommand](https://gohugo.io/commands/hugo_new/#hugo-new) to create a post (in [the `content/` directory](https://gohugo.io/content-management/organization/#organization-of-content-source)):
 
 ```bash
-hugo new posts/first_post.md
+hugo new posts/'My First Post'.md
 ```
 
-You need to add `type: "post"` to the Markdown YAML/front matter of posts. Two content types are supported in Gokarna:
+In this case, `type: "post"` must be added to the [front matter](https://gohugo.io/content-management/front-matter/#type).
 
-1. Post (`type: "post"`): A blog post consisting of a title, subtitle (description), creation and last modified dates, tags, and Markdown content.
+Two [content types](https://gohugo.io/content-management/types/) are supported in Gokarna:
 
-2. Page (`type: "page"`): A standalone page which only renders Markdown. Best used for custom pages (e.g. your portfolio), which should not feature in your [Posts](/posts/) timeline.
+1. `type: "post"`
+
+    A blog post consisting of a [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title#page_titles_and_seo), [meta description](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_an_author_and_description), creation/last modified dates, [SEO keywords (tags)](/posts/theme-documentation-advanced/#seo-keywords), and Markdown content.
+
+    Read more about Posts in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
+
+2. `type: "page"`
+
+    A standalone page which only renders Markdown. Best used for custom pages (e.g. your portfolio) which should not feature in your [Posts](/posts/) timeline.
 
     Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#content-types).
 
