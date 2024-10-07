@@ -273,9 +273,11 @@ Recent and popular posts can be shown on the home page:
 
 - `recent`: Sort posts in ascending order of [Date](https://gohugo.io/methods/page/date/)
 
-- Do not show anything if the variable is unset, or an empty string
+- Do not show anything if the variable is:
+    - unset
+    - an empty string (`""`)
 
-You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value is used.
+The number of posts displayed on the home page can be changed by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value is used.
 
 ```toml
 [params]
