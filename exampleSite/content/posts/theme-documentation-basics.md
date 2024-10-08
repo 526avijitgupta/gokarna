@@ -302,7 +302,7 @@ Recent and popular posts can be shown on the home page:
     - unset
     - an empty string (`""`)
 
-The number of posts displayed on the home page can be changed by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value is used.
+The number of posts displayed on the home page can be changed by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value (`4`) is used.
 
 ```toml
 [params]
