@@ -164,7 +164,7 @@ See this sample `config.toml`, which uses Gokarna's default values:
   # Choose the color shown when hyperlinks are hovered over
   accentColor = "#FF4D4D"
 
-  # Inject arbitrary HTML in to the <head> tag
+  # Inject arbitrary HTML via the <head> tag
   # Best used for importing custom JavaScript, CSS, or adding an analytics snippet
   customHeadHTML = ""
 
