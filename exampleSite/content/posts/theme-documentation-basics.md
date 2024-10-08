@@ -312,7 +312,7 @@ The number of posts displayed on the home page can be changed by setting `number
 
 ### Favicons
 
-Place favicons in to the `static/` directory. The following files are supported:
+Place favicons into the `static/` directory. The following files are supported:
 
 - `apple-touch-icon.png` (180x180)
 - `favicon-32x32.png` (32x32)
