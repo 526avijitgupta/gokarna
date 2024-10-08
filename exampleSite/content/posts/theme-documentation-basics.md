@@ -332,7 +332,7 @@ Text to display in the footer section, typically the name of the author or proje
   footer = "The Marauders"
 ```
 
-`footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
+`footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/) - best used for including hyperlinks, emoji, or text formatting.
 
 ### Previous and Next buttons
 
