@@ -21,7 +21,7 @@
         {{ range .Site.Params.SocialIcons }}
         <li class="gk-social-icon">
             <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} aria-label="Learn more on {{ .name }}">
-                <img class="svg-inject" src="/svg/icons/{{ .name | lower }}.svg" alt="">
+                <img class="svg-inject" src="{{ absURL "svg/icons/" }}{{ .name | lower }}.svg" alt="">
             </a>
         </li>
         {{ end }}
