@@ -158,7 +158,7 @@ See this sample `config.toml`, which uses Gokarna's default values, and [example
   avatarURL = "/images/avatar.webp"
 
   # Describe the avatar for screen readers
-  avatarAltText = ""
+  avatarAltText = "avatar"
 
   # Set the avatar's size. Valid values include:
   # size-xs, size-s, size-m, size-l & size-xl
@@ -186,10 +186,9 @@ See this sample `config.toml`, which uses Gokarna's default values, and [example
   # Define how many posts are displayed on the home page (see above)
   numberPostsOnHomePage = 4
 
-  # Display a "back to top" button on posts and pages (may not render on
-  # smaller screen sizes)
-  # Valid data types: (Boolean: true, false)
-  showBackToTopButton = false
+  # Display a "back to top" button on posts and pages: true, false
+  # May not render on smaller screen sizes
+  showBackToTopButton = true
 
   # Display posts on the home page:
   # "popular" (order posts by weight)
