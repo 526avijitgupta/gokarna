@@ -154,18 +154,17 @@ See this sample `config.toml`, which uses Gokarna's default values, and [example
   # Choose the color shown when hyperlinks are hovered over
   accentColor = "#FF4D4D"
 
-  # Resource URL for the avatar (seen on the home page and header)
+  # Resource URL for the site avatar (home page and header)
   avatarURL = "/images/avatar.webp"
 
   # Describe the avatar for screen readers
   avatarAltText = "avatar"
 
-  # Set the avatar's size. Valid values include:
-  # size-xs, size-s, size-m, size-l & size-xl
+  # Set the avatar's size: size-xs, size-s, size-m, size-l & size-xl
   avatarSize = "size-m"
 
   # Inject arbitrary HTML via the <head> tag
-  # Best used for importing custom JavaScript, CSS, or adding an analytics snippet
+  # Best used for importing custom JavaScript, CSS, or analytics
   customHeadHTML = ""
 
   # Configure how post dates are displayed
@@ -173,17 +172,17 @@ See this sample `config.toml`, which uses Gokarna's default values, and [example
   # enableGitInfo is true
   dateFormat = "January 2, 2006"
   
-  # Meta description shown on the home page
+  # Home page meta description
   description = "Sky above, sand below & peace within"
 
-  # Footer text (typically the author/project name)
+  # Footer text (i.e. author/project name)
   footer = "The Marauders"
 
   # Define SEO keywords
-  # Valid data types: (String: ""), (Array [ "", "", "" ])
   metaKeywords = ["blog", "gokarna", "hugo"]
 
-  # Define how many posts are displayed on the home page (see above)
+  # Define how many posts are displayed on the home page
+  # showPostsOnHomePage must be "popular" or "recent"
   numberPostsOnHomePage = 4
 
   # Display a "back to top" button on posts and pages: true, false
@@ -193,12 +192,11 @@ See this sample `config.toml`, which uses Gokarna's default values, and [example
   # Display posts on the home page:
   # "popular" (order posts by weight)
   # "recent" (order posts by date)
-  # "" or unset (do not display)
+  # "", unset (do not display)
   showPostsOnHomePage = ""
 
-  # Show the previous and next post in your timeline
+  # Show the previous and next post in your timeline: "true", "false"
   # Incompatible with Weight
-  # Valid data types: (String: "true", "false")
   togglePreviousAndNextButtons = "false"
 ```
 
