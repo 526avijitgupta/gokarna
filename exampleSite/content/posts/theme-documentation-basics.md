@@ -114,7 +114,7 @@ Two [content types](https://gohugo.io/content-management/types/) are supported i
 `hugo new` will automatically use an appropriate [archetype](https://gohugo.io/content-management/archetypes/#lookup-order) (see [`archetypes/`](https://github.com/526avijitgupta/gokarna/tree/main/archetypes)) and insert [front matter](https://gohugo.io/content-management/front-matter/) depending on the location of your content:
 
 - `hugo new posts/$post-name.md` automatically sets `type: "post"`
-- `hugo new page-name.md` automatically sets `type: "page"`
+- `hugo new $page-name.md` automatically sets `type: "page"`
 
 Gokarna employs [custom front matter](/posts/theme-documentation-advanced/#content-types), which is included in the archetypes:
 
