@@ -367,3 +367,12 @@ Will produce this footer:
 `copyright` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
 
 The years of `.Date` and `.Lastmod` are used to create a date range for your copyrighted material. [dateFormat](/posts/theme-documentation-basics/#date-format) **must** be set in `config.toml` if `.Lastmod` is present in any front matter.
+
+## Minification
+
+`hugo`'s HTML output can be [minified](https://gohugo.io/hugo-pipes/minification/#usage), resulting in smaller files. This makes your site more performant (especially when paired with compression), and may confer a better [Google Lighthouse](https://pagespeed.web.dev/) score.
+
+```toml
+[minify]
+    minifyOutput = true
+```
