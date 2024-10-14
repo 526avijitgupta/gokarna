@@ -151,6 +151,9 @@ See this sample `config.toml`, which uses Gokarna's default values:
 
 ```toml
 [params]
+  # Choose the color shown when hyperlinks are hovered over
+  accentColor = "#FF4D4D"
+
   # Resource URL for the avatar (seen on the home page and header)
   avatarURL = ""
 
@@ -160,9 +163,6 @@ See this sample `config.toml`, which uses Gokarna's default values:
   # Set the avatar's size. Valid values include:
   # size-xs, size-s, size-m, size-l & size-xl
   avatarSize = "size-m"
-
-  # Choose the color shown when hyperlinks are hovered over
-  accentColor = "#FF4D4D"
 
   # Inject arbitrary HTML via the <head> tag
   # Best used for importing custom JavaScript, CSS, or adding an analytics snippet
