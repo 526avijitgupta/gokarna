@@ -147,7 +147,7 @@ The website can be automatically published and hosted with [Netlify](https://www
 
 In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), Gokarna lets you define the following [parameters](https://gohugo.io/methods/site/params/) in your site configuration.
 
-See this sample `config.toml`, which uses Gokarna's default values:
+See this sample `config.toml`, which uses Gokarna's default values, and [exampleSite's `config.toml`](https://github.com/526avijitgupta/gokarna/blob/main/exampleSite/config.toml):
 
 ```toml
 [params]
@@ -155,7 +155,7 @@ See this sample `config.toml`, which uses Gokarna's default values:
   accentColor = "#FF4D4D"
 
   # Resource URL for the avatar (seen on the home page and header)
-  avatarURL = ""
+  avatarURL = "/images/avatar.webp"
 
   # Describe the avatar for screen readers
   avatarAltText = ""
@@ -174,14 +174,14 @@ See this sample `config.toml`, which uses Gokarna's default values:
   dateFormat = "January 2, 2006"
   
   # Meta description shown on the home page
-  description = ""
+  description = "Sky above, sand below & peace within"
 
   # Footer text (typically the author/project name)
-  footer = ""
+  footer = "The Marauders"
 
   # Define SEO keywords
   # Valid data types: (String: ""), (Array [ "", "", "" ])
-  metaKeywords = []
+  metaKeywords = ["blog", "gokarna", "hugo"]
 
   # Define how many posts are displayed on the home page (see above)
   numberPostsOnHomePage = 4
@@ -202,8 +202,6 @@ See this sample `config.toml`, which uses Gokarna's default values:
   # Valid data types: (String: "true", "false")
   togglePreviousAndNextButtons = "false"
 ```
-
-The following code uses [exampleSite's `config.toml`](https://github.com/526avijitgupta/gokarna/blob/main/exampleSite/config.toml) values for illustration:
 
 ### Accent color
 
