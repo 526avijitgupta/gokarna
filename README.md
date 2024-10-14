@@ -47,8 +47,6 @@ Light Mode                                                      | Dark Mode
 :-------------------------:|:-------------------------:
 ![Light mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-light-list.png "Light mode") | ![Dark mode](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/screenshot-dark-list.png "Dark mode")
 
-
-
 ## Installation
 
 Follow the steps in [Theme Documentation - Basics](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#installation).
