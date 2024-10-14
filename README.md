@@ -72,7 +72,7 @@ For a complete guide on customization, please go through our [basic](https://gok
 
 ## Inspiration
 
-The theme is inspired by and accordingly named after [Gokarna](https://en.wikipedia.org/wiki/Gokarna,_Karnataka), a small and peaceful beach town on the west coast on India.
+The theme is inspired by, and accordingly named after, [Gokarna](https://en.wikipedia.org/wiki/Gokarna,_Karnataka), a small and peaceful beach town on the west coast on India.
 
 ![Gokarna](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/gokarna.jpg)
 
