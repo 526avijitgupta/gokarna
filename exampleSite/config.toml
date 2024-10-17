@@ -97,3 +97,6 @@ title = "Gokarna"
     startLevel = 1
     endLevel = 4
     ordered = false
+
+[minify]
+    minifyOutput = true
