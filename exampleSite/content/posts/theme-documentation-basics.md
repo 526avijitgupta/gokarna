@@ -12,28 +12,27 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 ## Installation
 
-The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/quick-start/).
+Follow these steps to initialize your new website.
 
-### a. Create Your Project
+If you are new to [Hugo](https://gohugo.io/), we suggest following this [great documentation for beginners](https://gohugo.io/getting-started/quick-start/).
 
-Hugo provides a `new` command to create a new website:
+<!-- Set human-readable heading IDs:
+    https://gohugo.io/content-management/cross-references/#heading-ids -->
 
-```bash
-hugo new site my_website
-cd my_website
-```
+### a. Create Your Project {#create-your-project}
 
-### b. Install the Theme
-
-The theme’s repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
-
-You can clone this repository to the `themes` directory:
+Hugo provides a `new` subcommand to create a new website:
 
 ```bash
-git clone https://github.com/526avijitgupta/gokarna.git themes/gokarna
+hugo new site my-website
+cd my-website
 ```
 
-Or, create an empty git repository and make this repository a submodule of your site directory:
+### b. Install the Theme {#install-the-theme}
+
+The theme's repository is: [https://github.com/526avijitgupta/gokarna](https://github.com/526avijitgupta/gokarna).
+
+Make this repository a submodule of your Git project:
 
 ```bash
 git init
@@ -42,219 +41,274 @@ git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
 
 ### c. Basic Configuration {#basic-configuration}
 
-The following is a basic configuration for the gokarna theme:
+A simple Hugo [configuration file](https://gohugo.io/getting-started/configuration/#configuration-file) with [menu items](https://gohugo.io/content-management/menus/#properties-front-matter).
+
+Gokarna supports [adding Feather icons to the header](/posts/theme-documentation-advanced/#icons-in-header).
 
 ```toml
-baseURL = "http://example.org/"
+baseURL = "https://example.org/"
 defaultContentLanguage = "en"
-languageCode = "en"
-
-title = "My New Hugo Site"
-
-theme = "gokarna"
-
 # Automatically generate robots.txt
 enableRobotsTXT = true
-
-# Automatically set last modified dates using Git commit dates
-enableGitInfo = true
+languageCode = "en"
+theme = "gokarna"
+title = "My New Hugo Site"
 
 [menu]
   [[menu.main]]
-    # Unique identifier for a menu item
-    identifier = "posts"
-
-    url = "/posts/"
-    
-    # You can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-
-    # You can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-
     # Display name
     name = "Posts"
 
-    # Weights are used to determine the ordering
+    # Relative URL slug (appended to baseURL)
+    url = "/posts/"
+
+    # Lower weights are listed first in the menu (leftmost); higher weights are
+    # listed last in the menu (rightmost)
     weight = 1
 
   [[menu.main]]
-    identifier = "tags"
     name = "Tags"
     url = "/tags/"
     weight = 2
     
   [[menu.main]]
+    # Unique identifiers are required for menu entries without a name property,
+    # or for menu entries which re-use a name
     identifier = "github"
+
+    # Absolute URL to external resource
     url = "https://github.com"
     weight = 3
     
-    # We use feather-icons: https://feathericons.com/
+    # Surround the menu entry (or name) with HTML content, such as Feather
+    # icons: https://feathericons.com
     pre = "<span data-feather='github'></span>"
+    post = ""
 ```
 
 
-### d. Create Your First Post
+### d. Create Your First Post {#create-your-first-post}
 
-Here is the way to create your first post:
+Use the [`new` subcommand](https://gohugo.io/commands/hugo_new/#hugo-new) to create a post (in [the `content/` directory](https://gohugo.io/content-management/organization/#organization-of-content-source)):
 
 ```bash
-hugo new "content/posts/My First Post.md"
+hugo new posts/'My First Post'.md
 ```
 
-Feel free to edit the post file by adding some sample content and replacing the title value in the beginning of the file.
+Two [content types](https://gohugo.io/content-management/types/) are supported in Gokarna:
 
-For posts you need to add `type: "post"` in the markdown metadata. We currently support 2 types of content:
+1. `type: "post"`
 
-1. Post (`type: "post"`): A normal blog-post with tags, date, & content.
-2. Page (`type: "page"`): A standalone content page that will just render the markdown you wrote. You can use it to write custom pages which should not be a part of posts. Like showing your projects portfolio. You can read in detail about this on the [Theme Documentation - Advanced](/posts/theme-documentation-advanced/#content-types) page.
+    A blog post consisting of a [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title#page_titles_and_seo), [meta description](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_an_author_and_description), creation/last modified dates, [SEO keywords (tags)](/posts/theme-documentation-advanced/#seo-keywords), and Markdown content.
+
+    Read more about Posts in the [advanced documentation](/posts/theme-documentation-advanced/#post).
+
+2. `type: "page"`
+
+    A standalone page which only renders Markdown. Best used for custom pages (e.g. your [portfolio](/projects/)) which should not feature in your [Posts](/posts/) timeline.
+    
+    Read more about Pages in the [advanced documentation](/posts/theme-documentation-advanced/#page).
 
 #### Using archetypes
 
-`hugo new` will automatically use an appropriate [archetype](https://gohugo.io/content-management/archetypes/) (see [`archetypes/`](https://github.com/526avijitgupta/gokarna/tree/main/archetypes)) and insert [front matter](https://gohugo.io/content-management/front-matter/) depending on the location of your content:
+`hugo new` will automatically use an appropriate [archetype](https://gohugo.io/content-management/archetypes/#lookup-order) (see [`archetypes/`](https://github.com/526avijitgupta/gokarna/tree/main/archetypes)) and insert [front matter](https://gohugo.io/content-management/front-matter/) depending on the location of your content:
 
-- `hugo new content/posts/$PostName.md` uses `archetypes/posts.md`, and automatically sets `type: "post"`
-- `hugo new content/$PageName.md` uses `archetypes/default.md`, and automatically sets `type: "page"`
+- `hugo new posts/$post-name.md` automatically sets `type: "post"`
+- `hugo new $page-name.md` automatically sets `type: "page"`
 
-Gokarna employs [custom front matter](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#content-types), which is included in the archetypes. The creation date of the content is included in the front matter, and the Markdown filename is used as the default title.
+Gokarna employs [custom front matter](/posts/theme-documentation-advanced/#content-types), which is included in the archetypes:
 
-### e. Launching the Website Locally
+- The creation date of the file is automatically set (e.g. `date: 2023-12-25`)
+- The file name is used as the default title (e.g. `title: "My First Post"`)
 
-Launch by using the following command:
+### e. Launching the Website Locally {#launching-the-website-locally}
+
+Use the [`server` subcommand](https://gohugo.io/commands/hugo_server/#synopsis) to view your site.
 
 ```bash
-hugo serve
+hugo server
 ```
 
-Go to `http://localhost:1313`.
+Go to [`http://localhost:1313`](http://localhost:1313/) (if no other Hugo servers are running; Hugo will use an [ephemeral port](https://en.wikipedia.org/wiki/Ephemeral_port) if one or more servers are running concurrently on the host).
 
-### f. Build the Website
+### f. Build the Website {#build-the-website}
 
-When your site is ready to deploy, run the following command:
+Use the `hugo` command to build your site.
 
 ```bash
 hugo
 ```
 
-A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
+A `public` folder will be generated, containing all static content and assets for your website. It can be hosted on any web server.
 
-The website can be automatically published and hosted with [Netlify](https://www.netlify.com/), [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and more...
+The website can be automatically published and hosted with [Netlify](https://www.netlify.com/), [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/), and more...
 
 ## Configuration
 
-In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **gokarna** lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default).
+In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), Gokarna lets you define the following [parameters](https://gohugo.io/methods/site/params/) in your site configuration.
+
+See this sample `config.toml`, which uses Gokarna's default values, and [exampleSite's `config.toml`](https://github.com/526avijitgupta/gokarna/blob/main/exampleSite/config.toml):
 
 ```toml
 [params]
-  # URL for the avatar on homepage
-  avatarURL = ""
-
-  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
-  avatarSize = ""
-
-  # Description to display on homepage
-  description = "Sky above, sand below & peace within"
-
-  # Accent color is displayed when you hover over <a> tags
+  # Choose the color shown when hyperlinks are hovered over
   accentColor = "#FF4D4D"
 
-  # Display "back to top" button on posts and pages
-  ShowBackToTopButton = true
+  # Resource URL for the site avatar (home page and header)
+  avatarURL = "/images/avatar.webp"
 
-  # You can use this to inject any HTML in the <head> tag.
-  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  # Describe the avatar for screen readers
+  avatarAltText = "avatar"
+
+  # Set the avatar's size: size-xs, size-s, size-m, size-l & size-xl
+  avatarSize = "size-m"
+
+  # Inject arbitrary HTML via the <head> tag
+  # Best used for importing custom JavaScript, CSS, or analytics
   customHeadHTML = ""
 
-  # Keywords relevant for SEO
+  # Configure how post dates are displayed
+  # dateFormat must be set if lastmod is declared in front matter, or
+  # enableGitInfo is true
+  dateFormat = "January 2, 2006"
+  
+  # Home page meta description
+  description = "Sky above, sand below & peace within"
+
+  # Footer text (i.e. author/project name)
+  footer = "The Marauders"
+
+  # Define SEO keywords
   metaKeywords = ["blog", "gokarna", "hugo"]
 
-  # If you want to display posts on the homepage, the options are
-  # "popular" (order posts by weight), "recent" (order posts by date)
-  # or "" (do not display, default option)
-  showPostsOnHomePage = ""
-
-  # Defines number of posts displayed on homepage if showPostsOnHomePage option is set
-  # Default value is 4
+  # Define how many posts are displayed on the home page
+  # showPostsOnHomePage must be "popular" or "recent"
   numberPostsOnHomePage = 4
 
-  # Configure how post dates are displayed
-  # dateFormat must be set if lastmod is declared in front matter, or enableGitInfo
-  # is true
-  dateFormat = "January 2, 2006"
+  # Display a "back to top" button on posts and pages: true, false
+  # May not render on smaller screen sizes
+  showBackToTopButton = true
 
-  # Footer text
-  footer = "The Marauders"
+  # Display posts on the home page:
+  # "popular" (order posts by weight)
+  # "recent" (order posts by date)
+  # "", unset (do not display)
+  showPostsOnHomePage = ""
+
+  # Show the previous and next post in your timeline: "true", "false"
+  # Incompatible with Weight
+  togglePreviousAndNextButtons = "false"
+```
+
+### Accent color
+
+The color displayed when a user hovers over hyperlinks (`<a>` tags), expressed as a [hexadecimal](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color).
+
+```toml
+[params]
+  accentColor = "#FF4D4D"
 ```
 
 ### Avatar URL
 
-This is the image url for the avatar on the homepage and the header.
+The avatar's resource URL, displayed on the [home page](/) and header (top-left).
+
+Images are typically placed into the [`assets/`](https://gohugo.io/getting-started/directory-structure/#assets) or [`static/`](https://gohugo.io/getting-started/directory-structure/#static) directories (which are copied to the top-level directory [at build time](#build-the-website)).
 
 ```toml
 [params]
-  avatarURL = "/images/avatar.jpg"
+  avatarURL = "/images/avatar.webp"
 ```
 
-### Avatar Size
+### Avatar size
 
-You have an option to change the avatar size on the homepage. Options are: `size-xs`, `size-s`, `size-m`, `size-l` & `size-xl`. (Default: `size-m`)
+Set the avatar's size as: `size-xs`, `size-s`, `size-m`, `size-l`, or `size-xl`.
 
 ```toml
 [params]
-  avatarSize = "size-l"
+  avatarSize = "size-m"
 ```
 
-### Description
+### Custom Head HTML
 
-Description to display on homepage below the title and avatar.
-```toml
-[params]
-  description = "Hello, world!"
-```
-
-### Accent Color
-
-Accent color is displayed when you hover over `<a>` tags. It takes a hex/rgb color code. Default is `#FF4D4D`
+Add arbitrary HTML code to the [`<head>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
 ```toml
 [params]
-  accentColor = "#08F"
+  customHeadHTML = "<script>console.log('Any HTML')</script>"
 ```
 
-### Posts on home page
-
-If you want to display posts on the homepage, the options are:
-
-- `popular`: Show popular posts on home page if the value is set to popular. It sorts the all the posts by it’s weight attribute in ascending order. Read more about it [here](/posts/theme-documentation-advanced/#weights).
-- `recent`: Show recent posts on home page if the value is set to recent
-- Do not show anything if the variable is unset or an empty string.
-
-You can define how many posts will be displayed on homepage by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is absent (empty) or zero the default value is used.
-
-```toml
-[params]
-  showPostsOnHomePage = "popular"
-  numberPostsOnHomePage = 3
-```
+Examples are available in the [advanced documentation](/posts/theme-documentation-advanced/#bring-your-own-scripts).
 
 ### Date format 
-The date format being used across can be chaged. For valid date strings see: https://pkg.go.dev/time#pkg-constants
+
+[Configure how posts date are displayed](https://gohugo.io/functions/time/format/), using [date strings](https://pkg.go.dev/time#pkg-constants).
+
+dateFormat **must be set** if [`enableGitInfo`](https://gohugo.io/methods/page/gitinfo/#prerequisites) is `true`, or [`.Lastmod`](https://gohugo.io/methods/page/lastmod/) is present in any front matter.
 
 ```toml 
 [params]
   dateFormat = "2 January, 2006"
 ```
 
-### Footer
+### Description
 
-Text to display in the footer section
+[Meta description](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_an_author_and_description) to display on the home page, below the title and avatar.
 
 ```toml
 [params]
-  footer = "Text in footer"
+  description = "Sky above, sand below & peace within"
 ```
 
-`footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/). This is best used for including hyperlinks, emoji, or text formatting.
+### Display content on the home page
+
+Markdown content in `content/index-about.md` will be rendered on the home page, below the social icons.
+
+### Display posts on the home page
+
+Recent and popular posts can be shown on the home page:
+
+- `popular`: Sort posts in ascending order of their [Weight](https://gohugo.io/methods/page/weight/)
+
+  **If any post on your site defines `weight`, you cannot enable [Previous and Next buttons](#previous-and-next-buttons).**
+
+- `recent`: Sort posts in ascending order of [Date](https://gohugo.io/methods/page/date/)
+
+- Do not show anything if the variable is:
+    - unset
+    - an empty string (`""`)
+
+The number of posts displayed on the home page can be changed by setting `numberPostsOnHomePage`. If `numberPostsOnHomePage` is equal to `""` or `0`, the default value (`4`) is used.
+
+```toml
+[params]
+  showPostsOnHomePage = ""
+  numberPostsOnHomePage = 4
+```
+
+### Favicons
+
+Place favicons into the `static/` directory. The following files are supported:
+
+- `apple-touch-icon.png` (180x180)
+- `favicon-32x32.png` (32x32)
+- `favicon-16x16.png` (16x16)
+- `mstile-150x150.png` (150x150)
+- `android-chrome-192x192.png` (192x192)
+- `android-chrome-512x512.png` (512x512)
+
+Favicons can be generated using services such as [favicon.io](https://favicon.io), or [realfavicongenerator.net](https://realfavicongenerator.net/).
+
+### Footer
+
+Text to display in the footer section, typically the name of the author or project.
+
+```toml
+[params]
+  footer = "The Marauders"
+```
+
+`footer` can include [Markdown syntax](https://www.markdownguide.org/tools/hugo/) - best used for including hyperlinks, emoji, or text formatting.
 
 ### Previous and Next buttons
 
@@ -262,46 +316,17 @@ At the bottom of a post, show the previous and next post chronologically.
 
 **Warning**: Not compatible with the `.Weight` parameter.
 
-If any post YAML contains `weight:`, the posts will not appear by Date. See [Hugo's default sort](https://gohugo.io/templates/lists#default-weight--date--linktitle--filepath).
+If any post front matter contains `weight`, the posts will not appear by Date. See [Hugo's default sort](https://gohugo.io/templates/lists#default-weight--date--linktitle--filepath).
 
 ```toml
 [params]
-  togglePreviousAndNextButtons = "true"
+  togglePreviousAndNextButtons = "false"
 ```
-
-### Displaying content on the homepage
-
-Content to display on homepage below the social icons, using the contents of `content/index-about.md`.
-
-### Custom Head HTML
-
-You can add custom HTML in head section
-
-```toml
-[params]
-  customHeadHTML = "<script>console.log('Any HTML')</script>"
-```
-
-Read more in the advanced section [here](/posts/theme-documentation-advanced/#custom-head-html)
 
 ### robots.txt
 
-Automatically generate robots.txt
+[Automatically generate](https://gohugo.io/templates/robots/) a `robots.txt` file, used to ['manage crawler traffic to your site'](https://developers.google.com/search/docs/crawling-indexing/robots/intro).
 
 ```toml
 enableRobotsTXT = true
 ```
-
-### Favicons, Browserconfig, Manifest
-
-It is recommended to put your own favicons:
-
-* apple-touch-icon.png (180x180)
-* favicon-32x32.png (32x32)
-* favicon-16x16.png (16x16)
-* mstile-150x150.png (150x150)
-* android-chrome-192x192.png (192x192)
-* android-chrome-512x512.png (512x512)
-
-into `/static` directory. They’re easily created via [favicon.io](https://favicon.io) or [realfavicongenerator.net](https://realfavicongenerator.net/).
-

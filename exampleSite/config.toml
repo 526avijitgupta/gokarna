@@ -1,21 +1,18 @@
 baseURL = "https://gokarna-hugo.netlify.app"
-title = "Gokarna"
-theme = "gokarna"
-languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
-
+languageCode = "en"
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
+theme = "gokarna"
+title = "Gokarna"
 
 [params]
-  footer = "The Marauders"
-  description = "Sky above, sand below and peace within"
-  avatarURL = "/images/avatar.webp"
-  AvatarAltText = "avatar"
+  avatarAltText = "avatar"
   avatarSize = "size-m"
-  ShowBackToTopButton = true # true or false for "back to top" button on posts and pages
+  avatarURL = "/images/avatar.webp"
+
   customHeadHTML = """
     <!-- KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
@@ -36,6 +33,12 @@ pygmentsStyle = "monokai"
       });
     </script>
   """
+
+  description = "Sky above, sand below and peace within"
+  footer = "The Marauders"
+  metaKeywords = ["blog", "gokarna", "hugo"]
+  showBackToTopButton = true # true or false for "back to top" button on posts and pages
+
   socialIcons = [
     {name = "twitter", url = "https://example.com"},
     {name = "linkedin", url = "https://example.com"},
@@ -45,7 +48,6 @@ pygmentsStyle = "monokai"
     {name = "twitch", url = "https://example.com"},
     {name = "email", url = "mailto:example@example.com"}
   ]
-  metaKeywords = ["blog", "gokarna", "hugo"]
 
 [menu]
   [[menu.main]]
