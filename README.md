@@ -15,17 +15,18 @@ Gokarna is an opinionated theme with a focus on minimalism and simplicity.
 
 ## Features
 
-- Minimalistic & fast
-- Customizable header
-- Responsive
-- Available in light and dark themes
-- Native fonts and support for [feather icons](https://feathericons.com/) and [svg icons](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#icons-on-homepage)
-- Syntax highlighting
-- SEO Ready
-- Table of contents which can be configured per page
-- Option to add custom javascript and css
-- RSS Feed
-- Math typesetting using [Katex](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#katex)
+Gokarna is fast, responsive, and [SEO-friendly](#performance).
+
+- Light and dark modes
+- [Feather](https://feathericons.com/) and [Simple](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#icons-on-homepage) icons
+- [KaTeX](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#katex) math typesetting 
+- [Syntax highlighting](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#syntax-highlighting)
+- [Custom HTML, JavaScript, and CSS](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#custom-head-and-footer-html)
+- [Configurable Table of Contents](https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/#table-of-contents)
+- Google Lato fonts
+- Auto-generated RSS feed
+
+And more...
 
 ## Screenshots
 
