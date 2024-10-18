@@ -68,7 +68,7 @@ Examples include:
 - [Compose navigation menu items](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#basic-configuration)
 - [Define the site's accent color](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#accent-color)
     Change the color of hyperlinks, including icons.
-- [Display recent or popular posts on the home page](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#posts-on-home-page)
+- [Display recent or popular posts on the home page](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#display-posts-on-the-home-page)
 - [Inject custom HTML](https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#custom-head-html)
     Use the `<head>` and `<footer>` elements to add arbitrary HTML, JavaScript, and CSS.
 
