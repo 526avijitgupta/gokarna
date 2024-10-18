@@ -75,7 +75,7 @@ Examples include:
 
 ## Inspiration
 
-The theme is inspired by, and accordingly named after, [Gokarna](https://en.wikipedia.org/wiki/Gokarna,_Karnataka), a small and peaceful beach town on the west coast on India.
+The theme is inspired by, and accordingly named after, [Gokarna](https://en.wikipedia.org/wiki/Gokarna,_Karnataka), a small and peaceful beach town on the west coast of India.
 
 ![Gokarna](https://raw.githubusercontent.com/526avijitgupta/gokarna/main/images/gokarna.jpg)
 
